@@ -1,93 +1,81 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const captions = {
-    home: "Your library at a glance: song, artist, and album counts, plus quick picks.",
-    now: "Full playback controls, scrubber, and album art for whatever's playing.",
-    library: 'Browse by song, artist, album, genre, or playlist.',
-  };
 
-  const lists = {
-    home: [
-      'Local library with folder filtering',
-      'Library snapshot: song, artist, and album counts',
-      'Quick picks and recently played',
-      'Shuffle your entire library instantly',
-    ],
-    now: [
-      'Graphic equalizer with AutoEq calibration',
-      'Synced lyrics from LRCLIB or embedded tags',
-      'Sleep timer to pause playback automatically',
-      'Server credentials encrypted with hardware-backed AES-256',
-    ],
-    library: [
-      'Subsonic and Jellyfin streaming, offline caching',
-      'Browse by song, artist, album, genre, or playlist',
-      'Sort and filter your library your way',
-      'Backup and restore for your library and playlists',
-    ],
-  };
+  const mobileBtn = document.getElementById('rare-mobile-btn');
+  const mobileMenu = document.getElementById('rare-mobile-menu');
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      const isOpen = mobileMenu.classList.contains('open');
+      mobileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
 
-  const tabs = document.querySelectorAll('.app-tab');
-  const shots = document.querySelectorAll('.app-shot');
-  const caption = document.getElementById('app-caption');
-  const list = document.getElementById('app-list');
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 
-  tabs.forEach((tab) => {
+  const heroShots = document.querySelectorAll('.hero-phone-shot');
+  const heroTabs = document.querySelectorAll('.hero-pill-tab');
+  let currentHeroIdx = 0;
+  let heroInterval = null;
+
+  function switchHeroScreen(key) {
+    heroShots.forEach((shot) => {
+      shot.classList.toggle('active', shot.getAttribute('data-hero') === key);
+    });
+    heroTabs.forEach((tab) => {
+      tab.classList.toggle('active', tab.getAttribute('data-hero') === key);
+    });
+  }
+
+  heroTabs.forEach((tab, idx) => {
     tab.addEventListener('click', () => {
-      const key = tab.dataset.tab;
-      tabs.forEach((t) => t.classList.toggle('active', t === tab));
-      shots.forEach((s) => s.classList.toggle('active', s.dataset.tab === key));
-      if (caption && captions[key]) caption.textContent = captions[key];
-      if (list && lists[key]) {
-        list.innerHTML = lists[key]
-          .map((item) => `<li style="padding:10px 0; font-size:14px; color:var(--text-2);">${item}</li>`)
-          .join('');
-      }
+      const key = tab.getAttribute('data-hero');
+      currentHeroIdx = idx;
+      switchHeroScreen(key);
+      restartHeroCycle();
     });
   });
 
-  const heroShots = document.querySelectorAll('.hero-shot');
-  if (heroShots.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    let i = 0;
-    setInterval(() => {
-      heroShots[i].classList.remove('active');
-      i = (i + 1) % heroShots.length;
-      heroShots[i].classList.add('active');
-    }, 3400);
+  function nextHeroScreen() {
+    if (heroTabs.length === 0) return;
+    currentHeroIdx = (currentHeroIdx + 1) % heroTabs.length;
+    const key = heroTabs[currentHeroIdx].getAttribute('data-hero');
+    switchHeroScreen(key);
   }
 
-  const themeToggle = document.getElementById('theme-toggle');
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const root = document.documentElement;
-      const isLight = root.getAttribute('data-theme') === 'light';
-      const next = isLight ? 'dark' : 'light';
-      if (next === 'light') {
-        root.setAttribute('data-theme', 'light');
-      } else {
-        root.removeAttribute('data-theme');
-      }
-      try { localStorage.setItem('cc-theme', next); } catch (e) {}
-      const metaTheme = document.querySelector('meta[name="theme-color"]');
-      if (metaTheme) metaTheme.setAttribute('content', next === 'light' ? '#F4F1EB' : '#000000');
-    });
+  function startHeroCycle() {
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && heroTabs.length > 1) {
+      heroInterval = setInterval(nextHeroScreen, 3400);
+    }
   }
 
-  const starCountEl = document.getElementById('gh-star-count');
-  const starValueEl = document.getElementById('gh-star-count-value');
-  if (starCountEl && starValueEl) {
+  function restartHeroCycle() {
+    if (heroInterval) clearInterval(heroInterval);
+    startHeroCycle();
+  }
+
+  startHeroCycle();
+  const starCountEl = document.getElementById('gh-star-count-value');
+  const starBoxEl = document.getElementById('gh-star-count');
+  if (starCountEl) {
     fetch('https://api.github.com/repos/samyyy2311/CassetteCat')
       .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
-        if (!data || typeof data.stargazers_count !== 'number') return;
-        starValueEl.textContent = data.stargazers_count;
-        starCountEl.style.display = 'inline-flex';
+        if (data && typeof data.stargazers_count === 'number') {
+          starCountEl.textContent = data.stargazers_count.toLocaleString();
+          if (starBoxEl) starBoxEl.style.display = 'inline-flex';
+        }
       })
       .catch(() => {});
   }
 
-  const downloadCountEl = document.getElementById('gh-download-count');
-  const downloadValueEl = document.getElementById('gh-download-count-value');
-  if (downloadCountEl && downloadValueEl) {
+  const dlCountEl = document.getElementById('gh-download-count-value');
+  const dlBoxEl = document.getElementById('gh-download-count');
+  if (dlCountEl) {
     fetch('https://api.github.com/repos/samyyy2311/CassetteCat/releases?per_page=100')
       .then((res) => (res.ok ? res.json() : null))
       .then((releases) => {
@@ -96,8 +84,10 @@ document.addEventListener('DOMContentLoaded', () => {
           const assets = Array.isArray(release.assets) ? release.assets : [];
           return sum + assets.reduce((s, asset) => s + (asset.download_count || 0), 0);
         }, 0);
-        downloadValueEl.textContent = total.toLocaleString();
-        downloadCountEl.style.display = 'inline-flex';
+        if (total > 0) {
+          dlCountEl.textContent = total.toLocaleString();
+          if (dlBoxEl) dlBoxEl.style.display = 'inline-flex';
+        }
       })
       .catch(() => {});
   }

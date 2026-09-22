@@ -1,0 +1,26 @@
+# CassetteCat
+
+> CassetteCat is a free, open-source music player for Android, Windows, and Linux. It plays local audio files, streams from personal Subsonic and Jellyfin servers, displays synchronized lyrics, tunes into internet radio, supports Android Auto, and connects to an open-source ESP32 hardware player.
+
+## What it does
+
+- **Plays Local Files**: Reads FLAC, MP3, AAC, OGG, Opus, WAV, and ALAC from device storage or SD card, with folder filtering and metadata reading.
+- **Streams Self-Hosted Music**: Connects to Jellyfin and any Subsonic-compatible server (Navidrome, Gonic, Airsonic, LMS) with offline caching.
+- **Private by Design**: No user accounts, analytics SDKs, ads, or tracking. Server passwords stay on your device, encrypted with the Android Keystore.
+- **Synchronized Lyrics**: Reads embedded LRC/ID3 tags and fetches synced lyrics from LRCLIB, with a built-in lyrics editor.
+- **Equalizer & AutoEq**: Built-in equalizer with bass boost and headphone calibration presets from AutoEq.
+- **Internet Radio**: Browse and stream thousands of public radio stations through Radio Browser.
+- **In the Car**: Works with Android Auto and Android Automotive OS (AAOS) to browse and play music from your car dashboard.
+- **Companion Hardware**: Works alongside an open-source ESP32 physical pocket player over local Wi-Fi.
+
+## Key Links
+
+- **Website**: https://cassettecat.caffeinelabs.in/
+- **Android Repository**: https://github.com/samyyy2311/CassetteCat
+- **Desktop Repository**: https://github.com/samyyy2311/CassetteCat-Desktop
+- **Hardware Project**: https://github.com/samyyy2311/CassetteCat/tree/main/hardware
+- **Changelog**: https://cassettecat.caffeinelabs.in/changelog
+- **Privacy Policy**: https://cassettecat.caffeinelabs.in/privacy
+- **Terms of Service**: https://cassettecat.caffeinelabs.in/terms
+- **License**: GNU General Public License v3.0 (GPL-3.0)
+- **Organization**: CaffeineLabs (https://caffeinelabs.in)

@@ -1,0 +1,22 @@
+{
+  "name": "CassetteCat · Open Source Music Player",
+  "short_name": "CassetteCat",
+  "description": "An open-source music player you can make your own. For Android, Windows, Linux, and standalone hardware.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "assets/play_store_icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
