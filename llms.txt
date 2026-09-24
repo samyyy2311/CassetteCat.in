@@ -1,26 +1,38 @@
 # CassetteCat
 
-> CassetteCat is a free, open-source music player for Android, Windows, and Linux. It plays local audio files, streams from personal Subsonic and Jellyfin servers, displays synchronized lyrics, tunes into internet radio, supports Android Auto, and connects to an open-source ESP32 hardware player.
+> CassetteCat is a free, open-source music player for Android, Windows and Linux, made by CaffeineLabs. It plays local music files, streams from your own Navidrome, Jellyfin or other Subsonic server, shows synced lyrics, plays internet radio and works with Android Auto. It has no ads, no analytics and no account. Licensed under GPL-3.0.
 
-## What it does
+## Platforms and downloads
 
-- **Plays Local Files**: Reads FLAC, MP3, AAC, OGG, Opus, WAV, and ALAC from device storage or SD card, with folder filtering and metadata reading.
-- **Streams Self-Hosted Music**: Connects to Jellyfin and any Subsonic-compatible server (Navidrome, Gonic, Airsonic, LMS) with offline caching.
-- **Private by Design**: No user accounts, analytics SDKs, ads, or tracking. Server passwords stay on your device, encrypted with the Android Keystore.
-- **Synchronized Lyrics**: Reads embedded LRC/ID3 tags and fetches synced lyrics from LRCLIB, with a built-in lyrics editor.
-- **Equalizer & AutoEq**: Built-in equalizer with bass boost and headphone calibration presets from AutoEq.
-- **Internet Radio**: Browse and stream thousands of public radio stations through Radio Browser.
-- **In the Car**: Works with Android Auto and Android Automotive OS (AAOS) to browse and play music from your car dashboard.
-- **Companion Hardware**: Works alongside an open-source ESP32 physical pocket player over local Wi-Fi.
+- Android 8.0 or later: [Google Play](https://play.google.com/store/apps/details?id=in.caffeinelabs.cassettecat) or the APK from [GitHub Releases](https://github.com/samyyy2311/CassetteCat/releases/latest). Obtainium can track GitHub releases for automatic updates.
+- Windows (64-bit): installer (.exe) or portable .zip from [CassetteCat Desktop releases](https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest).
+- Linux (x86_64): AppImage, .deb, .rpm, Flatpak or .tar.gz from the same desktop releases page.
+- Not available: iPhone, iPad and macOS. The F-Droid listing is pending.
 
-## Key Links
+## Features
 
-- **Website**: https://cassettecat.caffeinelabs.in/
-- **Android Repository**: https://github.com/samyyy2311/CassetteCat
-- **Desktop Repository**: https://github.com/samyyy2311/CassetteCat-Desktop
-- **Hardware Project**: https://github.com/samyyy2311/CassetteCat/tree/main/hardware
-- **Changelog**: https://cassettecat.caffeinelabs.in/changelog
-- **Privacy Policy**: https://cassettecat.caffeinelabs.in/privacy
-- **Terms of Service**: https://cassettecat.caffeinelabs.in/terms
-- **License**: GNU General Public License v3.0 (GPL-3.0)
-- **Organization**: CaffeineLabs (https://caffeinelabs.in)
+- Local library: scans device storage and SD cards for FLAC, MP3, AAC, OGG, Opus, WAV and ALAC, with folder filters and tag support.
+- Self-hosted streaming: Jellyfin and any Subsonic-compatible server (Navidrome, Gonic, Airsonic, LMS), with offline caching.
+- Synced lyrics: reads embedded LRC and ID3 lyrics, falls back to LRCLIB, and includes a lyrics editor.
+- Equalizer with AutoEq headphone correction profiles.
+- Internet radio through Radio Browser, searchable by name, genre or country.
+- Android Auto, Android Automotive OS and a Drive Mode for the car.
+- Scrobbling to ListenBrainz and Libre.fm.
+- M3U and M3U8 playlist import and export, plus backup and restore of playlists and settings.
+- Monthly listening stats (Rewind), a home screen widget, and Listening Room (beta) for synced playback across devices on the same Wi-Fi.
+- CassetteCat Player: an open-hardware ESP32 pocket player, still in development, that the phone app can sync songs to and control over Wi-Fi.
+
+## Privacy
+
+No ads, no analytics SDKs, no tracking IDs and no user accounts. Listening history and playlists stay on the device. Server passwords are encrypted with the Android Keystore. Online lookups for lyrics, artwork and metadata are optional and can each be turned off.
+
+## Links
+
+- Website: https://cassettecat.caffeinelabs.in/
+- Changelog: https://cassettecat.caffeinelabs.in/changelog
+- Privacy policy: https://cassettecat.caffeinelabs.in/privacy
+- Terms: https://cassettecat.caffeinelabs.in/terms
+- Android source: https://github.com/samyyy2311/CassetteCat
+- Desktop source: https://github.com/samyyy2311/CassetteCat-Desktop
+- Hardware: https://github.com/samyyy2311/CassetteCat/tree/main/hardware
+- Developer: CaffeineLabs, https://caffeinelabs.in

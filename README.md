@@ -16,11 +16,21 @@
 
 This repository contains the static website, deployed with GitHub Pages. Releases and Android downloads stay in the [CassetteCat Android repository](https://github.com/samyyy2311/CassetteCat).
 
-## Local preview & Build
+## Local preview
 
-Open `index.html` with any static file server. The deployment workflow automatically compiles the changelog from public GitHub Releases and minifies all production assets before publishing to GitHub Pages.
+Serve the folder with any static server:
 
-To test minification locally:
 ```bash
-python scripts/minify.py
+python -m http.server
 ```
+
+Then open http://localhost:8000. Clean URLs such as `/changelog` only work on GitHub Pages, so use `/changelog.html` locally.
+
+## Deploy
+
+Pushing to `main` runs the Pages workflow, which:
+
+1. Rebuilds `changelog.html` from the public GitHub Releases, updates the app version and FAQ structured data in `index.html`, and refreshes the dates in `sitemap.xml` (`scripts/build_releases.py`).
+2. Minifies the HTML, CSS and JS (`scripts/minify.py`).
+
+Keep the FAQ in `index.html` as `<details><summary>Question</summary><p>Answer</p></details>` blocks so the build can mirror it into the structured data.

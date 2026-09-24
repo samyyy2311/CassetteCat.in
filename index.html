@@ -5,23 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CassetteCat · Open Source Android &amp; Desktop Music Player</title>
-  <meta name="description" content="A free, open-source music player for Android, Windows, and Linux. Built for local files, Subsonic and Jellyfin servers, synchronized lyrics, and internet radio.">
-  <meta name="keywords" content="open source music player, android audio player, subsonic client, jellyfin music player, synchronized lyrics, lrclib, autoeq equalizer, internet radio, esp32 music player, flac android, local music player, navidrome client">
+  <meta name="description" content="A free, open-source music player for Android, Windows and Linux. Play your own music files, stream from Navidrome or Jellyfin, and get synced lyrics. No ads, no tracking, no account.">
   <meta name="author" content="CaffeineLabs">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta property="og:site_name" content="CassetteCat">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="CassetteCat · Open Source Android &amp; Desktop Music Player">
-  <meta property="og:description" content="An open-source music player you can make your own. Local library, Subsonic, Jellyfin, and internet radio.">
+  <meta property="og:description" content="A free, open-source music player for your own music. Play the songs on your phone or computer, or stream them from your own server.">
   <meta property="og:url" content="https://cassettecat.caffeinelabs.in/">
   <meta property="og:image" content="https://cassettecat.caffeinelabs.in/assets/feature_graphic_1024x500.png">
   <meta property="og:image:width" content="1024">
   <meta property="og:image:height" content="500">
+  <meta property="og:image:alt" content="CassetteCat music player running on two Android phones">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="CassetteCat · Open Source Android &amp; Desktop Music Player">
-  <meta name="twitter:description" content="An open-source music player you can make your own. Local library, Subsonic, Jellyfin, and internet radio.">
+  <meta name="twitter:description" content="A free, open-source music player for your own music. Play the songs on your phone or computer, or stream them from your own server.">
   <meta name="twitter:image" content="https://cassettecat.caffeinelabs.in/assets/feature_graphic_1024x500.png">
   <meta name="theme-color" content="#000000">
   <script type="application/ld+json">
@@ -43,7 +43,8 @@
         "url": "https://caffeinelabs.in",
         "logo": "https://cassettecat.caffeinelabs.in/assets/play_store_icon_512.png",
         "sameAs": [
-          "https://github.com/samyyy2311/CassetteCat"
+          "https://github.com/samyyy2311/CassetteCat",
+          "https://github.com/samyyy2311/CassetteCat-Desktop"
         ]
       },
       {
@@ -53,7 +54,7 @@
         "operatingSystem": "Android, Windows, Linux",
         "applicationCategory": "MultimediaApplication",
         "applicationSubCategory": "MusicApplication",
-        "description": "An open-source music player for Android and desktop. Play local files, stream from Subsonic and Jellyfin, view synced lyrics, and connect to Android Auto.",
+        "description": "A free, open-source music player for Android, Windows and Linux. Plays local music files, streams from your own Navidrome, Jellyfin or Subsonic server, shows synced lyrics, and works with Android Auto. No ads, no tracking and no account.",
         "url": "https://cassettecat.caffeinelabs.in/",
         "image": "https://cassettecat.caffeinelabs.in/assets/feature_graphic_1024x500.png",
         "screenshot": [
@@ -63,7 +64,7 @@
           "https://cassettecat.caffeinelabs.in/assets/screenshots/artists.webp"
         ],
         "license": "https://www.gnu.org/licenses/gpl-3.0.html",
-        "softwareVersion": "1.7.0",
+        "softwareVersion": "1.7.4",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -72,17 +73,28 @@
         "author": {
           "@id": "https://cassettecat.caffeinelabs.in/#organization"
         },
-        "downloadUrl": "https://github.com/samyyy2311/CassetteCat/releases/latest",
+        "downloadUrl": [
+          "https://github.com/samyyy2311/CassetteCat/releases/latest",
+          "https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest"
+        ],
         "installUrl": "https://play.google.com/store/apps/details?id=in.caffeinelabs.cassettecat",
         "featureList": [
-          "Local audio playback with folder filtering",
-          "Streaming from Subsonic and Jellyfin servers",
-          "Synchronized lyrics from LRCLIB and file tags",
-          "Equalizer with AutoEq headphone profiles",
-          "Internet radio with live station search",
-          "Android Auto and AAOS dashboard support",
-          "Encrypted server passwords stored on device",
-          "No ads, no tracking, and no accounts required"
+          "Local music library with folder filters and tag support",
+          "Streaming from Navidrome, Jellyfin and other Subsonic servers, with offline caching",
+          "Synced lyrics from embedded tags or LRCLIB, with a lyrics editor",
+          "Graphic equalizer with AutoEq headphone profiles",
+          "Internet radio via Radio Browser",
+          "Android Auto, Android Automotive and Drive Mode",
+          "Scrobbling to ListenBrainz and Libre.fm",
+          "M3U and M3U8 playlist import and export",
+          "Backup and restore of playlists and settings",
+          "No ads, no analytics and no account"
+        ],
+        "softwareRequirements": "Android 8.0 or later, 64-bit Windows, or 64-bit (x86_64) Linux",
+        "sameAs": [
+          "https://play.google.com/store/apps/details?id=in.caffeinelabs.cassettecat",
+          "https://alternativeto.net/software/cassettecat/about/",
+          "https://github.com/samyyy2311/CassetteCat"
         ]
       },
       {
@@ -94,47 +106,71 @@
             "name": "What is CassetteCat?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "CassetteCat is an open-source music player for Android, Windows, and Linux, built for people who want to own their music collection. It plays songs stored on your device, streams from personal Subsonic or Jellyfin libraries, shows synchronized lyrics, and connects to an open-source DIY hardware player."
+              "text": "A music player for Android, Windows and Linux, made for people who keep their own music. It plays what's on your device, streams from your own Subsonic or Jellyfin server, and shows lyrics that scroll along with the song. It's free and the code is open."
             }
           },
           {
             "@type": "Question",
-            "name": "Does CassetteCat collect or track any user data?",
+            "name": "Does it collect any of my data?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. There are no analytics libraries, tracking IDs, accounts, or ads. Your listening history and playlists stay strictly on your phone, and server passwords are encrypted locally using the Android Keystore."
+              "text": "No. There's no analytics, no ads and no account to create. Your history and playlists stay on your phone, nothing is sent to us, and server passwords are encrypted on the device."
             }
           },
           {
             "@type": "Question",
-            "name": "What self-hosted servers are supported?",
+            "name": "Which servers can I connect to?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "It works with Jellyfin and any server that supports the Subsonic API, such as Navidrome, Gonic, Airsonic, and LMS. You can browse your remote library, stream songs, and cache tracks locally so they play when you are offline."
+              "text": "Jellyfin, and anything that speaks the Subsonic API: Navidrome, Gonic, Airsonic, LMS and others. You can browse your library, stream, and keep songs on the phone for offline listening."
             }
           },
           {
             "@type": "Question",
-            "name": "How do synchronized lyrics work?",
+            "name": "Where do the lyrics come from?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "CassetteCat first checks for embedded LRC or ID3 tags inside your music files. If they aren't tagged, it pulls live synchronized lyrics from LRCLIB. There is also an in-app lyrics editor if you want to tweak timing or write your own."
+              "text": "First from your files, if they have LRC or ID3 lyrics embedded. If not, CassetteCat looks them up on LRCLIB. If the timing is off, you can fix it in the lyrics editor."
             }
           },
           {
             "@type": "Question",
-            "name": "What is the CassetteCat DIY hardware player?",
+            "name": "What's the hardware player?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "It's an open-hardware pocket player powered by an ESP32 chip, with an audio DAC, color display, and SD card storage. You can use the CassetteCat phone app to manage files or control what is playing over local Wi-Fi."
+              "text": "A small open-hardware music player built around an ESP32, with a DAC, a colour screen and an SD card. It's still in progress. The phone app can already send songs to it and control playback over Wi-Fi."
             }
           },
           {
             "@type": "Question",
-            "name": "Is CassetteCat compatible with Android Auto?",
+            "name": "Does it work with Android Auto?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. It supports Android Auto and Android Automotive OS (AAOS), letting you browse albums, launch playlists, and listen to internet radio right from your car's dashboard."
+              "text": "Yes. It works with Android Auto and Android Automotive, so you can pick albums, playlists and radio stations from your car's screen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there an iPhone or Mac version?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not right now. CassetteCat runs on Android, Windows and Linux."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it on F-Droid?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not yet, the F-Droid listing is still pending. Until then you can grab the APK from GitHub, or add the repository to Obtainium to get updates automatically."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I bring my playlists from another player?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. CassetteCat imports M3U and M3U8 playlists, which most players can export. Your music files are picked up by the library scan, so there's nothing else to move."
             }
           }
         ]
@@ -149,450 +185,247 @@
   <link rel="apple-touch-icon" href="assets/play_store_icon_512.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="assets/style.css?v=20260922">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%C2%B7%26-.:&display=swap">
+  <link rel="stylesheet" href="assets/style.css?v=20261005">
 </head>
 
 <body>
 
-  <div class="rare-nav-wrapper">
-    <nav class="rare-nav-bar" aria-label="Main Navigation">
-      <a href="/" class="rare-brand">
-        <img src="assets/play_store_icon_512.png" alt="CassetteCat logo" class="rare-brand-icon" width="28" height="28">
-        <span class="rare-brand-text">Cassette<span>Cat</span></span>
-      </a>
-
-      <div class="rare-links">
-        <a href="#features" class="rare-nav-link">Features</a>
-        <span class="rare-nav-divider"></span>
-        <a href="#desktop" class="rare-nav-link">Desktop</a>
-        <span class="rare-nav-divider"></span>
-        <a href="#hardware" class="rare-nav-link">Hardware</a>
-        <span class="rare-nav-divider"></span>
-        <a href="#faq" class="rare-nav-link">FAQ</a>
-        <span class="rare-nav-divider"></span>
-        <a href="#credits" class="rare-nav-link">Credits</a>
-        <span class="rare-nav-divider"></span>
-        <a href="/changelog" class="rare-nav-link">Changelog</a>
-      </div>
-
-      <div class="rare-actions">
-        <a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener noreferrer" class="rare-gh-btn" aria-label="View on GitHub">
-          <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.35.95.1-.74.4-1.25.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.04 11.04 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
-          <span>GitHub</span>
-          <span id="gh-star-count" class="rare-star-badge" style="display:none;">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <span id="gh-star-count-value"></span>
-          </span>
-        </a>
-
-        <button type="button" id="rare-mobile-btn" class="rare-icon-btn rare-mobile-btn" aria-label="Toggle navigation menu" aria-expanded="false">
-          <svg viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
-        </button>
-      </div>
-    </nav>
-
-    <div id="rare-mobile-menu" class="rare-mobile-menu">
-      <a href="#features">Features</a>
-      <a href="#desktop">Desktop</a>
-      <a href="#hardware">Hardware</a>
-      <a href="#faq">FAQ</a>
-      <a href="#credits">Credits</a>
-      <a href="/changelog">Changelog</a>
-      <a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener">GitHub</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a href="/" class="brand"><img src="assets/play_store_icon_512.png" alt="" width="26" height="26"><span>CassetteCat</span></a>
+      <nav aria-label="Main">
+        <a href="/#features" class="wide">Features</a>
+        <a href="/#desktop" class="wide">Desktop</a>
+        <a href="/#faq" class="wide">FAQ</a>
+        <a href="/changelog" class="wide">Changelog</a>
+        <a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener" class="gh cap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.35.95.1-.74.4-1.25.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.04 11.04 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>GitHub<span id="gh-stars" hidden></span></a>
+        <a href="/#download" class="narrow nav-dl cap cap-accent">Download</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
   <main>
-    <section class="hero-section">
-      <div class="hero-ambient-glow" aria-hidden="true"></div>
 
-      <div class="hero-grid">
-        <div class="hero-content-col">
-          <h1 class="hero-title">An open-source music player you can make your own.</h1>
-
-          <p class="hero-subtitle">
-            Built for people who own their music. Play local files on your phone or desktop, stream from your personal server, and build or customize your own player.
-          </p>
-
-          <div class="hero-actions-group">
-            <a href="https://github.com/samyyy2311/CassetteCat/releases/latest" class="btn-record-red">
-              <svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 19h16"/></svg>
-              Download APK
-            </a>
-            <a href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest" class="btn-tactile-secondary">
-              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
-              Download Desktop
-            </a>
-              <a href="https://play.google.com/store/apps/details?id=in.caffeinelabs.cassettecat" target="_blank" rel="noopener noreferrer" class="btn-play-badge" aria-label="Get it on Google Play">
-                <img src="assets/google-play-badge.png" alt="Get CassetteCat on Google Play" width="142" height="42" loading="lazy">
-              </a>
-          </div>
-
-          <div class="hero-badges-row">
-            <span>
-              <svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-              GPL-3.0
-            </span>
-            <span>
-              <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
-              Android 8.0+
-            </span>
-            <span>
-              <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/></svg>
-              Self-hosted friendly
-            </span>
-            <a id="gh-download-count" href="https://github.com/samyyy2311/CassetteCat/releases" style="display:none;">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 19h16"/></svg>
-              <span id="gh-download-count-value"></span> downloads
-            </a>
-          </div>
-
-          <div class="cc-discovery-badges">
-            <a class="cc-alternativeto-badge" href="https://alternativeto.net/software/cassettecat/about/" target="_blank" rel="noopener noreferrer" aria-label="View CassetteCat on AlternativeTo">
-              <img class="cc-alternativeto-logo" src="assets/alternativeto.png" alt="AlternativeTo logo" width="28" height="28" loading="lazy">
-              <span><small>VIEW ON</small><strong>AlternativeTo</strong></span>
-            </a>
-          </div>
+    <section id="download" class="wrap hero">
+      <div class="hero-copy">
+        <h1>A music player for your own music.</h1>
+        <p class="lede">Play the songs on your phone or computer, or stream them from your own server. Free, open source, and no account needed.</p>
+        <div class="actions">
+          <a id="dl-primary" href="https://github.com/samyyy2311/CassetteCat/releases/latest" class="btn btn-primary">
+            <svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 19h16"/></svg>
+            <span>Download APK</span>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=in.caffeinelabs.cassettecat" target="_blank" rel="noopener noreferrer" class="btn">
+            <img class="play" src="assets/google-play.png" alt="" width="18" height="20">
+            Google Play
+          </a>
         </div>
+        <p id="dl-note" class="dl-note">Also on <a href="#desktop">Windows and Linux</a>. Free and open source.</p>
+        <p id="gh-downloads" class="dl-count" hidden></p>
+      </div>
+      <div class="hero-phone">
+        <img src="assets/screenshots/now-playing.webp" alt="CassetteCat now playing screen with album art and controls" width="240" height="534" fetchpriority="high">
+      </div>
+    </section>
 
-        <div class="hero-visual-col">
-          <div class="hero-phone-container">
-            <div class="rare-phone-frame">
-              <div class="rare-phone-screen">
-                <img src="assets/screenshots/now-playing.webp" alt="CassetteCat now playing screen with album art, playback controls, and lyrics toggle" class="hero-phone-shot active" data-hero="now" width="240" height="534" fetchpriority="high">
-                <img src="assets/screenshots/home.webp" alt="CassetteCat home screen with quick playlists and recently played" class="hero-phone-shot" data-hero="home" width="240" height="534" loading="lazy" decoding="async">
-                <img src="assets/screenshots/library.webp" alt="CassetteCat music library view with folder filters" class="hero-phone-shot" data-hero="library" width="240" height="534" loading="lazy" decoding="async">
-                <img src="assets/screenshots/artists.webp" alt="CassetteCat artists view with artist portraits" class="hero-phone-shot" data-hero="artists" width="240" height="534" loading="lazy" decoding="async">
-                <img src="assets/screenshots/queue.webp" alt="CassetteCat playback queue with drag-and-drop reordering" class="hero-phone-shot" data-hero="queue" width="240" height="534" loading="lazy" decoding="async">
-                <img src="assets/screenshots/lyrics.webp" alt="CassetteCat real-time synchronized scrolling lyrics from LRCLIB" class="hero-phone-shot" data-hero="lyrics" width="240" height="534" loading="lazy" decoding="async">
-              </div>
-            </div>
+    <div class="tape-stripe"></div>
 
-            <div class="hero-screen-selector" role="tablist">
-              <button type="button" class="hero-pill-tab active" data-hero="now">Now Playing</button>
-              <button type="button" class="hero-pill-tab" data-hero="home">Home</button>
-              <button type="button" class="hero-pill-tab" data-hero="library">Library</button>
-              <button type="button" class="hero-pill-tab" data-hero="artists">Artists</button>
-              <button type="button" class="hero-pill-tab" data-hero="queue">Queue</button>
-              <button type="button" class="hero-pill-tab" data-hero="lyrics">Lyrics</button>
-            </div>
+    <section class="tour" aria-labelledby="tour-title">
+      <div class="wrap tour-head">
+        <div>
+          <h2 id="tour-title">A look inside</h2>
+          <p>The screens you'll spend the most time on.</p>
+        </div>
+        <div class="tour-nav">
+          <button type="button" class="cap" data-scroll="-1" aria-label="Previous screens"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+          <button type="button" class="cap" data-scroll="1" aria-label="Next screens"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+      </div>
+      <div class="tour-track">
+        <figure><img src="assets/screenshots/home.webp" alt="CassetteCat home screen with mixes and recently played songs" width="240" height="534" loading="lazy"><figcaption><b>Home</b><span>Mixes made from what you actually play, next to everything you played recently.</span></figcaption></figure>
+        <figure><img src="assets/screenshots/library.webp" alt="CassetteCat library showing an album grid" width="240" height="534" loading="lazy"><figcaption><b>Library</b><span>Browse by song, album, artist, genre or folder, and sort it however you like.</span></figcaption></figure>
+        <figure><img src="assets/screenshots/artists.webp" alt="CassetteCat artists view with artist photos" width="240" height="534" loading="lazy"><figcaption><b>Artists</b><span>Artist photos and bios, filled in for you.</span></figcaption></figure>
+        <figure><img src="assets/screenshots/queue.webp" alt="CassetteCat playback queue" width="240" height="534" loading="lazy"><figcaption><b>Queue</b><span>See what's coming up and drag songs into the order you want.</span></figcaption></figure>
+        <figure><img src="assets/screenshots/lyrics.webp" alt="CassetteCat lyrics screen" width="240" height="534" loading="lazy"><figcaption><b>Lyrics</b><span>Lyrics scroll along with the song. Instrumentals are marked so you're not left waiting.</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section id="features" class="wrap block">
+      <div class="head">
+        <h2>What's on the tape</h2>
+        <p>Everything here is in the app today, and none of it sits behind a subscription.</p>
+      </div>
+      <div class="jcard">
+        <div class="jcard-top"><span>CassetteCat</span><span>C-90 &middot; Type II</span></div>
+        <div class="tape-stripe"></div>
+        <div class="jcard-body">
+          <div class="side">
+            <h3>Side A &middot; Listening</h3>
+            <ol>
+              <li><span>A1</span><div><b>Your local library</b><small>Point it at your music folders and it reads the tags for you.</small></div></li>
+              <li><span>A2</span><div><b>Your own server</b><small>Navidrome, Jellyfin, Gonic, Airsonic or LMS. Save songs for when you're offline.</small></div></li>
+              <li><span>A3</span><div><b>Synced lyrics</b><small>Read from your files or pulled from LRCLIB. Fix the timing yourself if it drifts.</small></div></li>
+              <li><span>A4</span><div><b>EQ with AutoEq</b><small>Pick your headphones and get a correction curve made for them.</small></div></li>
+              <li><span>A5</span><div><b>Internet radio</b><small>Thousands of stations. Search by name, genre or country.</small></div></li>
+              <li><span>A6</span><div><b>In the car</b><small>Android Auto, plus a Drive Mode with big, easy buttons.</small></div></li>
+            </ol>
+          </div>
+          <div class="side">
+            <h3>Side B &middot; Your stuff</h3>
+            <ol>
+              <li><span>B1</span><div><b>Scrobbling</b><small>Send your plays to ListenBrainz or Libre.fm.</small></div></li>
+              <li><span>B2</span><div><b>Rewind</b><small>See what you played each month, and share it as a poster.</small></div></li>
+              <li><span>B3</span><div><b>Listening Room<em>Beta</em></b><small>Play the same song on a few devices across your Wi-Fi.</small></div></li>
+              <li><span>B4</span><div><b>Home screen widget</b><small>Play, pause and skip without opening the app.</small></div></li>
+              <li><span>B5</span><div><b>Backups</b><small>Playlists, favourites and settings in one file you can restore anywhere.</small></div></li>
+              <li><span>B6</span><div><b>Safe logins</b><small>Server passwords are encrypted with the Android Keystore.</small></div></li>
+            </ol>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="features" class="section-container">
-      <div class="section-header">
-        <span class="section-pill-tag">Features</span>
-        <h2 class="section-title">Built for the music you own.</h2>
-        <p class="section-subtitle">
-          Local library playback, Subsonic and Jellyfin streaming, headphone equalizer profiles, and internet radio, designed with a clean hi-fi feel.
-        </p>
+    <section id="desktop" class="wrap block" style="padding-top:0">
+      <div class="head">
+        <h2>Also on your computer</h2>
+        <p>Windows and Linux today, with a small hardware player on the way.</p>
       </div>
-
-      <div class="rare-bento-grid">
-        <div class="bento-card wide">
-          <div class="bento-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--silver)"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg>
-          </div>
-          <div class="bento-heading">Local Library</div>
-          <div class="bento-desc">Scans your device with folder filtering and full metadata support.</div>
-        </div>
-
-        <div class="bento-card">
-          <div class="bento-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#38BDF8"><rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><path d="M6 6.5h.01M6 17.5h.01"/></svg>
-          </div>
-          <div class="bento-heading">Self-Hosted Streaming</div>
-          <div class="bento-desc">Subsonic and Jellyfin, with offline caching.</div>
-        </div>
-
-        <div class="bento-card">
-          <div class="bento-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#F59E0B"><path d="M4 20V10M10 20V4M16 20v-9M22 20v-4"/></svg>
-          </div>
-          <div class="bento-heading">EQ &amp; AutoEq</div>
-          <div class="bento-desc">A graphic equalizer plus calibration profiles for your headphones.</div>
-        </div>
-
-        <div class="bento-card wide">
-          <div class="bento-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.2 19.1 19.1"/></svg>
-          </div>
-          <div class="bento-heading">Internet Radio</div>
-          <div class="bento-desc">Tens of thousands of live stations, searchable by name, tag, or country.</div>
-        </div>
-
-        <div class="bento-card">
-          <div class="bento-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#A5B4FC"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>
-          </div>
-          <div class="bento-heading">Synced Lyrics</div>
-          <div class="bento-desc">Real-time lyrics from LRCLIB or embedded tags.</div>
-        </div>
-
-        <div class="bento-card">
-          <div class="bento-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#10B981"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-          </div>
-          <div class="bento-heading">Encrypted Credentials</div>
-          <div class="bento-desc">Hardware-backed AES-256. No accounts, no ads.</div>
-        </div>
-
-        <div class="bento-card">
-          <div class="bento-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#EC4899"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9a9 9 0 0 1 9 9"/><path d="M2 13a5 5 0 0 1 5 5"/><circle cx="4" cy="20" r="1"/></svg>
-          </div>
-          <div class="bento-heading">
-            Listening Room
-            <span class="bento-badge-inline">Beta</span>
-          </div>
-          <div class="bento-desc">Sync playback with nearby devices over your local Wi-Fi.</div>
-        </div>
-
-        <div class="bento-card">
-          <div class="bento-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#06B6D4"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
-          </div>
-          <div class="bento-heading">Android Auto</div>
-          <div class="bento-desc">Browse your library and control playback from the car.</div>
-        </div>
-
-        <div class="bento-card">
-          <div class="bento-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--silver)"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-          </div>
-          <div class="bento-heading">Home Screen Widget</div>
-          <div class="bento-desc">Play, pause, and skip from your home screen.</div>
-        </div>
-
-        <div class="bento-card">
-          <div class="bento-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--silver)"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
-          </div>
-          <div class="bento-heading">Scrobbling</div>
-          <div class="bento-desc">Track plays with ListenBrainz and Libre.fm.</div>
-        </div>
-
-        <div class="bento-card wide">
-          <div class="bento-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#6B7F9E"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 19h16"/></svg>
-          </div>
-          <div class="bento-heading">Backup &amp; Restore</div>
-          <div class="bento-desc">Export and restore your library, playlists, and settings.</div>
-        </div>
-
-        <div class="bento-card wide">
-          <div class="bento-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#FBBF24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
-          </div>
-          <div class="bento-heading">Listening Stats &amp; Rewind</div>
-          <div class="bento-desc">Monthly listening time, top artists, and a shareable poster.</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="desktop" class="section-container">
-      <div class="section-header">
-        <span class="section-pill-tag">Platforms</span>
-        <h2 class="section-title">Desktop &amp; dedicated hardware.</h2>
-        <p class="section-subtitle">
-          Take your library from your phone to your computer, or build a dedicated physical player.
-        </p>
-      </div>
-
-      <div class="platforms-grid">
-        <div class="platform-card">
-          <div class="platform-card-top">
-            <div class="desktop-os-row">
-              <span class="desktop-os-tag">
-                <img src="assets/windows.svg" alt="Windows" width="16" height="16">
-                <span>Windows</span>
-              </span>
-              <span class="desktop-os-tag">
-                <img src="assets/linux.svg" alt="Linux" width="16" height="16">
-                <span>Linux</span>
-              </span>
-            </div>
-            <span class="bento-badge-inline">Desktop</span>
-          </div>
+      <div class="platforms">
+        <div class="platform">
+          <div class="platform-top"><img src="assets/windows.svg" alt="Windows" width="20" height="20"><img src="assets/linux.svg" alt="Linux" width="20" height="20"></div>
           <h3>CassetteCat for Desktop</h3>
-          <p>
-            Play local music files or stream from Subsonic and Jellyfin right from your computer, with synced lyrics and internet radio.
-          </p>
-          <div class="platform-card-action">
-            <a href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest" class="btn-record-red">
-              <svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 19h16"/></svg>
-              Download Desktop
-            </a>
-          </div>
+          <p>Same player, bigger screen. Play your local files, connect to your server, and keep your lyrics and radio stations.</p>
+          <dl class="formats">
+            <dt>Windows</dt>
+            <dd><a data-asset="windows-x64-setup.exe" href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest">Installer</a><a data-asset="windows-x64.zip" href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest">Portable</a></dd>
+            <dt>Linux</dt>
+            <dd><a data-asset=".AppImage" href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest">AppImage</a><a data-asset=".deb" href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest">.deb</a><a data-asset=".rpm" href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest">.rpm</a><a data-asset=".flatpak" href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest">Flatpak</a></dd>
+          </dl>
+          <div class="platform-action"><a id="dl-desktop" href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest" class="btn btn-primary">Download for desktop</a></div>
         </div>
-
-        <div id="hardware" class="platform-card">
-          <div class="platform-card-top">
-            <div class="hw-chip-tag">
-              <svg viewBox="0 0 24 24" fill="none"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg>
-              <span>Dedicated Hardware</span>
-            </div>
-            <span class="bento-badge-inline">Work in progress</span>
-          </div>
-          <h3>Standalone Hardware Player</h3>
-          <p>
-            A dedicated pocket player in development using an ESP32, an onboard display, SD card storage, and a separate audio DAC.
-          </p>
-          <div class="platform-card-action">
-            <a href="https://github.com/samyyy2311/CassetteCat/tree/main/hardware" target="_blank" rel="noopener noreferrer" class="btn-tactile-secondary">
-              Hardware on GitHub
-            </a>
-          </div>
+        <div id="hardware" class="platform">
+          <div class="platform-top"><span class="status">Still being built</span></div>
+          <h3>CassetteCat Player</h3>
+          <p>A pocket music player you can build yourself, with an ESP32, a proper DAC, a colour screen and an SD card. The phone app syncs songs to it and doubles as a remote.</p>
+          <div class="platform-action"><a href="https://github.com/samyyy2311/CassetteCat/tree/main/hardware" target="_blank" rel="noopener noreferrer" class="btn">Follow along on GitHub</a></div>
         </div>
       </div>
     </section>
 
-    <section id="faq" class="section-container">
-      <div class="section-header">
-        <span class="section-pill-tag">FAQ</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">
-          Everything you need to know about CassetteCat, privacy, streaming, and open-source licensing.
-        </p>
-      </div>
-
-      <div class="faq-grid">
-        <div class="faq-item">
-          <h3 class="faq-question">What is CassetteCat?</h3>
-          <p class="faq-answer">CassetteCat is an open-source music player for Android, Windows, and Linux, built for people who want to own their music collection. It plays songs stored on your device, streams from personal Subsonic or Jellyfin libraries, shows synchronized lyrics, and connects to an open-source DIY hardware player.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3 class="faq-question">Does CassetteCat collect or track any user data?</h3>
-          <p class="faq-answer">No. There are no analytics libraries, tracking IDs, accounts, or ads. Your listening history and playlists stay strictly on your phone, and server passwords are encrypted locally using the Android Keystore.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3 class="faq-question">What self-hosted servers are supported?</h3>
-          <p class="faq-answer">It works with Jellyfin and any server that supports the Subsonic API, such as Navidrome, Gonic, Airsonic, and LMS. You can browse your remote library, stream songs, and cache tracks locally so they play when you are offline.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3 class="faq-question">How do synchronized lyrics work?</h3>
-          <p class="faq-answer">CassetteCat first checks for embedded LRC or ID3 tags inside your music files. If they aren't tagged, it pulls live synchronized lyrics from LRCLIB. There is also an in-app lyrics editor if you want to tweak timing or write your own.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3 class="faq-question">What is the CassetteCat DIY hardware player?</h3>
-          <p class="faq-answer">It's an open-hardware pocket player powered by an ESP32 chip, with an audio DAC, color display, and SD card storage. You can use the CassetteCat phone app to manage files or control what is playing over local Wi-Fi.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3 class="faq-question">Is CassetteCat compatible with Android Auto?</h3>
-          <p class="faq-answer">Yes. It supports Android Auto and Android Automotive OS (AAOS), letting you browse albums, launch playlists, and listen to internet radio right from your car's dashboard.</p>
-        </div>
+    <section class="privacy">
+      <div class="wrap">
+        <p><strong>No ads. No tracking. No account.</strong> Your listening history stays on your phone. Lyrics and artwork lookups are optional, and you can turn each one off. <a href="/privacy">Read the privacy policy</a></p>
       </div>
     </section>
 
-    <section class="section-container">
-      <div class="open-source-banner">
-        <h3>Built in the open.</h3>
-        <p>All code is public. You can inspect the source, report bugs, suggest features, or contribute on GitHub.</p>
-        <a href="https://github.com/samyyy2311/CassetteCat" class="btn-record-red">
-          <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-          View CassetteCat on GitHub
-        </a>
-        <div class="open-source-meta-row">
-          <span>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-            GPL-3.0 licensed
-          </span>
-          <span>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-            Public commit history
-          </span>
-          <span>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-            Issues welcome
-          </span>
-        </div>
+    <section id="faq" class="wrap block faq">
+      <div class="head">
+        <h2>Questions</h2>
+        <p>Can't find what you need? <a href="https://github.com/samyyy2311/CassetteCat/issues" target="_blank" rel="noopener">Ask on GitHub</a>.</p>
+      </div>
+      <div>
+        <details>
+          <summary>What is CassetteCat?</summary>
+          <p>A music player for Android, Windows and Linux, made for people who keep their own music. It plays what's on your device, streams from your own Subsonic or Jellyfin server, and shows lyrics that scroll along with the song. It's free and the code is open.</p>
+        </details>
+        <details>
+          <summary>Does it collect any of my data?</summary>
+          <p>No. There's no analytics, no ads and no account to create. Your history and playlists stay on your phone, nothing is sent to us, and server passwords are encrypted on the device.</p>
+        </details>
+        <details>
+          <summary>Which servers can I connect to?</summary>
+          <p>Jellyfin, and anything that speaks the Subsonic API: Navidrome, Gonic, Airsonic, LMS and others. You can browse your library, stream, and keep songs on the phone for offline listening.</p>
+        </details>
+        <details>
+          <summary>Where do the lyrics come from?</summary>
+          <p>First from your files, if they have LRC or ID3 lyrics embedded. If not, CassetteCat looks them up on LRCLIB. If the timing is off, you can fix it in the lyrics editor.</p>
+        </details>
+        <details>
+          <summary>What's the hardware player?</summary>
+          <p>A small open-hardware music player built around an ESP32, with a DAC, a colour screen and an SD card. It's still in progress. The phone app can already send songs to it and control playback over Wi-Fi.</p>
+        </details>
+        <details>
+          <summary>Does it work with Android Auto?</summary>
+          <p>Yes. It works with Android Auto and Android Automotive, so you can pick albums, playlists and radio stations from your car's screen.</p>
+        </details>
+        <details>
+          <summary>Is there an iPhone or Mac version?</summary>
+          <p>Not right now. CassetteCat runs on Android, Windows and Linux.</p>
+        </details>
+        <details>
+          <summary>Is it on F-Droid?</summary>
+          <p>Not yet, the F-Droid listing is still pending. Until then you can grab the APK from GitHub, or add the repository to Obtainium to get updates automatically.</p>
+        </details>
+        <details>
+          <summary>Can I bring my playlists from another player?</summary>
+          <p>Yes. CassetteCat imports M3U and M3U8 playlists, which most players can export. Your music files are picked up by the library scan, so there's nothing else to move.</p>
+        </details>
       </div>
     </section>
 
-    <section id="credits" class="section-container">
-      <div class="section-header">
-        <span class="section-pill-tag">Credits</span>
-        <h2 class="section-title">Built on open work.</h2>
-        <p class="section-subtitle">
-          CassetteCat relies on these open-source projects, public services, and fonts. You can also view this list inside the app under Settings &gt; Credits.
-        </p>
+    <section id="credits" class="wrap block" style="padding-top:0">
+      <div class="head">
+        <h2>Thanks</h2>
+        <p>CassetteCat is open source under the GPL-3.0 and <a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener">lives on GitHub</a>. It's built on top of these projects and services.</p>
       </div>
-
-      <div class="credits-grid">
+      <div class="credits">
         <div>
-          <div class="credits-col-title">Services &amp; Data</div>
-          <ul class="credits-list">
-            <li><a href="https://lrclib.net" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="#38BDF8"><path d="M14,2H6C4.9,2 4,2.9 4,4v16c0,1.1 0.9,2 2,2h12c1.1,0 2,-0.9 2,-2V8L14,2zM13,3.5L18.5,9H13V3.5zM7,12h10v1.5H7V12zM7,15h10v1.5H7V15zM7,18h7v1.5H7V18z"/></svg><span><strong>LRCLIB</strong>, synced lyrics</span></a></li>
-            <li><a href="https://deezer.com" target="_blank" rel="noopener noreferrer"><svg width="17" height="17" viewBox="0 0 24 24" fill="#A238FF"><title>Deezer</title><path d="M.693 10.024c.381 0 .693-1.256.693-2.807 0-1.55-.312-2.807-.693-2.807C.312 4.41 0 5.666 0 7.217s.312 2.808.693 2.808ZM21.038 1.56c-.364 0-.684.805-.91 2.096C19.765 1.446 19.184 0 18.526 0c-.78 0-1.464 2.036-1.784 5-.312-2.158-.788-3.536-1.325-3.536-.745 0-1.386 2.704-1.62 6.472-.442-1.932-1.083-3.145-1.793-3.145s-1.35 1.213-1.793 3.145c-.242-3.76-.874-6.463-1.628-6.463-.537 0-1.013 1.378-1.325 3.535C6.938 2.036 6.262 0 5.474 0c-.658 0-1.247 1.447-1.602 3.665-.217-1.291-.546-2.105-.91-2.105-.675 0-1.221 2.807-1.221 6.272 0 3.466.546 6.273 1.221 6.273.277 0 .537-.476.736-1.273.32 2.928.996 4.938 1.776 4.938.606 0 1.143-1.204 1.507-3.11.251 3.622.875 6.195 1.602 6.195.46 0 .875-1.023 1.187-2.677C10.142 21.6 11 24 12.004 24c1.005 0 1.863-2.4 2.235-5.822.312 1.654.727 2.677 1.186 2.677.728 0 1.352-2.573 1.603-6.195.364 1.906.9 3.11 1.507 3.11.78 0 1.455-2.01 1.775-4.938.208.797.46 1.273.737 1.273.675 0 1.22-2.807 1.22-6.273-.008-3.457-.553-6.272-1.23-6.272ZM23.307 10.024c.381 0 .693-1.256.693-2.807 0-1.55-.312-2.807-.693-2.807-.381 0-.693 1.256-.693 2.807s.312 2.808.693 2.808Z"/></svg><span><strong>Deezer</strong>, artist images</span></a></li>
-            <li><a href="https://theaudiodb.com" target="_blank" rel="noopener noreferrer"><svg width="17" height="17" viewBox="0 0 24 24" fill="#6599CD"><path d="M2,10h2v4H2v-4zM6,6h2v12H6V6zM10,2h2v20h-2V2zM14,6h2v12h-2V6zM18,10h2v4h-2v-4z"/></svg><span><strong>TheAudioDB</strong>, artist images &amp; bios</span></a></li>
-            <li><a href="https://radio-browser.info" target="_blank" rel="noopener noreferrer"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2.5" fill="#F97316"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.2 19.1 19.1"/></svg><span><strong>Radio Browser</strong>, internet radio directory</span></a></li>
-            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer"><svg width="17" height="17" viewBox="0 0 24 24"><path fill="var(--text)" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/></svg><span><strong>GitHub</strong>, release update checks</span></a></li>
-            <li><a href="https://wikipedia.org" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24"><path fill="var(--text)" d="M12.09,13.119c-0.936,1.932 -2.217,4.548 -2.853,5.728 -0.616,1.074 -1.127,0.931 -1.532,0.029 -1.406,-3.321 -4.293,-9.144 -5.651,-12.409 -0.251,-0.601 -0.441,-0.987 -0.619,-1.139 -0.181,-0.15 -0.554,-0.24 -1.122,-0.271C0.103,5.033 0,4.982 0,4.898v-0.455l0.052,-0.045c0.924,-0.005 5.401,0 5.401,0l0.051,0.045v0.434c0,0.119 -0.075,0.176 -0.225,0.176l-0.564,0.031c-0.485,0.029 -0.727,0.164 -0.727,0.436 0,0.135 0.053,0.33 0.166,0.601 1.082,2.646 4.818,10.521 4.818,10.521l0.136,0.046 2.411,-4.81 -0.482,-1.067 -1.658,-3.264s-0.318,-0.654 -0.428,-0.872c-0.728,-1.443 -0.712,-1.518 -1.447,-1.617 -0.207,-0.023 -0.313,-0.05 -0.313,-0.149v-0.468l0.06,-0.045h4.292l0.113,0.037v0.451c0,0.105 -0.076,0.15 -0.227,0.15l-0.308,0.047c-0.792,0.061 -0.661,0.381 -0.136,1.422l1.582,3.252 1.758,-3.504c0.293,-0.64 0.233,-0.801 0.111,-0.947 -0.07,-0.084 -0.305,-0.22 -0.812,-0.24l-0.201,-0.021c-0.052,0 -0.098,-0.015 -0.145,-0.051 -0.045,-0.031 -0.067,-0.076 -0.067,-0.129v-0.427l0.061,-0.045c1.247,-0.008 4.043,0 4.043,0l0.059,0.045v0.436c0,0.121 -0.059,0.178 -0.193,0.178 -0.646,0.03 -0.782,0.095 -1.023,0.439 -0.12,0.186 -0.375,0.589 -0.646,1.039l-2.301,4.273 -0.065,0.135 2.792,5.712 0.17,0.048 4.396,-10.438c0.154,-0.422 0.129,-0.722 -0.064,-0.895 -0.197,-0.172 -0.346,-0.273 -0.857,-0.295l-0.42,-0.016c-0.061,0 -0.105,-0.014 -0.152,-0.045 -0.043,-0.029 -0.072,-0.075 -0.072,-0.119v-0.436l0.059,-0.045h4.961l0.041,0.045v0.437c0,0.119 -0.074,0.18 -0.209,0.18 -0.648,0.03 -1.127,0.18 -1.443,0.421 -0.314,0.255 -0.557,0.616 -0.736,1.067 0,0 -4.043,9.258 -5.426,12.339 -0.525,1.007 -1.053,0.917 -1.503,-0.031 -0.571,-1.171 -1.773,-3.786 -2.646,-5.71l0.053,-0.036z"/></svg><span><strong>Wikipedia &amp; Wikimedia</strong>, bios (CC BY-SA 4.0)</span></a></li>
-            <li><a href="https://musicbrainz.org" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="#BA478F"><title>MusicBrainz</title><path d="M11.582 0L1.418 5.832v12.336L11.582 24V10.01L7.1 12.668v3.664c.01.111.01.225 0 .336-.103.435-.54.804-1 1.111-.802.537-1.752.509-2.166-.111-.413-.62-.141-1.631.666-2.168.384-.28.863-.399 1.334-.332V6.619c0-.154.134-.252.226-.308L11.582 3zm.836 0v6.162c.574.03 1.14.16 1.668.387a2.225 2.225 0 0 0 1.656-.717 1.02 1.02 0 1 1 1.832-.803l.004.006a1.022 1.022 0 0 1-1.295 1.197c-.34.403-.792.698-1.297.85.34.263.641.576.891.928a1.04 1.04 0 0 1 .777.125c.768.486.568 1.657-.318 1.857-.886.2-1.574-.77-1.09-1.539.02-.03.042-.06.065-.09a3.598,3.598 0 0 0-1.436-1.166 4.142,4.142 0 0 0-1.457-.369v4.01c.855.06 1.256.493 1.555.834.227.256.356.39.578.402.323.018.568.008.806 0a5.44,5.44 0 0 1 .895.022c.94-.017 1.272-.226 1.605-.446a2.533,2.533 0 0 1 1.131-.463 1.027,1.027 0 0 1 .12-.263 1.04,1.04 0 0 1 .105-.137c.023-.025.047-.044.07-.066a4.775,4.775 0 0 1 0-2.405l-.012,-0.01a1.02,1.02 0 1 1 .692.272h-.057a4.288,4.288 0 0 0 0 1.877h.063a1.02,1.02 0 1 1-.545 1.883l-.047-.033a1,1 0 0 1-.352-.442 1.885,1.885 0 0 0-.814.354 3.03,3.03 0 0 1-.703.365c.757.555 1.772,1.6 2.199,2.299a1.03,1.03 0 0 1 .256-.033 1.02,1.02 0 1 1-.545 1.88l-.047-.03a1.017,1.017 0 0 1-.27-1.376 0.72,0.72 0 0 1 .051-.072c-.445-.775-2.026-2.28-2.46-2.387a4.037,4.037 0 0 0-1.31-.117c-.24,0.008-.513,0.018-.866,0-.515-.027-.783-.333-1.043-.629-.26-.296-.51-.56-1.055-.611V18.5a1.877,1.877 0 0 0 .426-.135.333.333 0 0 1 .058-.027c.56-.267 1.421-.91 2.096-2.447a1.02,1.02 0 0 1-.27-1.344 1.02,1.02 0 1 1 .915 1.54 6.273,6.273 0 0 1-1.432 2.136 1.785,1.785 0 0 1 .691.306.667.667 0 0 0 .37 0.168 3.31,3.31 0 0 0 .888-.222 1.02,1.02 0 0 1 1.787-.79v-.005a1.02,1.02 0 0 1-.773 1.683 1.022,1.022 0 0 1-.719-.287 3.935,3.935 0 0 1-1.168 0.287h-.05a1.313,1.313 0 0 1-.71-.275c-.262-.177-.51-.345-1.402-.12a2.098,2.098 0 0 1-.707 0.2V24l10.164-5.832V5.832zm4.154 4.904a.352.352 0 0 0-.197.639l.018.01c.163.1.378.053.484-.108v-.002a.352.352 0 0 0-.303-.539zm-4.99 1.928L7.082 9.5v2l4.5-2.668zm8.385.38a.352.352 0 0 0-.295.165v.002a.35.35 0 0 0 .096.473l.013.01a.357.357 0 0 0 .487-.108.352.352 0 0 0-.301-.541zM16.09 8.647a.352.352 0 0 0-.277.163.355.355 0 0 0 .296.54c.482 0 .463-.73-.02-.703zm3.877 2.477a.352.352 0 0 0-.295.164.35.35 0 0 0 .094.475l.015.01a.357.357 0 0 0 .485-.11.352.352 0 0 0-.3-.539zm-4.375 3.594a.352.352 0 0 0-.291.172.35.35 0 0 0-.04.265.352.352 0 1 0 .33-.437zm4.375.789a.352.352 0 0 0-.295.164v.002a.352.352 0 0 0 .094.473l.015.01a.357.357 0 0 0 .485-.108.352.352 0 0 0-.3-.54zm-2.803 2.488v.002a.347.347 0 0 0-.223.084.352.352 0 0 0 .23.62.347.347 0 0 0 .23-.085.348.348 0 0 0 .12-.24.353.353 0 0 0-.35-.38.347.347 0 0 0-.007 0Z"/></svg><span><strong>MusicBrainz</strong>, metadata</span></a></li>
-            <li><a href="https://coverartarchive.org" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 25 28"><polygon points="12 0 0 7 0 21 12 28 12 0" fill="#20656C"/><polygon points="13 0 25 7 25 21 13 28 13 0" fill="#EB743B"/></svg><span><strong>Cover Art Archive</strong>, cover scans</span></a></li>
-            <li><a href="https://listenbrainz.org" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 32 32"><polygon fill="#353070" points="15.5 2 3.5 9 3.5 23 15.5 30 15.5 2"/><polygon fill="#eb743b" points="16.5 2 28.5 9 28.5 23 16.5 30 16.5 2"/></svg><span><strong>ListenBrainz</strong>, open scrobbling</span></a></li>
-            <li><a href="https://libre.fm" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 34 17"><rect width="34" height="17" rx="3" fill="#990000"/><text x="17" y="12.5" font-family="'IBM Plex Mono',monospace" font-size="7.5" font-weight="600" fill="#FFFFFF" text-anchor="middle" letter-spacing="-0.3">libre.fm</text></svg><span><strong>Libre.fm</strong>, GNU FM scrobbling</span></a></li>
+          <h3>Services &amp; Data</h3>
+          <ul>
+            <li><a href="https://lrclib.net" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="#38BDF8"><path d="M14,2H6C4.9,2 4,2.9 4,4v16c0,1.1 0.9,2 2,2h12c1.1,0 2,-0.9 2,-2V8L14,2zM13,3.5L18.5,9H13V3.5zM7,12h10v1.5H7V12zM7,15h10v1.5H7V15zM7,18h7v1.5H7V18z"/></svg><span><strong>LRCLIB</strong>, synced lyrics</span></a></li>
+            <li><a href="https://deezer.com" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="#A238FF"><path d="M.693 10.024c.381 0 .693-1.256.693-2.807 0-1.55-.312-2.807-.693-2.807C.312 4.41 0 5.666 0 7.217s.312 2.808.693 2.808ZM21.038 1.56c-.364 0-.684.805-.91 2.096C19.765 1.446 19.184 0 18.526 0c-.78 0-1.464 2.036-1.784 5-.312-2.158-.788-3.536-1.325-3.536-.745 0-1.386 2.704-1.62 6.472-.442-1.932-1.083-3.145-1.793-3.145s-1.35 1.213-1.793 3.145c-.242-3.76-.874-6.463-1.628-6.463-.537 0-1.013 1.378-1.325 3.535C6.938 2.036 6.262 0 5.474 0c-.658 0-1.247 1.447-1.602 3.665-.217-1.291-.546-2.105-.91-2.105-.675 0-1.221 2.807-1.221 6.272 0 3.466.546 6.273 1.221 6.273.277 0 .537-.476.736-1.273.32 2.928.996 4.938 1.776 4.938.606 0 1.143-1.204 1.507-3.11.251 3.622.875 6.195 1.602 6.195.46 0 .875-1.023 1.187-2.677C10.142 21.6 11 24 12.004 24c1.005 0 1.863-2.4 2.235-5.822.312 1.654.727 2.677 1.186 2.677.728 0 1.352-2.573 1.603-6.195.364 1.906.9 3.11 1.507 3.11.78 0 1.455-2.01 1.775-4.938.208.797.46 1.273.737 1.273.675 0 1.22-2.807 1.22-6.273-.008-3.457-.553-6.272-1.23-6.272ZM23.307 10.024c.381 0 .693-1.256.693-2.807 0-1.55-.312-2.807-.693-2.807-.381 0-.693 1.256-.693 2.807s.312 2.808.693 2.808Z"/></svg><span><strong>Deezer</strong>, artist images</span></a></li>
+            <li><a href="https://theaudiodb.com" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="#6599CD"><path d="M2,10h2v4H2v-4zM6,6h2v12H6V6zM10,2h2v20h-2V2zM14,6h2v12h-2V6zM18,10h2v4h-2v-4z"/></svg><span><strong>TheAudioDB</strong>, artist images &amp; bios</span></a></li>
+            <li><a href="https://radio-browser.info" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2.5" fill="#F97316"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.2 19.1 19.1"/></svg><span><strong>Radio Browser</strong>, internet radio directory</span></a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path fill="var(--ink)" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/></svg><span><strong>GitHub</strong>, release update checks</span></a></li>
+            <li><a href="https://wikipedia.org" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path fill="var(--ink)" d="M12.09,13.119c-0.936,1.932 -2.217,4.548 -2.853,5.728 -0.616,1.074 -1.127,0.931 -1.532,0.029 -1.406,-3.321 -4.293,-9.144 -5.651,-12.409 -0.251,-0.601 -0.441,-0.987 -0.619,-1.139 -0.181,-0.15 -0.554,-0.24 -1.122,-0.271C0.103,5.033 0,4.982 0,4.898v-0.455l0.052,-0.045c0.924,-0.005 5.401,0 5.401,0l0.051,0.045v0.434c0,0.119 -0.075,0.176 -0.225,0.176l-0.564,0.031c-0.485,0.029 -0.727,0.164 -0.727,0.436 0,0.135 0.053,0.33 0.166,0.601 1.082,2.646 4.818,10.521 4.818,10.521l0.136,0.046 2.411,-4.81 -0.482,-1.067 -1.658,-3.264s-0.318,-0.654 -0.428,-0.872c-0.728,-1.443 -0.712,-1.518 -1.447,-1.617 -0.207,-0.023 -0.313,-0.05 -0.313,-0.149v-0.468l0.06,-0.045h4.292l0.113,0.037v0.451c0,0.105 -0.076,0.15 -0.227,0.15l-0.308,0.047c-0.792,0.061 -0.661,0.381 -0.136,1.422l1.582,3.252 1.758,-3.504c0.293,-0.64 0.233,-0.801 0.111,-0.947 -0.07,-0.084 -0.305,-0.22 -0.812,-0.24l-0.201,-0.021c-0.052,0 -0.098,-0.015 -0.145,-0.051 -0.045,-0.031 -0.067,-0.076 -0.067,-0.129v-0.427l0.061,-0.045c1.247,-0.008 4.043,0 4.043,0l0.059,0.045v0.436c0,0.121 -0.059,0.178 -0.193,0.178 -0.646,0.03 -0.782,0.095 -1.023,0.439 -0.12,0.186 -0.375,0.589 -0.646,1.039l-2.301,4.273 -0.065,0.135 2.792,5.712 0.17,0.048 4.396,-10.438c0.154,-0.422 0.129,-0.722 -0.064,-0.895 -0.197,-0.172 -0.346,-0.273 -0.857,-0.295l-0.42,-0.016c-0.061,0 -0.105,-0.014 -0.152,-0.045 -0.043,-0.029 -0.072,-0.075 -0.072,-0.119v-0.436l0.059,-0.045h4.961l0.041,0.045v0.437c0,0.119 -0.074,0.18 -0.209,0.18 -0.648,0.03 -1.127,0.18 -1.443,0.421 -0.314,0.255 -0.557,0.616 -0.736,1.067 0,0 -4.043,9.258 -5.426,12.339 -0.525,1.007 -1.053,0.917 -1.503,-0.031 -0.571,-1.171 -1.773,-3.786 -2.646,-5.71l0.053,-0.036z"/></svg><span><strong>Wikipedia &amp; Wikimedia</strong>, bios (CC BY-SA 4.0)</span></a></li>
+            <li><a href="https://musicbrainz.org" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="#BA478F"><path d="M11.582 0L1.418 5.832v12.336L11.582 24V10.01L7.1 12.668v3.664c.01.111.01.225 0 .336-.103.435-.54.804-1 1.111-.802.537-1.752.509-2.166-.111-.413-.62-.141-1.631.666-2.168.384-.28.863-.399 1.334-.332V6.619c0-.154.134-.252.226-.308L11.582 3zm.836 0v6.162c.574.03 1.14.16 1.668.387a2.225 2.225 0 0 0 1.656-.717 1.02 1.02 0 1 1 1.832-.803l.004.006a1.022 1.022 0 0 1-1.295 1.197c-.34.403-.792.698-1.297.85.34.263.641.576.891.928a1.04 1.04 0 0 1 .777.125c.768.486.568 1.657-.318 1.857-.886.2-1.574-.77-1.09-1.539.02-.03.042-.06.065-.09a3.598,3.598 0 0 0-1.436-1.166 4.142,4.142 0 0 0-1.457-.369v4.01c.855.06 1.256.493 1.555.834.227.256.356.39.578.402.323.018.568.008.806 0a5.44,5.44 0 0 1 .895.022c.94-.017 1.272-.226 1.605-.446a2.533,2.533 0 0 1 1.131-.463 1.027,1.027 0 0 1 .12-.263 1.04,1.04 0 0 1 .105-.137c.023-.025.047-.044.07-.066a4.775,4.775 0 0 1 0-2.405l-.012,-0.01a1.02,1.02 0 1 1 .692.272h-.057a4.288,4.288 0 0 0 0 1.877h.063a1.02,1.02 0 1 1-.545 1.883l-.047-.033a1,1 0 0 1-.352-.442 1.885,1.885 0 0 0-.814.354 3.03,3.03 0 0 1-.703.365c.757.555 1.772,1.6 2.199,2.299a1.03,1.03 0 0 1 .256-.033 1.02,1.02 0 1 1-.545 1.88l-.047-.03a1.017,1.017 0 0 1-.27-1.376 0.72,0.72 0 0 1 .051-.072c-.445-.775-2.026-2.28-2.46-2.387a4.037,4.037 0 0 0-1.31-.117c-.24,0.008-.513,0.018-.866,0-.515-.027-.783-.333-1.043-.629-.26-.296-.51-.56-1.055-.611V18.5a1.877,1.877 0 0 0 .426-.135.333.333 0 0 1 .058-.027c.56-.267 1.421-.91 2.096-2.447a1.02,1.02 0 0 1-.27-1.344 1.02,1.02 0 1 1 .915 1.54 6.273,6.273 0 0 1-1.432 2.136 1.785,1.785 0 0 1 .691.306.667.667 0 0 0 .37 0.168 3.31,3.31 0 0 0 .888-.222 1.02,1.02 0 0 1 1.787-.79v-.005a1.02,1.02 0 0 1-.773 1.683 1.022,1.022 0 0 1-.719-.287 3.935,3.935 0 0 1-1.168 0.287h-.05a1.313,1.313 0 0 1-.71-.275c-.262-.177-.51-.345-1.402-.12a2.098,2.098 0 0 1-.707 0.2V24l10.164-5.832V5.832zm4.154 4.904a.352.352 0 0 0-.197.639l.018.01c.163.1.378.053.484-.108v-.002a.352.352 0 0 0-.303-.539zm-4.99 1.928L7.082 9.5v2l4.5-2.668zm8.385.38a.352.352 0 0 0-.295.165v.002a.35.35 0 0 0 .096.473l.013.01a.357.357 0 0 0 .487-.108.352.352 0 0 0-.301-.541zM16.09 8.647a.352.352 0 0 0-.277.163.355.355 0 0 0 .296.54c.482 0 .463-.73-.02-.703zm3.877 2.477a.352.352 0 0 0-.295.164.35.35 0 0 0 .094.475l.015.01a.357.357 0 0 0 .485-.11.352.352 0 0 0-.3-.539zm-4.375 3.594a.352.352 0 0 0-.291.172.35.35 0 0 0-.04.265.352.352 0 1 0 .33-.437zm4.375.789a.352.352 0 0 0-.295.164v.002a.352.352 0 0 0 .094.473l.015.01a.357.357 0 0 0 .485-.108.352.352 0 0 0-.3-.54zm-2.803 2.488v.002a.347.347 0 0 0-.223.084.352.352 0 0 0 .23.62.347.347 0 0 0 .23-.085.348.348 0 0 0 .12-.24.353.353 0 0 0-.35-.38.347.347 0 0 0-.007 0Z"/></svg><span><strong>MusicBrainz</strong>, metadata</span></a></li>
+            <li><a href="https://coverartarchive.org" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 25 28"><polygon points="12 0 0 7 0 21 12 28 12 0" fill="#20656C"/><polygon points="13 0 25 7 25 21 13 28 13 0" fill="#EB743B"/></svg><span><strong>Cover Art Archive</strong>, cover scans</span></a></li>
+            <li><a href="https://listenbrainz.org" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 32 32"><polygon fill="#353070" points="15.5 2 3.5 9 3.5 23 15.5 30 15.5 2"/><polygon fill="#eb743b" points="16.5 2 28.5 9 28.5 23 16.5 30 16.5 2"/></svg><span><strong>ListenBrainz</strong>, open scrobbling</span></a></li>
+            <li><a href="https://libre.fm" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 34 17"><rect width="34" height="17" rx="3" fill="#990000"/><text x="17" y="12.5" font-family="'IBM Plex Mono',monospace" font-size="7.5" font-weight="600" fill="#FFFFFF" text-anchor="middle" letter-spacing="-0.3">libre.fm</text></svg><span><strong>Libre.fm</strong>, GNU FM scrobbling</span></a></li>
           </ul>
         </div>
-
         <div>
-          <div class="credits-col-title">Core Audio &amp; Architecture</div>
-          <ul class="credits-list">
-            <li><a href="https://github.com/jaakkopasanen/AutoEq" target="_blank" rel="noopener"><img src="assets/autoeq.svg" alt="AutoEq" width="17" height="17" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><span><strong>AutoEq</strong>, headphone EQ curves</span></a></li>
-            <li><a href="https://developer.android.com/media/media3" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="#3DDC84"><title>Android</title><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg><span><strong>AndroidX Media3</strong>, playback engine</span></a></li>
-            <li><a href="https://developer.android.com/reference/android/media/audiofx/AudioEffect" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="#3DDC84"><title>Android AudioFX</title><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg><span><strong>Android AudioFX</strong>, EQ &amp; DSP</span></a></li>
-            <li><a href="https://kotlinlang.org/docs/coroutines-overview.html" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24"><path fill="#7F52FF" d="M24,0 L0,0 L12,12 Z"/><path fill="#C811E2" d="M0,0 L12,12 L0,24 Z"/><path fill="#E24462" d="M12,12 L24,24 L0,24 Z"/></svg><span><strong>KotlinX Coroutines</strong>, async state</span></a></li>
-            <li><a href="https://developer.android.com/topic/libraries/architecture/datastore" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="#4285F4"><title>Jetpack DataStore</title><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg><span><strong>Jetpack DataStore</strong>, local storage</span></a></li>
-            <li><a href="https://github.com/square/okhttp" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="#006AFF"><title>Square</title><path d="M4.01 0A4.01 4.01 0 000 4.01v15.98c0 2.21 1.8 4 4.01 4.01h15.98C22.2 24 24 22.2 24 19.99V4A4.01 4.01 0 0019.99 0H4zm1.62 4.36h12.74c.7 0 1.26.57 1.26 1.27v12.74c0 .7-.56 1.27-1.26 1.27H5.63c-.7 0-1.26-.57-1.26-1.27V5.63a1.27,1.27 0 011.26-1.27zm3.83 4.35a0.73.73 0 00-.73.73v5.09c0 .4.32.72.72.72h5.1a0.73.73 0 00.73-.72V9.44a0.73.73 0 00-.73-.73h-5.1Z"/></svg><span><strong>OkHttp</strong>, HTTP client</span></a></li>
+          <h3>Core Audio &amp; Architecture</h3>
+          <ul>
+            <li><a href="https://github.com/jaakkopasanen/AutoEq" target="_blank" rel="noopener"><img aria-hidden="true" src="assets/autoeq.svg" alt="AutoEq" width="18" height="18"><span><strong>AutoEq</strong>, headphone EQ curves</span></a></li>
+            <li><a href="https://developer.android.com/media/media3" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="#3DDC84"><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg><span><strong>AndroidX Media3</strong>, playback engine</span></a></li>
+            <li><a href="https://developer.android.com/reference/android/media/audiofx/AudioEffect" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="#3DDC84"><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg><span><strong>Android AudioFX</strong>, EQ &amp; DSP</span></a></li>
+            <li><a href="https://kotlinlang.org/docs/coroutines-overview.html" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path fill="#7F52FF" d="M24,0 L0,0 L12,12 Z"/><path fill="#C811E2" d="M0,0 L12,12 L0,24 Z"/><path fill="#E24462" d="M12,12 L24,24 L0,24 Z"/></svg><span><strong>KotlinX Coroutines</strong>, async state</span></a></li>
+            <li><a href="https://developer.android.com/topic/libraries/architecture/datastore" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="#4285F4"><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg><span><strong>Jetpack DataStore</strong>, local storage</span></a></li>
+            <li><a href="https://github.com/square/okhttp" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="#006AFF"><path d="M4.01 0A4.01 4.01 0 000 4.01v15.98c0 2.21 1.8 4 4.01 4.01h15.98C22.2 24 24 22.2 24 19.99V4A4.01 4.01 0 0019.99 0H4zm1.62 4.36h12.74c.7 0 1.26.57 1.26 1.27v12.74c0 .7-.56 1.27-1.26 1.27H5.63c-.7 0-1.26-.57-1.26-1.27V5.63a1.27,1.27 0 011.26-1.27zm3.83 4.35a0.73.73 0 00-.73.73v5.09c0 .4.32.72.72.72h5.1a0.73.73 0 00.73-.72V9.44a0.73.73 0 00-.73-.73h-5.1Z"/></svg><span><strong>OkHttp</strong>, HTTP client</span></a></li>
           </ul>
         </div>
-
         <div>
-          <div class="credits-col-title">Design &amp; Typography</div>
-          <ul class="credits-list">
-            <li><a href="https://lucide.dev" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="#F56565"><title>Lucide</title><path d="M18.483 1.123a1.09 1.09 0 0 0-.752.362 1.09 1.09 0 0 0 .088 1.54 11.956 11.956 0 0 1 4 8.946 7.62 7.62 0 0 1-7.637 7.636 7.62 7.62 0 0 1-7.637-7.636 3.255 3.255 0 0 1 3.273-3.273c1.82 0 3.273,1.45 3.273,3.273a1.09 1.09 0 0 0 1.09 1.09 1.09 1.09 0 0 0 1.092-1.09c0-3-2.455-5.455-5.455-5.455s-5.454,2.455-5.454 5.455c0 5.408 4.408,9.818 9.818,9.818 5.41 0 9.818-4.41 9.818-9.818A14.16,14.16 0 0 0 19.272 1.4a1.09 1.09 0 0 0-.789-.277ZM9.818 2.15C4.408 2.151 0 6.561 0 11.97a14.16 14.16 0 0 0 4.8 10.637 1.09 1.09 0 0 0 1.54-.096 1.09 1.09 0 0 0-.095-1.54 11.957 11.957 0 0 1-4.063-9 7.62 7.62 0 0 1 7.636-7.637 7.62 7.62 0 0 1 7.637 7.636 3.256 3.256 0 0 1-3.273 3.273 3.256 3.256 0 0 1-3.273-3.273 1.09 1.09 0 0 0-1.09-1.09 1.09 1.09 0 0 0-1.092 1.09c0 3 2.455 5.455 5.455 5.455s5.454-2.455 5.454-5.455c0-5.408-4.408-9.818-9.818-9.818z"/></svg><span><strong>Lucide Icons</strong>, iconography</span></a></li>
-            <li><a href="https://simpleicons.org" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="#FFFFFF"><title>Simple Icons</title><path d="M18 6a6 6 0 10-6 6 6 6 0 015.35 9h1.5A7.5 7.5 0 0012 10.5 4.5 4.5 0 1116.5 6Zm-6-3a3 3 0 000 6 1 1 0 000-6m0 1.5a1.5 1.5 0 010 3 1 1 0 010-3M7.5 15v1.5H9v6H4.5V24h15v-1.5H15v-6h1.5V15Zm3 1.5h3v6h-3zm-6 1.5a7.5 7.5 0 00.7 3h1.5a6 6 0 01-.7-3Z"/></svg><span><strong>Simple Icons</strong>, brand marks</span></a></li>
-            <li><a href="https://github.com/IBM/plex" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 1075 401.15" fill="#0F62FE"><title>IBM</title><g><rect y="373.17" width="194.43" height="27.932"/><rect y="319.83" width="194.43" height="27.932"/><rect x="55.468" y="266.54" width="83.399" height="27.932"/><rect x="55.468" y="213.25" width="83.399" height="27.932"/><rect x="55.468" y="159.96" width="83.399" height="27.932"/><rect x="55.468" y="106.58" width="83.399" height="27.932"/><rect y="53.288" width="194.43" height="27.932"/><rect width="194.43" height="27.932"/><path d="m222.17 400.85 207.11 0.297c27.734 0 52.793-10.697 71.513-27.932h-278.62z"/><path d="m222.17 347.76h299.03c5.051-8.617 8.815-18.027 11.094-27.932h-310.12z"/><rect x="277.73" y="266.54" width="83.3" height="27.932"/><path d="m444.43 266.54v27.932h90.927c0-9.608-1.288-19.017-3.764-27.932z"/><path d="m497.92 213.25h-220.19v27.932h243.46c-6.34-10.698-14.165-20.107-23.277-27.932z"/><path d="m277.73 159.96v27.932h220.19c9.311-7.825 17.135-17.235 23.277-27.932z"/><rect x="277.73" y="106.58" width="83.3" height="27.932"/><path d="m444.43 134.51h87.163c2.476-8.914 3.764-18.324 3.764-27.932h-90.927z"/><path d="m521.2 53.288h-299.03v27.932h310.12c-2.575-9.905-6.339-19.314-11.093-27.932z"/><path d="m429.28 0h-207.11v27.932h278.53c-18.621-17.235-43.878-27.932-71.414-27.932z"/><polygon points="555.57 81.22 742.67 81.22 733.06 53.288 555.57 53.288"/><polygon points="555.57 27.932 724.25 27.932 714.64 0 555.57 0"/><polygon points="861.03 401.17 861.03 373.24 1000 373.24 1000 401.17"/><polygon points="861.03 347.76 861.03 319.83 1000 319.83 1000 347.76"/><polygon points="777.73 182.54 769.91 159.96 694.43 159.96 611.03 159.96 611.03 187.89 694.43 187.89 694.43 162.24 703.25 187.89 852.22 187.89 861.03 162.24 861.03 187.89 944.43 187.89 944.43 159.96 861.03 159.96 785.56 159.96"/><polygon points="944.43 106.58 803.98 106.58 794.37 134.51 944.43 134.51"/><polygon points="1000 27.932 1000 0 840.93 0 831.32 27.932"/><polygon points="768.13 373.22 777.73 400.85 787.34 373.22"/><polygon points="749.5 319.83 759.31 347.76 796.16 347.76 806.06 319.83"/><polygon points="730.78 266.54 740.59 294.47 814.88 294.47 824.68 266.54"/><polygon points="721.97 241.18 833.6 241.18 843.11 213.25 712.36 213.25"/><polygon points="611.03 134.51 761.09 134.51 751.49 106.58 611.03 106.58"/><polygon points="1000 53.288 822.4 53.288 812.9 81.22 1000 81.22"/><rect x="555.57" y="373.22" width="138.97" height="27.932"/><rect x="555.57" y="319.83" width="138.97" height="27.932"/><rect x="611.03" y="266.54" width="83.399" height="27.932"/><rect x="611.03" y="213.25" width="83.399" height="27.932"/><rect x="861.03" y="213.25" width="83.399" height="27.932"/><rect x="861.03" y="266.54" width="83.399" height="27.932"/></g></svg><span><strong>IBM Plex</strong>, Sans &amp; Mono (OFL 1.1)</span></a></li>
-            <li><a href="https://github.com/floriankarsten/space-grotesk" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="rgba(255,255,255,0.06)"/><text x="12" y="17" font-family="'Space Grotesk',sans-serif" font-size="14" font-weight="700" fill="var(--text)" text-anchor="middle">S</text></svg><span><strong>Space Grotesk</strong>, display type (OFL 1.1)</span></a></li>
-            <li><a href="https://developer.android.com/jetpack/compose" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="#4285F4"><title>Jetpack Compose</title><path d="M12.135.003a2.577 2.577 0 0 0-1.42.344L2.55 5.06a2.577 2.577 0 0 0-.953.967l3.957 2.17a1.765 1.765 0 0 1 .603-.588l4.951-2.86a1.761 1.761 0 0 1 1.76 0l4.951 2.86a1.753 1.753 0 0 1 .526.46l3.921-2.265a2.577 2.577 0 0 0-.816-.744L13.291.347a2.577 2.577 0 0 0-1.152-.34Zm-.145 4.912a1.36 1.36 0 0 0-.68.182L6.36 7.953a1.345 1.345 0 0 0-.454.435l1.92 1.055a1.05 1.05 0 0 1 .31-.275l3.34-1.928a1.054 1.054 0 0 1 1.051 0l3.336 1.928a1.066 1.066 0 0 1 .238.199l.018-.01-.002-.002 1.877-1.08a1.353 1.353 0 0 0-.373-.322l-4.95-2.86a1.357 1.357 0 0 0-.68-.178Zm10.432 1.149-3.92 2.26a1.757 1.757 0 0 1 .2.812v5.715c0 .627-.332 1.21-.88 1.528l-4.95 2.86a1.761 1.761 0 0 1-.64.214v4.524a2.577 2.577 0 0 0 1.059-.313l8.162-4.713a2.577 2.577 0 0 0 1.289-2.23V7.297a2.577 2.577 0 0 0-.318-1.228Zm-20.937.238a2.577 2.577 0 0 0-.227.99v9.43c0 .918.491 1.767 1.293 2.229l8.162 4.713a2.57 2.57 0 0 0 1.225.336v-4.531a1.761 1.761 0 0 1-.833-.235L6.156 16.38a1.765 1.765 0 0 1-.877-1.528V9.136a1.776 1.776 0 0 1 .131-.676Zm16.67 2.223-1.89 1.092a1.058 1.058 0 0 1 .124.46v3.856c0 .378-.2.72-.526.907l-3.336 1.93a1.04 1.04 0 0 1-.295.107v2.17c.152-.027.304-.078.44-.157l4.949-2.859a1.36 1.36 0 0 0 .68-1.18V9.136a1.36 1.36 0 0 0-.147-.607Zm-12.387.13a1.36 1.36 0 0 0-.088.481v5.715a1.36 1.36 0 0 0 .68 1.18l4.95 2.86c.194.112.412.166.627.177v-2.174a1.054 1.054 0 0 1-.46-.123L8.14 14.843a1.054 1.054 0 0 1-.532-.908v-3.853a.99.99 0 0 1 .077-.38l-.034-.013z"/></svg><span><strong>Jetpack Compose</strong> &amp; Material 3</span></a></li>
+          <h3>Design &amp; Typography</h3>
+          <ul>
+            <li><a href="https://lucide.dev" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="#F56565"><path d="M18.483 1.123a1.09 1.09 0 0 0-.752.362 1.09 1.09 0 0 0 .088 1.54 11.956 11.956 0 0 1 4 8.946 7.62 7.62 0 0 1-7.637 7.636 7.62 7.62 0 0 1-7.637-7.636 3.255 3.255 0 0 1 3.273-3.273c1.82 0 3.273,1.45 3.273,3.273a1.09 1.09 0 0 0 1.09 1.09 1.09 1.09 0 0 0 1.092-1.09c0-3-2.455-5.455-5.455-5.455s-5.454,2.455-5.454 5.455c0 5.408 4.408,9.818 9.818,9.818 5.41 0 9.818-4.41 9.818-9.818A14.16,14.16 0 0 0 19.272 1.4a1.09 1.09 0 0 0-.789-.277ZM9.818 2.15C4.408 2.151 0 6.561 0 11.97a14.16 14.16 0 0 0 4.8 10.637 1.09 1.09 0 0 0 1.54-.096 1.09 1.09 0 0 0-.095-1.54 11.957 11.957 0 0 1-4.063-9 7.62 7.62 0 0 1 7.636-7.637 7.62 7.62 0 0 1 7.637 7.636 3.256 3.256 0 0 1-3.273 3.273 3.256 3.256 0 0 1-3.273-3.273 1.09 1.09 0 0 0-1.09-1.09 1.09 1.09 0 0 0-1.092 1.09c0 3 2.455 5.455 5.455 5.455s5.454-2.455 5.454-5.455c0-5.408-4.408-9.818-9.818-9.818z"/></svg><span><strong>Lucide Icons</strong>, iconography</span></a></li>
+            <li><a href="https://simpleicons.org" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18 6a6 6 0 10-6 6 6 6 0 015.35 9h1.5A7.5 7.5 0 0012 10.5 4.5 4.5 0 1116.5 6Zm-6-3a3 3 0 000 6 1 1 0 000-6m0 1.5a1.5 1.5 0 010 3 1 1 0 010-3M7.5 15v1.5H9v6H4.5V24h15v-1.5H15v-6h1.5V15Zm3 1.5h3v6h-3zm-6 1.5a7.5 7.5 0 00.7 3h1.5a6 6 0 01-.7-3Z"/></svg><span><strong>Simple Icons</strong>, brand marks</span></a></li>
+            <li><a href="https://github.com/IBM/plex" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 1075 401.15" fill="#0F62FE"><g><rect y="373.17" width="194.43" height="27.932"/><rect y="319.83" width="194.43" height="27.932"/><rect x="55.468" y="266.54" width="83.399" height="27.932"/><rect x="55.468" y="213.25" width="83.399" height="27.932"/><rect x="55.468" y="159.96" width="83.399" height="27.932"/><rect x="55.468" y="106.58" width="83.399" height="27.932"/><rect y="53.288" width="194.43" height="27.932"/><rect width="194.43" height="27.932"/><path d="m222.17 400.85 207.11 0.297c27.734 0 52.793-10.697 71.513-27.932h-278.62z"/><path d="m222.17 347.76h299.03c5.051-8.617 8.815-18.027 11.094-27.932h-310.12z"/><rect x="277.73" y="266.54" width="83.3" height="27.932"/><path d="m444.43 266.54v27.932h90.927c0-9.608-1.288-19.017-3.764-27.932z"/><path d="m497.92 213.25h-220.19v27.932h243.46c-6.34-10.698-14.165-20.107-23.277-27.932z"/><path d="m277.73 159.96v27.932h220.19c9.311-7.825 17.135-17.235 23.277-27.932z"/><rect x="277.73" y="106.58" width="83.3" height="27.932"/><path d="m444.43 134.51h87.163c2.476-8.914 3.764-18.324 3.764-27.932h-90.927z"/><path d="m521.2 53.288h-299.03v27.932h310.12c-2.575-9.905-6.339-19.314-11.093-27.932z"/><path d="m429.28 0h-207.11v27.932h278.53c-18.621-17.235-43.878-27.932-71.414-27.932z"/><polygon points="555.57 81.22 742.67 81.22 733.06 53.288 555.57 53.288"/><polygon points="555.57 27.932 724.25 27.932 714.64 0 555.57 0"/><polygon points="861.03 401.17 861.03 373.24 1000 373.24 1000 401.17"/><polygon points="861.03 347.76 861.03 319.83 1000 319.83 1000 347.76"/><polygon points="777.73 182.54 769.91 159.96 694.43 159.96 611.03 159.96 611.03 187.89 694.43 187.89 694.43 162.24 703.25 187.89 852.22 187.89 861.03 162.24 861.03 187.89 944.43 187.89 944.43 159.96 861.03 159.96 785.56 159.96"/><polygon points="944.43 106.58 803.98 106.58 794.37 134.51 944.43 134.51"/><polygon points="1000 27.932 1000 0 840.93 0 831.32 27.932"/><polygon points="768.13 373.22 777.73 400.85 787.34 373.22"/><polygon points="749.5 319.83 759.31 347.76 796.16 347.76 806.06 319.83"/><polygon points="730.78 266.54 740.59 294.47 814.88 294.47 824.68 266.54"/><polygon points="721.97 241.18 833.6 241.18 843.11 213.25 712.36 213.25"/><polygon points="611.03 134.51 761.09 134.51 751.49 106.58 611.03 106.58"/><polygon points="1000 53.288 822.4 53.288 812.9 81.22 1000 81.22"/><rect x="555.57" y="373.22" width="138.97" height="27.932"/><rect x="555.57" y="319.83" width="138.97" height="27.932"/><rect x="611.03" y="266.54" width="83.399" height="27.932"/><rect x="611.03" y="213.25" width="83.399" height="27.932"/><rect x="861.03" y="213.25" width="83.399" height="27.932"/><rect x="861.03" y="266.54" width="83.399" height="27.932"/></g></svg><span><strong>IBM Plex</strong>, Sans &amp; Mono (OFL 1.1)</span></a></li>
+            <li><a href="https://github.com/floriankarsten/space-grotesk" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="rgba(255,255,255,0.06)"/><text x="12" y="17" font-family="'Space Grotesk',sans-serif" font-size="14" font-weight="700" fill="var(--ink)" text-anchor="middle">S</text></svg><span><strong>Space Grotesk</strong>, display type (OFL 1.1)</span></a></li>
+            <li><a href="https://developer.android.com/jetpack/compose" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="#4285F4"><path d="M12.135.003a2.577 2.577 0 0 0-1.42.344L2.55 5.06a2.577 2.577 0 0 0-.953.967l3.957 2.17a1.765 1.765 0 0 1 .603-.588l4.951-2.86a1.761 1.761 0 0 1 1.76 0l4.951 2.86a1.753 1.753 0 0 1 .526.46l3.921-2.265a2.577 2.577 0 0 0-.816-.744L13.291.347a2.577 2.577 0 0 0-1.152-.34Zm-.145 4.912a1.36 1.36 0 0 0-.68.182L6.36 7.953a1.345 1.345 0 0 0-.454.435l1.92 1.055a1.05 1.05 0 0 1 .31-.275l3.34-1.928a1.054 1.054 0 0 1 1.051 0l3.336 1.928a1.066 1.066 0 0 1 .238.199l.018-.01-.002-.002 1.877-1.08a1.353 1.353 0 0 0-.373-.322l-4.95-2.86a1.357 1.357 0 0 0-.68-.178Zm10.432 1.149-3.92 2.26a1.757 1.757 0 0 1 .2.812v5.715c0 .627-.332 1.21-.88 1.528l-4.95 2.86a1.761 1.761 0 0 1-.64.214v4.524a2.577 2.577 0 0 0 1.059-.313l8.162-4.713a2.577 2.577 0 0 0 1.289-2.23V7.297a2.577 2.577 0 0 0-.318-1.228Zm-20.937.238a2.577 2.577 0 0 0-.227.99v9.43c0 .918.491 1.767 1.293 2.229l8.162 4.713a2.57 2.57 0 0 0 1.225.336v-4.531a1.761 1.761 0 0 1-.833-.235L6.156 16.38a1.765 1.765 0 0 1-.877-1.528V9.136a1.776 1.776 0 0 1 .131-.676Zm16.67 2.223-1.89 1.092a1.058 1.058 0 0 1 .124.46v3.856c0 .378-.2.72-.526.907l-3.336 1.93a1.04 1.04 0 0 1-.295.107v2.17c.152-.027.304-.078.44-.157l4.949-2.859a1.36 1.36 0 0 0 .68-1.18V9.136a1.36 1.36 0 0 0-.147-.607Zm-12.387.13a1.36 1.36 0 0 0-.088.481v5.715a1.36 1.36 0 0 0 .68 1.18l4.95 2.86c.194.112.412.166.627.177v-2.174a1.054 1.054 0 0 1-.46-.123L8.14 14.843a1.054 1.054 0 0 1-.532-.908v-3.853a.99.99 0 0 1 .077-.38l-.034-.013z"/></svg><span><strong>Jetpack Compose</strong> &amp; Material 3</span></a></li>
           </ul>
         </div>
       </div>
-
-      <div style="margin-top:32px; padding-top:24px; border-top:1px solid var(--border);">
-        <a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:9px; font-size:13px; color:var(--text-2);">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M5.072 13.931a.62.62 0 00-.52.338c-.114.211-.388.242-.516.201-.21-.07-.48-.119-.744.068-.263.187-.546.045-.495-.297.05-.34.172-.645.5-.83.713-.41.216-.695.607-1.108.394-.412.307-.537.293-1.1-1.326-.2-2.077-.58-2.915-1.63C.442 8.528.117 7.664.03 6.35-.057 5.033.02 4.18.588 3.09 1.156 2 1.756 1.475 2.788.93 3.825.383 4.84.254 5.78.271c.938.014 1.563.082 2.093.386.53.303 1.016.684 1.324.685.24.015.477-.053.673-.192.04 1.02-.878 1.108-1.698 1.13-.82.02-1.324-.317-2.08-.192-.754.128-1.992.47-2.595 1.52-.603 1.05-.624 1.42-.573 2.3.05.879.806 1.535 1.234 1.543.428.007.523-.117.898-.36.374-.246 2.284-2.61 2.934-3.14.653-.53 1.296-.696 1.99-.705.695-.008.87.015 1.433.246.56.229.903.652 1.355.91.23-.135.375-.34.584-.495.76-.552 1.152-.702 2.053-.615.518.052 1.17.347 1.56.686.693.604 1.265 1.44 1.727 2.079.36.497.785 1.09 1.392 1.277.66.2 1.157-.652 1.23-1.13.043-.27.097-.505.097-.8 0-.297-.03-.655-.115-.965a3.453 3.453 0 00-.392-.87c-.258-.415-.68-.85-1.116-1.071-.246-.125-.826-.353-1.19-.36-.449-.01-.79.14-1.202.168-.5.034-1.396.146-1.786-.24-.25-.246-.283-.41-.324-.73a.76.76 0 00.4.162c.314.026.606-.23.86-.378.21-.123.504-.34.778-.45.704-.285 1.567-.278 2.31-.2.594.06 1.367.324 1.89.62.525.297 1.03.798 1.4 1.269.465.594.72 1.104.888 1.844.216.945.277 2.365.015 3.299-.205.734-.887 1.86-1.467 2.414-.573.547-1.235.81-1.986.955.03.149.033.29.071.416.056.178.163.375.38.313.086-.025.133-.047.246.053.115.1.056.484-.266.66-.164.085-.334.103-.595.11a5.61 5.61 0 01-.953-.046c-.283-.047-.45-.272-.765-.308-.484-.055-.854-.404-1.244-.653-.162-.104-.218-.104-.31-.158.05.154.117.314.15.465.034.145.02.284.037.403.02.12.052.21.07.308.077.068.103.173.233.207.13.035.334-.018.468-.037.135-.018.224-.09.327-.07.105.02.204.096.292.166s.164.08.234.254c.07.178.135.537.146.777.01.24-.018.455-.089.648-.07.19-.135.273-.327.463s-.505.465-.818.66c.058.084.083.162.173.254.09.094.277.197.36.295.083.098.126.168.126.277a.587.587 0 01-.092.373c-.223.3-.483.352-.803.492.054.334.098.572.02.906-.03.137-.102.445-.27.525-.17.08-.492.041-.698.074-.205.031-.32.063-.48.094-.097.141-.24.297-.29.422-.05.127-.034.172.006.3.042.128.185.315.225.468a.93.93 0 01.01.463.834.834 0 01-.23.396c-.128.135-.38.24-.508.346-.125.11-.252.123-.217.303.047.248.41.646.67.744a.793.793 0 00.557-.04c-.014.208-.195.353-.315.493.322-.094.636-.27.854-.504-.067.203-.3.529-.645.816-.345.287-.343.229-.517.344.314.06.606.045.85.002a1.69 1.69 0 01-.64.207 1.876 1.876 0 01-.73-.055c-.26-.063-.499-.301-.814-.465.03.119.053.26.185.38.136.12.335.183.55.284-.273-.03-.559-.037-.825-.096a2.083 2.083 0 01-.478-.164c-.144-.07-.255-.176-.384-.264.06.117.08.256.184.352.104.098.275.135.412.199-.143-.004-.28.029-.43-.01a1.166 1.166 0 01-.443-.21 3.165 3.165 0 01-.445-.395c-.132-.145-.296-.332-.345-.463-.048-.133.03-.225.044-.338-.09.06-.2.094-.272.18-.07.088-.131.166-.1.318.03.15.171.338.27.506-.295-.242-.46-.336-.53-.625-.064-.273.104-.52.233-.725.064-.104.161-.2.22-.3-.134-.128-.284-.24-.4-.388-.112-.15-.161-.352-.276-.492-.117-.143-.274-.232-.41-.348.119.256.317.572.359.77.044.2-.048.323-.12.43-.07.108-.183.134-.291.198-.11.068-.277.016-.342.113s-.083.246-.021.344l.256.398a1.173 1.173 0 01-.327-.28c-.074-.097-.186-.189-.2-.317-.015-.13-.022-.246.064-.363.084-.117.318-.156.422-.246.105-.09.162-.148.156-.264-.006-.117-.12-.2-.217-.273-.3-.225-.68-.43-.934-.699a.931.931 0 01-.24-.379c-.03-.105.002-.188.072-.314.072-.13.315-.305.346-.443.029-.14-.095-.172-.205-.22-.111-.05-.322.024-.425-.062-.103-.086.03-.266-.086-.365-.116-.099-.38-.045-.52-.15a.724.724 0 01-.24-.395.828.828 0 01-.02-.436c.032-.113.128-.133.187-.19.06-.058.108-.105.03-.192-.074-.088-.33.004-.476-.105-.15-.113-.06-.38-.163-.494-.104-.109-.287-.066-.386-.104-.097-.035-.135.09-.194-.109-.06-.199-.063-.797-.143-1.02-.08-.223-.238-.016-.31-.236-.076-.22-.005-.574-.038-.908l-.15-.91c-.52.352-.867.463-1.428.561-.047 1.373-.176 2.182.29 3.705.466 1.521 1.409 2.42 2.68 3.707-1.68-1.256-2.478-2.279-2.98-3.588-.501-1.31-.406-2.407-.356-3.666z"/></svg>
-          <span><strong style="color:var(--text);">GNU GPL v3.0</strong>, full source on GitHub</span>
-        </a>
-      </div>
     </section>
+
   </main>
 
-  <footer class="rare-footer">
-    <div class="rare-footer-left">
-      <span class="rare-footer-brand">Cassette<span>Cat</span></span>
-      <span style="color:var(--text-3);">·</span>
-      <span style="color:var(--text-3);">Open source.</span>
-      <span style="color:var(--text-3);">·</span>
-      <a href="https://caffeinelabs.in" target="_blank" rel="noopener" style="color:var(--text-3);">CaffeineLabs</a>
-    </div>
-
-    <div class="rare-footer-links">
-      <a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener">GitHub</a>
-      <a href="/changelog">Changelog</a>
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
+  <div class="tape-stripe"></div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>CassetteCat · GPL-3.0 · by <a href="https://caffeinelabs.in" target="_blank" rel="noopener">CaffeineLabs</a></span>
+      <nav aria-label="Footer">
+        <a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener">GitHub</a>
+        <a href="/changelog">Changelog</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </nav>
     </div>
   </footer>
 
-  <script src="assets/main.js?v=20260922"></script>
+  <script src="assets/main.js?v=20261005"></script>
 </body>
 
 </html>

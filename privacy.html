@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy · CassetteCat</title>
-  <meta name="description" content="Privacy policy for the CassetteCat music player. How we handle your data, storage permissions, and server credentials.">
+  <meta name="description" content="Privacy policy for the CassetteCat music player and website. What stays on your device, what online services are used, and how your passwords are stored.">
   <meta property="og:title" content="Privacy · CassetteCat">
   <meta property="og:description" content="Privacy policy for the CassetteCat music player.">
   <meta property="og:url" content="https://cassettecat.caffeinelabs.in/privacy">
@@ -23,7 +23,9 @@
   <link rel="manifest" href="manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%C2%B7%26-.:&display=swap">
+  <link rel="stylesheet" href="assets/style.css?v=20261002">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,50 +50,19 @@
 
 <body>
 
-  <div class="rare-nav-wrapper">
-    <nav class="rare-nav-bar" aria-label="Main Navigation">
-      <a href="/" class="rare-brand">
-        <img src="assets/play_store_icon_512.png" alt="CassetteCat logo" class="rare-brand-icon" width="28" height="28">
-        <span class="rare-brand-text">Cassette<span>Cat</span></span>
-      </a>
-
-      <div class="rare-links">
-        <a href="/#features" class="rare-nav-link">Features</a>
-        <span class="rare-nav-divider"></span>
-        <a href="/#desktop" class="rare-nav-link">Desktop</a>
-        <span class="rare-nav-divider"></span>
-        <a href="/#hardware" class="rare-nav-link">Hardware</a>
-        <span class="rare-nav-divider"></span>
-        <a href="/#credits" class="rare-nav-link">Credits</a>
-        <span class="rare-nav-divider"></span>
-        <a href="/changelog" class="rare-nav-link">Changelog</a>
-      </div>
-
-      <div class="rare-actions">
-        <a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener noreferrer" class="rare-gh-btn" aria-label="View on GitHub">
-          <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.35.95.1-.74.4-1.25.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.04 11.04 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
-          <span>GitHub</span>
-          <span id="gh-star-count" class="rare-star-badge" style="display:none;">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <span id="gh-star-count-value"></span>
-          </span>
-        </a>
-
-        <button type="button" id="rare-mobile-btn" class="rare-icon-btn rare-mobile-btn" aria-label="Toggle navigation menu" aria-expanded="false">
-          <svg viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
-        </button>
-      </div>
-    </nav>
-
-    <div id="rare-mobile-menu" class="rare-mobile-menu">
-      <a href="/#features">Features</a>
-      <a href="/#desktop">Desktop</a>
-      <a href="/#hardware">Hardware</a>
-      <a href="/#credits">Credits</a>
-      <a href="/changelog">Changelog</a>
-      <a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener">GitHub</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a href="/" class="brand"><img src="assets/play_store_icon_512.png" alt="" width="26" height="26"><span>CassetteCat</span></a>
+      <nav aria-label="Main">
+        <a href="/#features" class="wide">Features</a>
+        <a href="/#desktop" class="wide">Desktop</a>
+        <a href="/#faq" class="wide">FAQ</a>
+        <a href="/changelog" class="wide">Changelog</a>
+        <a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener" class="gh cap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.35.95.1-.74.4-1.25.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.04 11.04 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>GitHub<span id="gh-stars" hidden></span></a>
+        <a href="/#download" class="narrow nav-dl cap cap-accent">Download</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
   <main class="frame">
     <div class="doc-layout">
@@ -99,7 +70,7 @@
       <div class="doc-head">
         <h1>Privacy Policy</h1>
         <div class="doc-head-meta">
-          <span><b>Effective</b> August 2026</span>
+          <span><b>Effective</b> September 2026</span>
           <span class="sep">·</span>
           <span><b>App</b> CassetteCat</span>
           <span class="sep">·</span>
@@ -114,174 +85,223 @@
         <ol>
           <li><a href="#scope"><span class="toc-num">01</span>Scope and Summary</a></li>
           <li><a href="#data"><span class="toc-num">02</span>Data We Collect</a></li>
-          <li><a href="#storage"><span class="toc-num">03</span>Storage & Audio Access</a></li>
-          <li><a href="#credentials"><span class="toc-num">04</span>Server Credentials</a></li>
-          <li><a href="#third-party"><span class="toc-num">05</span>Third Party Services</a></li>
-          <li><a href="#tracking"><span class="toc-num">06</span>Tracking & Ads</a></li>
-          <li><a href="#retention"><span class="toc-num">07</span>Data Retention & Deletion</a></li>
-          <li><a href="#dpdp"><span class="toc-num">08</span>DPDP Act Rights (India)</a></li>
-          <li><a href="#gdpr"><span class="toc-num">09</span>GDPR Rights (EEA & UK)</a></li>
-          <li><a href="#children"><span class="toc-num">10</span>Children's Privacy</a></li>
-          <li><a href="#open-source"><span class="toc-num">11</span>Open Source Transparency</a></li>
-          <li><a href="#contact"><span class="toc-num">12</span>How to Reach Us</a></li>
+          <li><a href="#permissions"><span class="toc-num">03</span>Android Permissions</a></li>
+          <li><a href="#credentials"><span class="toc-num">04</span>Passwords and Tokens</a></li>
+          <li><a href="#third-party"><span class="toc-num">05</span>Online Services</a></li>
+          <li><a href="#local-network"><span class="toc-num">06</span>Local Network Features</a></li>
+          <li><a href="#backups"><span class="toc-num">07</span>Backups</a></li>
+          <li><a href="#tracking"><span class="toc-num">08</span>Tracking and Ads</a></li>
+          <li><a href="#website"><span class="toc-num">09</span>This Website</a></li>
+          <li><a href="#retention"><span class="toc-num">10</span>Deleting Your Data</a></li>
+          <li><a href="#dpdp"><span class="toc-num">11</span>DPDP Act Rights (India)</a></li>
+          <li><a href="#gdpr"><span class="toc-num">12</span>GDPR Rights (EEA and UK)</a></li>
+          <li><a href="#children"><span class="toc-num">13</span>Children's Privacy</a></li>
+          <li><a href="#open-source"><span class="toc-num">14</span>Open Source</a></li>
+          <li><a href="#contact"><span class="toc-num">15</span>How to Reach Us</a></li>
         </ol>
       </aside>
 
       <div class="doc-body">
-        <p class="doc-lede">CassetteCat is a free and open-source music player. We do not collect your personal data, we do not track what you listen to, we do not run advertisements, and your server passwords stay encrypted on your own device.</p>
+        <p class="doc-lede">CassetteCat is a free, open-source music player. We don't collect your personal data, we don't track what you listen to, we don't show ads, and your server passwords stay encrypted on your own device.</p>
 
         <section id="scope">
           <h2><span class="sec-num">01.</span>Scope and Summary</h2>
-          <p>This policy applies to the CassetteCat application (<code>in.caffeinelabs.cassettecat</code>) published on Google Play, GitHub Releases, and F-Droid, as well as the website at <code>cassettecat.caffeinelabs.in</code>.</p>
-          <p>The application is designed for local media playback and direct self-hosted streaming. There is no central account creation, no sign-up wall, and no telemetry backend operated by CaffeineLabs.</p>
+          <p>This policy covers the CassetteCat Android app (<code>in.caffeinelabs.cassettecat</code>) from Google Play and GitHub Releases, the CassetteCat desktop app for Windows and Linux, and this website at <code>cassettecat.caffeinelabs.in</code>.</p>
+          <p>CassetteCat plays music stored on your device and streams from servers you run yourself. There are no accounts, no sign-up, and no server run by CaffeineLabs that the apps report to.</p>
         </section>
 
         <section id="data">
           <h2><span class="sec-num">02.</span>Data We Collect</h2>
-          <p><strong>CaffeineLabs does not receive or store personally identifiable information (PII) from CassetteCat.</strong></p>
-          <p>The app does not access your name, email address, device identifiers (IMEI / Android ID), location data, contact lists, or audio recordings. Playback history, playlists, and listening statistics are stored entirely in your device's local database and are never transmitted to CaffeineLabs.</p>
-          <p>If you enable an optional online service, CassetteCat sends only the information needed for that request. This may include artist, album, and track names for artwork, metadata, lyrics, or scrobbling; a station query for internet radio; or credentials for a server or scrobbling service you configure.</p>
+          <p><strong>CaffeineLabs does not receive or store any personal information from CassetteCat.</strong></p>
+          <p>The apps don't access your name, email address, device identifiers, location, contacts, or microphone. Your playback history, playlists, favourites and listening stats are kept in a local database on your device and are never sent to CaffeineLabs.</p>
+          <p>If you use an online service, CassetteCat sends only what that request needs. That can be an artist, album or track name for artwork, lyrics, metadata or scrobbling, a search for a radio station, or the login details for a server or scrobbling account you set up yourself.</p>
         </section>
 
-        <section id="storage">
-          <h2><span class="sec-num">03.</span>Storage & Audio Access</h2>
-          <p>CassetteCat requests standard audio read permissions on Android:</p>
+        <section id="permissions">
+          <h2><span class="sec-num">03.</span>Android Permissions</h2>
+          <p>The Android app asks for these permissions, and uses each one only for the purpose listed:</p>
           <div class="doc-data-table">
             <div class="doc-data-row">
               <div class="doc-data-key">READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE</div>
-              <div class="doc-data-val">Used solely to scan, index metadata, and play audio files stored on your device's internal storage or SD card. Parsing occurs 100% locally.</div>
+              <div class="doc-data-val">Finds and plays the music files on your device or SD card. Scanning happens entirely on the device.</div>
             </div>
             <div class="doc-data-row">
               <div class="doc-data-key">POST_NOTIFICATIONS / FOREGROUND_SERVICE</div>
-              <div class="doc-data-val">Used to display the system media notification and lock screen playback controls while audio plays in the background.</div>
+              <div class="doc-data-val">Shows the playback notification and lock screen controls, keeps music playing in the background, and keeps song downloads running.</div>
+            </div>
+            <div class="doc-data-row">
+              <div class="doc-data-key">INTERNET / ACCESS_NETWORK_STATE</div>
+              <div class="doc-data-val">Streams from your server and reaches the online services in Section 5.</div>
+            </div>
+            <div class="doc-data-row">
+              <div class="doc-data-key">ACCESS_WIFI_STATE / CHANGE_WIFI_MULTICAST_STATE / CHANGE_NETWORK_STATE / NEARBY_WIFI_DEVICES</div>
+              <div class="doc-data-val">Used only for the Listening Room and for connecting to a CassetteCat Player. Nearby Wi-Fi access is declared as never used for location.</div>
+            </div>
+            <div class="doc-data-row">
+              <div class="doc-data-key">BLUETOOTH_CONNECT</div>
+              <div class="doc-data-val">Shows the name of the connected Bluetooth headphones or speaker on the Now Playing screen. The app does not scan for or pair devices.</div>
+            </div>
+            <div class="doc-data-row">
+              <div class="doc-data-key">DETECT_SCREEN_CAPTURE</div>
+              <div class="doc-data-val">On Android 14 and later, offers a share option after you take a screenshot of the player. The app is only told that a screenshot happened. It never sees the image.</div>
+            </div>
+            <div class="doc-data-row">
+              <div class="doc-data-key">VIBRATE</div>
+              <div class="doc-data-val">Haptic feedback when you tap controls.</div>
             </div>
           </div>
-          <p class="doc-note">CassetteCat does not upload your audio files to CaffeineLabs or metadata providers. When you use an optional online service, descriptive track metadata may be sent as explained in Section 5. Audio is transferred only when you use a server or radio stream that you selected.</p>
+          <p class="doc-note">CassetteCat never uploads your music files to CaffeineLabs or to any metadata service. Audio only travels over the network when you stream from a server or radio station you chose, or share it through the local features in Section 6.</p>
         </section>
 
         <section id="credentials">
-          <h2><span class="sec-num">04.</span>Server Credentials & Encryption</h2>
-          <p>If you connect the app to a self-hosted media server (Subsonic, Navidrome, Gonic, Airsonic, or Jellyfin):</p>
+          <h2><span class="sec-num">04.</span>Passwords and Tokens</h2>
+          <p>When you connect a Subsonic-compatible server (such as Navidrome, Gonic, Airsonic or LMS) or Jellyfin, or sign in to a scrobbling service:</p>
           <ul>
-            <li>Your server endpoint URL, username, and authentication token/password are saved locally.</li>
-            <li>Saved secrets are encrypted using <strong>AES-256-GCM with a key held in Android Keystore</strong>. Android may protect that key in secure hardware when the device supports it.</li>
-            <li>Credentials are transmitted only to the server or scrobbling service you configure. HTTPS connections encrypt data in transit. CassetteCat also permits HTTP for user-managed servers and companion hardware on trusted local networks; HTTP does not provide transport encryption.</li>
+            <li>Your server address, username and password or token are saved on your device only.</li>
+            <li>On Android, they are encrypted with <strong>AES-256-GCM using a key held in the Android Keystore</strong>. The key can't be exported, so it never leaves the device.</li>
+            <li>On desktop, they are stored in your system's password vault: <strong>Windows Credential Manager</strong> on Windows, and the <strong>Secret Service</strong> keyring (such as GNOME Keyring or KWallet) on Linux.</li>
+            <li>Login details are only ever sent to the server or service they belong to. HTTPS encrypts them in transit. CassetteCat also allows plain HTTP for your own servers and for a CassetteCat Player on your home network. HTTP connections are not encrypted.</li>
           </ul>
         </section>
 
         <section id="third-party">
-          <h2><span class="sec-num">05.</span>Third Party Services</h2>
-          <p>CassetteCat connects to the following external services to provide metadata, artwork, and lyrics. Each is individually toggleable in <strong>Settings &gt; External Services</strong>, and all are enabled by default:</p>
+          <h2><span class="sec-num">05.</span>Online Services</h2>
+          <p>CassetteCat can use these services for artwork, lyrics, metadata and radio. On Android, each one can be switched off in <strong>Settings &gt; External Services</strong>, and they are all on by default.</p>
           <div class="doc-data-table">
             <div class="doc-data-row">
               <div class="doc-data-key">LRCLIB (lrclib.net)</div>
-              <div class="doc-data-val">Fetches synchronized scrolling lyrics using song title and artist name, for tracks with no lyrics embedded.</div>
+              <div class="doc-data-val">Looks up synced lyrics by song title and artist when a file has no lyrics of its own.</div>
             </div>
             <div class="doc-data-row">
               <div class="doc-data-key">Deezer</div>
-              <div class="doc-data-val">Looks up artist images and album artwork using artist and album names.</div>
+              <div class="doc-data-val">Looks up artist photos and album covers by artist and album name.</div>
             </div>
             <div class="doc-data-row">
               <div class="doc-data-key">TheAudioDB</div>
-              <div class="doc-data-val">Fallback source for artist images when Deezer has none available.</div>
+              <div class="doc-data-val">A backup source for artist photos and bios when Deezer has none.</div>
             </div>
             <div class="doc-data-row">
-              <div class="doc-data-key">MusicBrainz & Cover Art Archive</div>
-              <div class="doc-data-val">Looks up open music metadata and archival CD/vinyl cover artwork.</div>
+              <div class="doc-data-key">Apple iTunes Search, MusicBrainz and Cover Art Archive</div>
+              <div class="doc-data-val">Find album covers for songs that don't have one, by album and artist name. These are controlled together by the Cover Art Archive switch. Searching for a cover yourself also uses iTunes Search and Deezer.</div>
             </div>
             <div class="doc-data-row">
               <div class="doc-data-key">Radio Browser</div>
-              <div class="doc-data-val">Searches for internet radio stations using the filters or query you enter and retrieves the selected station stream.</div>
+              <div class="doc-data-val">Searches internet radio stations with the words or filters you enter, and plays the station you pick.</div>
             </div>
             <div class="doc-data-row">
-              <div class="doc-data-key">Wikipedia & Wikimedia</div>
-              <div class="doc-data-val">Fetches "About" descriptions for artists and albums using their names.</div>
+              <div class="doc-data-key">Wikipedia and Wikimedia</div>
+              <div class="doc-data-val">Fetches short descriptions of artists and albums by name.</div>
             </div>
             <div class="doc-data-row">
               <div class="doc-data-key">GitHub</div>
-              <div class="doc-data-val">Checks github.com/samyyy2311/CassetteCat for newer app releases. Toggled separately in <strong>Settings &gt; Updates</strong>, not in External Services.</div>
+              <div class="doc-data-val">Checks for new app releases. This has its own switch in <strong>Settings &gt; Data &amp; Updates</strong>.</div>
             </div>
             <div class="doc-data-row">
-              <div class="doc-data-key">ListenBrainz & Libre.fm (Optional)</div>
-              <div class="doc-data-val">Off by default. Only activates if you enter your own user token in Settings, after which playback logs are submitted to your chosen scrobbling profile.</div>
+              <div class="doc-data-key">ListenBrainz and Libre.fm</div>
+              <div class="doc-data-val">Off by default. Only used after you sign in with your own account, and then sends the songs you play to that account.</div>
             </div>
           </div>
-          <p>These services receive the request data described above and handle it under their own privacy policies. You can enable <strong>Offline Blackout Mode</strong> in Settings at any time to immediately disable all outbound network requests across the app, overriding every toggle above.</p>
+          <p>Each service gets only the request described above and handles it under its own privacy policy. <strong>Offline Blackout Mode</strong>, available in both the Android and desktop apps, turns off every online request at once, whatever the individual switches say. The desktop app uses the same services, and Offline Blackout Mode is how you switch them off there.</p>
+        </section>
+
+        <section id="local-network">
+          <h2><span class="sec-num">06.</span>Local Network Features</h2>
+          <ul>
+            <li><strong>Listening Room:</strong> when you start a room, your device streams the song that's playing to the other devices in the room over your Wi-Fi, and keeps playback in sync. Nothing goes through the internet or to CaffeineLabs.</li>
+            <li><strong>CassetteCat Player:</strong> when you pair the hardware player, the app sends it songs, playback commands and settings over your Wi-Fi or the player's own hotspot, and reads back its battery level, storage and firmware version.</li>
+          </ul>
+        </section>
+
+        <section id="backups">
+          <h2><span class="sec-num">07.</span>Backups</h2>
+          <p>You can save your playlists, favourites, listening stats, folder filters and settings to a backup file. The file is saved wherever you choose, and CaffeineLabs never sees it.</p>
+          <p>If Android system backup is turned on for your phone, Android may also copy the app's data to your own Google account backup. Server passwords, scrobbling logins and the crash log are always left out of it. Server passwords are never in backups at all, so you'll need to enter them again after a restore.</p>
         </section>
 
         <section id="tracking">
-          <h2><span class="sec-num">06.</span>Tracking, Analytics & Advertising</h2>
-          <p>CassetteCat is strictly anti-tracking:</p>
+          <h2><span class="sec-num">08.</span>Tracking and Ads</h2>
           <ul>
-            <li><strong>No Advertisements:</strong> No ad networks, banners, or rewarded video SDKs.</li>
-            <li><strong>No Analytics SDKs:</strong> No Google Analytics, Firebase, Crashlytics, or Mixpanel.</li>
-            <li><strong>No Trackers:</strong> No background fingerprinting, advertising IDs, or behavioral analytics.</li>
+            <li><strong>No ads:</strong> no ad networks, banners or rewarded videos.</li>
+            <li><strong>No analytics:</strong> no Google Analytics, Firebase, Crashlytics or similar tools.</li>
+            <li><strong>No tracking:</strong> no advertising IDs, fingerprinting or behaviour tracking.</li>
+          </ul>
+          <p>If the Android app crashes, it writes a crash log that stays on your device. You can view it, clear it, or share it yourself from <strong>Settings &gt; Privacy &amp; Security</strong> if you want to report a bug.</p>
+        </section>
+
+        <section id="website">
+          <h2><span class="sec-num">09.</span>This Website</h2>
+          <p>This website has no cookies, analytics or ads. A few things still happen when you visit:</p>
+          <ul>
+            <li>It is hosted on GitHub Pages, which keeps standard server logs, including your IP address, under GitHub's privacy policy.</li>
+            <li>Fonts load from Google Fonts, so Google receives your IP address and browser details.</li>
+            <li>Your browser asks the GitHub API for the star count, download count and latest release links. GitHub receives your IP address for these requests.</li>
+            <li>Those GitHub responses are saved in your browser's local storage for 15 minutes so the page doesn't ask again on every visit. They contain no personal information, and you can clear them by clearing your browser's site data.</li>
           </ul>
         </section>
 
         <section id="retention">
-          <h2><span class="sec-num">07.</span>Data Retention & Deletion</h2>
-          <p>Because all data lives on your device, you retain absolute ownership. You can permanently delete all app data at any time by:</p>
+          <h2><span class="sec-num">10.</span>Deleting Your Data</h2>
+          <p>Everything CassetteCat stores lives on your device, so you are always in control of it. On Android, you can delete it by:</p>
           <ul>
-            <li>Tapping <em>"Clear Credentials"</em> or <em>"Reset Listening Record"</em> inside CassetteCat Settings.</li>
-            <li>Clearing data in Android System Settings (<em>Settings &gt; Apps &gt; CassetteCat &gt; Storage &gt; Clear Storage</em>).</li>
-            <li>Uninstalling the app from your device.</li>
+            <li>Using <strong>Settings &gt; Privacy &amp; Security</strong> to manage your Listening Record, or to disconnect all servers and remove their saved credentials.</li>
+            <li>Clearing the app's storage in Android settings (<strong>Settings &gt; Apps &gt; CassetteCat &gt; Storage &gt; Clear storage</strong>).</li>
+            <li>Uninstalling the app.</li>
           </ul>
+          <p>On desktop, disconnecting a server or scrobbling account deletes its saved password or token from your system's password vault. Uninstalling removes the app itself.</p>
         </section>
 
         <section id="dpdp">
-          <h2><span class="sec-num">08.</span>Your Rights Under the DPDP Act, 2023</h2>
-          <p>CaffeineLabs is based in India, and this policy is designed to align with the Digital Personal Data Protection Act, 2023 (DPDP Act). Under the Act, a Data Fiduciary must honor a Data Principal's rights to access, correct, and erase their personal data, and must provide a way to raise grievances.</p>
-          <p>Because CassetteCat does not collect or store personal data on any server (see Section 2), these rights are already met by design: your data lives entirely on your device, where you can view, correct, or delete it directly, or by uninstalling the app (see Section 7).</p>
-          <p>For grievances or data-related requests, contact us via GitHub Issues (Section 12). If you choose to connect an optional third-party service (Section 5) using your own account or token, that service's own obligations under the DPDP Act and its own privacy policy apply to that data, not to CaffeineLabs.</p>
+          <h2><span class="sec-num">11.</span>Your Rights Under the DPDP Act, 2023</h2>
+          <p>CaffeineLabs is based in India, and this policy is written to follow the Digital Personal Data Protection Act, 2023. The Act gives you the right to access, correct and erase your personal data, and to raise a complaint.</p>
+          <p>Because CassetteCat doesn't collect or store personal data on any server (see Section 2), these rights are met by design. Your data is on your device, where you can view, change or delete it yourself (see Section 10).</p>
+          <p>For complaints or data requests, contact us through GitHub Issues (Section 15). If you connect an optional service from Section 5 with your own account, that service's obligations and privacy policy apply to that data.</p>
         </section>
 
         <section id="gdpr">
-          <h2><span class="sec-num">09.</span>Your Rights Under the GDPR (EEA & UK)</h2>
-          <p>CassetteCat is distributed globally, including to users in the European Economic Area (EEA) and United Kingdom, where the General Data Protection Regulation (GDPR) applies. The GDPR gives you rights to access, rectify, erase, restrict, or port your personal data, and to object to its processing.</p>
-          <p>Because CassetteCat processes no personal data on any server, CaffeineLabs does not act as a data controller for information generated while using the app; it exists only on your device, under your direct control, and can be exported, corrected, or deleted at any time (see Section 7).</p>
-          <p>Where an optional third-party service in Section 5 processes data on your behalf (for example, a lyric search sent to LRCLIB, or a self-hosted server in Section 4), that service acts as an independent data controller under its own GDPR-compliant privacy policy, not CaffeineLabs.</p>
+          <h2><span class="sec-num">12.</span>Your Rights Under the GDPR (EEA and UK)</h2>
+          <p>CassetteCat is available worldwide, including in the European Economic Area and the United Kingdom, where the General Data Protection Regulation applies. It gives you the right to access, correct, erase, restrict or move your personal data, and to object to how it is processed.</p>
+          <p>CassetteCat processes no personal data on any server, so CaffeineLabs is not a data controller for anything created while you use the apps. That data exists only on your device, under your control, and you can export, change or delete it at any time (see Section 10).</p>
+          <p>When an optional service from Section 5 handles a request for you, such as a lyrics search sent to LRCLIB, or when you connect your own server (Section 4), that service is an independent data controller under its own privacy policy.</p>
         </section>
 
         <section id="children">
-          <h2><span class="sec-num">10.</span>Children's Privacy</h2>
-          <p>CassetteCat is not directed at children under the age of 13. As stated in Section 2, the app does not knowingly collect personal information from anyone, regardless of age.</p>
+          <h2><span class="sec-num">13.</span>Children's Privacy</h2>
+          <p>CassetteCat is not made for children under 13. As Section 2 explains, it doesn't knowingly collect personal information from anyone, whatever their age.</p>
         </section>
 
         <section id="open-source">
-          <h2><span class="sec-num">11.</span>Open Source Transparency</h2>
-          <p>CassetteCat is open-source software licensed under the <strong>GNU General Public License v3.0 (GPL-3.0)</strong>. You can inspect, audit, and build the entire codebase from source:</p>
-          <p><a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener">https://github.com/samyyy2311/CassetteCat</a></p>
+          <h2><span class="sec-num">14.</span>Open Source</h2>
+          <p>CassetteCat is open-source software under the <strong>GNU General Public License v3.0</strong>. You can read, check and build all of the code yourself:</p>
+          <ul>
+            <li>Android: <a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener">github.com/samyyy2311/CassetteCat</a></li>
+            <li>Desktop: <a href="https://github.com/samyyy2311/CassetteCat-Desktop" target="_blank" rel="noopener">github.com/samyyy2311/CassetteCat-Desktop</a></li>
+          </ul>
         </section>
 
         <section id="contact">
-          <h2><span class="sec-num">12.</span>How to Reach Us</h2>
-          <p>For questions or privacy inquiries, open an issue on GitHub:</p>
-          <p><a href="https://github.com/samyyy2311/CassetteCat/issues" target="_blank" rel="noopener">https://github.com/samyyy2311/CassetteCat/issues</a></p>
+          <h2><span class="sec-num">15.</span>How to Reach Us</h2>
+          <p>For questions about privacy, open an issue on GitHub:</p>
+          <p><a href="https://github.com/samyyy2311/CassetteCat/issues" target="_blank" rel="noopener">github.com/samyyy2311/CassetteCat/issues</a></p>
         </section>
 
       </div>
     </div>
   </main>
 
-  <footer class="rare-footer">
-    <div class="rare-footer-left">
-      <span class="rare-footer-brand">Cassette<span>Cat</span></span>
-      <span style="color:var(--text-3);">·</span>
-      <span style="color:var(--text-3);">Open source.</span>
-      <span style="color:var(--text-3);">·</span>
-      <a href="https://caffeinelabs.in" target="_blank" rel="noopener" style="color:var(--text-3);">CaffeineLabs</a>
-    </div>
-
-    <div class="rare-footer-links">
-      <a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener">GitHub</a>
-      <a href="/changelog">Changelog</a>
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
+  <div class="tape-stripe"></div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>CassetteCat · GPL-3.0 · by <a href="https://caffeinelabs.in" target="_blank" rel="noopener">CaffeineLabs</a></span>
+      <nav aria-label="Footer">
+        <a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener">GitHub</a>
+        <a href="/changelog">Changelog</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </nav>
     </div>
   </footer>
 
-  <script src="assets/main.js"></script>
+  <script src="assets/main.js?v=20261002"></script>
 </body>
 
 </html>

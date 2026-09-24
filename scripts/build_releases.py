@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 import html, json, re
+from datetime import date
 from pathlib import Path
 from urllib.request import Request, urlopen
 
 API = "https://api.github.com/repos/samyyy2311/CassetteCat/releases?per_page=100"
-PAGE = Path(__file__).resolve().parents[1] / "changelog.html"
+ROOT = Path(__file__).resolve().parents[1]
+PAGE = ROOT / "changelog.html"
+INDEX = ROOT / "index.html"
+SITEMAP = ROOT / "sitemap.xml"
 
 def inline(text):
     text = html.escape(text, quote=False)
@@ -29,6 +33,30 @@ def parse(body):
         sections[-1][1].append(item.group(1) if item else line)
     return sections or [(None, ["See the release on GitHub for details."])]
 
+def strip_tags(text):
+    return html.unescape(re.sub(r"<[^>]+>", "", text)).strip()
+
+def sync_index(version):
+    page = INDEX.read_text(encoding="utf-8")
+    match = re.search(r'(<script type="application/ld\+json">)(.*?)(</script>)', page, re.S)
+    data = json.loads(match.group(2))
+    faqs = re.findall(r"<details>\s*<summary>(.*?)</summary>\s*<p>(.*?)</p>\s*</details>", page, re.S)
+    for node in data["@graph"]:
+        if node["@type"] == "SoftwareApplication":
+            node["softwareVersion"] = version
+        if node["@type"] == "FAQPage":
+            node["mainEntity"] = [
+                {"@type": "Question", "name": strip_tags(q), "acceptedAnswer": {"@type": "Answer", "text": strip_tags(a)}}
+                for q, a in faqs
+            ]
+    block = json.dumps(data, indent=2, ensure_ascii=False).replace("\n", "\n  ")
+    page = page[:match.start(2)] + "\n  " + block + "\n  " + page[match.end(2):]
+    INDEX.write_text(page, encoding="utf-8")
+
+def sync_sitemap():
+    sitemap = SITEMAP.read_text(encoding="utf-8")
+    SITEMAP.write_text(re.sub(r"<lastmod>[^<]*</lastmod>", f"<lastmod>{date.today().isoformat()}</lastmod>", sitemap), encoding="utf-8")
+
 def main():
     request = Request(API, headers={"Accept": "application/vnd.github+json", "User-Agent": "CassetteCat-site-build"})
     with urlopen(request, timeout=30) as response:
@@ -40,7 +68,7 @@ def main():
         tag = release["tag_name"].removeprefix("v")
         anchor = f"v{tag.replace('.', '-')}"
         toc.append(f'          <li><a href="#{anchor}"><span class="toc-num">{number:02d}</span>v{html.escape(tag)}</a></li>')
-        title = re.sub(rf"^v?{re.escape(tag)}\s*[-–—:]?\s*", "", release.get("name") or "").strip()
+        title = re.sub(rf"^v?{re.escape(tag)}\s*[-\u2013\u2014:]?\s*", "", release.get("name") or "").strip()
         lines = [f'        <section id="{anchor}">', f'          <h2><span class="sec-num">{number:02d}.</span>v{html.escape(tag)}{(" - " + inline(title)) if title else ""}</h2>']
         for category, items in parse(release.get("body") or ""):
             if category:
@@ -55,6 +83,8 @@ def main():
     page = re.sub(r'(<aside class="doc-toc">\s*<h4>Versions</h4>\s*<ol>).*?(</ol>\s*</aside>)', rf"\1\n{'\n'.join(toc)}\n        \2", page, flags=re.DOTALL)
     page = re.sub(r'(<div class="doc-body">\s*<p class="doc-lede">).*?(</p>\s*)<section id=.*?</section>(\s*</div>\s*</div>\s*</main>)', rf'\1Release notes are generated from <a href="https://github.com/samyyy2311/CassetteCat/releases" target="_blank" rel="noopener">public GitHub Releases</a> when this site deploys.\2\n{content_html}\n\n      \3', page, flags=re.DOTALL)
     PAGE.write_text(page, encoding="utf-8")
+    sync_index(releases[0]["tag_name"].removeprefix("v"))
+    sync_sitemap()
 
 if __name__ == "__main__":
     main()
