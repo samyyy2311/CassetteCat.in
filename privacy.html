@@ -106,7 +106,7 @@
 
         <section id="scope">
           <h2><span class="sec-num">01.</span>Scope and Summary</h2>
-          <p>This policy covers the CassetteCat Android app (<code>in.caffeinelabs.cassettecat</code>) from Google Play and GitHub Releases, the CassetteCat desktop app for Windows and Linux, and this website at <code>cassettecat.caffeinelabs.in</code>.</p>
+          <p>This policy covers the CassetteCat Android app (<code>in.caffeinelabs.cassettecat</code>) from Google Play and GitHub Releases, the CassetteCat desktop app for Windows (from GitHub Releases and the Microsoft Store) and Linux, and this website at <code>cassettecat.caffeinelabs.in</code>.</p>
           <p>CassetteCat plays music stored on your device and streams from servers you run yourself. There are no accounts, no sign-up, and no server run by CaffeineLabs that the apps report to.</p>
         </section>
 
@@ -135,7 +135,7 @@
             </div>
             <div class="doc-data-row">
               <div class="doc-data-key">ACCESS_WIFI_STATE / CHANGE_WIFI_MULTICAST_STATE / CHANGE_NETWORK_STATE / NEARBY_WIFI_DEVICES</div>
-              <div class="doc-data-val">Used only for the Listening Room and for connecting to a CassetteCat Player. Nearby Wi-Fi access is declared as never used for location.</div>
+              <div class="doc-data-val">Used only for the Listening Room, the Desktop Remote and connecting to a CassetteCat Player. Nearby Wi-Fi access is declared as never used for location.</div>
             </div>
             <div class="doc-data-row">
               <div class="doc-data-key">BLUETOOTH_CONNECT</div>
@@ -194,7 +194,7 @@
             </div>
             <div class="doc-data-row">
               <div class="doc-data-key">GitHub</div>
-              <div class="doc-data-val">Checks for new app releases. This has its own switch in <strong>Settings &gt; Data &amp; Updates</strong>.</div>
+              <div class="doc-data-val">Checks for new app releases, at most once a day when the app starts and whenever you check by hand. On Android this has its own switch in <strong>Settings &gt; Data &amp; Updates</strong>. The Microsoft Store version of the desktop app gets its updates from the Store and never asks GitHub.</div>
             </div>
             <div class="doc-data-row">
               <div class="doc-data-key">ListenBrainz and Libre.fm</div>
@@ -208,6 +208,7 @@
           <h2><span class="sec-num">06.</span>Local Network Features</h2>
           <ul>
             <li><strong>Listening Room:</strong> when you start a room, your device streams the song that's playing to the other devices in the room over your Wi-Fi, and keeps playback in sync. Nothing goes through the internet or to CaffeineLabs.</li>
+            <li><strong>Desktop Remote:</strong> when you turn on Phone Remote in the desktop app (it is off by default), the desktop answers only devices on your local network that know its pairing code. To find it, the phone sends a short probe to devices on your Wi-Fi, never over mobile data or a VPN. Once paired, the two apps exchange the playing song's title, artist, cover and position, the upcoming queue, playback commands and the phone's model name. When you move playback between them, the titles and artists of the queued songs are sent so the other device can find them in its own library. Nothing goes through the internet or to CaffeineLabs.</li>
             <li><strong>CassetteCat Player:</strong> when you pair the hardware player, the app sends it songs, playback commands and settings over your Wi-Fi or the player's own hotspot, and reads back its battery level, storage and firmware version.</li>
           </ul>
         </section>
