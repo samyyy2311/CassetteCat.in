@@ -25,103 +25,79 @@ function getJSON(url) {
 function detectOS() {
   const platform = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.userAgent;
   if (/android/i.test(platform)) return 'android';
-  if (/mac|iphone|ipad|ios/i.test(platform)) return 'apple';
+  if (/iphone|ipad|ios/i.test(platform)) return 'ios';
+  if (/mac/i.test(platform)) return 'mac';
   if (/win/i.test(platform)) return 'windows';
   if (/linux|x11/i.test(platform)) return 'linux';
   return 'other';
 }
 
+// The download each desktop system gets from the main button; Linux gets the x86_64 AppImage.
+const DESKTOP_DOWNLOADS = {
+  windows: { name: 'Windows', asset: 'windows-x64-setup.exe' },
+  mac: { name: 'macOS', asset: 'macos-universal.dmg' },
+  linux: { name: 'Linux', asset: 'linux-x86_64.AppImage' },
+};
+
 getJSON(REPO + 'CassetteCat').then((data) => {
   if (data) show('gh-stars', '★ ' + data.stargazers_count.toLocaleString());
 });
 
-const androidReleases = document.getElementById('dl-primary')
-  ? getJSON(REPO + 'CassetteCat/releases?per_page=100').then((list) => (Array.isArray(list) ? list : []))
-  : Promise.resolve([]);
+const os = detectOS();
+const desktopOS = DESKTOP_DOWNLOADS[os];
+const primary = document.getElementById('dl-primary');
+const apkLink = document.getElementById('dl-apk');
+const desktopLink = document.getElementById('dl-desktop');
+const assetLinks = document.querySelectorAll('[data-asset]');
 
-androidReleases.then((releases) => {
-  const total = releases.flatMap((r) => r.assets || []).reduce((sum, a) => sum + (a.download_count || 0), 0);
-  if (total > 0) show('gh-downloads', total.toLocaleString() + ' downloads on GitHub');
-});
+if (primary && os === 'ios') primary.hidden = true;
 
-if (document.getElementById('dl-primary')) {
-  const os = detectOS();
-  const primary = document.getElementById('dl-primary');
-  const note = document.getElementById('dl-note');
-  const desktop = document.getElementById('dl-desktop');
-  const onDesktop = os === 'windows' || os === 'linux';
-  const osName = os === 'windows' ? 'Windows' : 'Linux';
-  let apkUrl = 'https://github.com/samyyy2311/CassetteCat/releases/latest';
+if (primary && desktopOS) {
+  primary.querySelector('span').textContent = 'Download for ' + desktopOS.name;
+  primary.href = 'https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest';
+  const other = document.getElementById('dl-other');
+  other.textContent = 'Android app';
+  other.href = '/android';
+}
+if (desktopLink && desktopOS) desktopLink.querySelector('span').textContent = 'Download for ' + desktopOS.name;
 
-  const writeNote = (version) => {
-    if (!onDesktop) return;
-    const build = os === 'windows' ? '64-bit installer' : 'AppImage';
-    note.innerHTML = (version ? 'Version ' + version + ', ' + build + '. ' : '')
-      + 'Want the <a href="' + apkUrl + '">Android app</a> or <a href="#desktop">another format</a>?';
-  };
+if (primary || apkLink) {
+  getJSON(REPO + 'CassetteCat/releases?per_page=100').then((list) => {
+    const releases = Array.isArray(list) ? list : [];
+    const total = releases.flatMap((r) => r.assets || []).reduce((sum, a) => sum + (a.download_count || 0), 0);
+    if (total > 0) show('gh-downloads', total.toLocaleString() + ' downloads on GitHub');
 
-  if (os === 'apple') {
-    primary.hidden = true;
-    note.textContent = "CassetteCat runs on Android, Windows and Linux. There's no Mac or iPhone version yet.";
-  }
+    const release = releases.find((r) => !r.draft && !r.prerelease);
+    const apk = release && (release.assets || []).find((a) => a.name.endsWith('.apk'));
+    if (!apk) return;
+    if (apkLink) apkLink.href = apk.browser_download_url;
+    if (primary && !desktopOS && os !== 'ios') primary.href = apk.browser_download_url;
+  });
+}
 
-  if (onDesktop) {
-    primary.querySelector('span').textContent = 'Download for ' + osName;
-    primary.href = desktop.href;
-    desktop.textContent = 'Download for ' + osName;
-    writeNote();
-  }
-
+if ((primary && desktopOS) || desktopLink || assetLinks.length) {
   getJSON(REPO + 'CassetteCat-Desktop/releases/latest').then((release) => {
     if (!release || !Array.isArray(release.assets)) return;
     const find = (suffix) => release.assets.find((a) => a.name.endsWith(suffix));
 
-    document.querySelectorAll('[data-asset]').forEach((link) => {
+    assetLinks.forEach((link) => {
       const asset = find(link.dataset.asset);
       if (asset) link.href = asset.browser_download_url;
     });
 
-    const asset = onDesktop && find(os === 'windows' ? 'windows-x64-setup.exe' : '.AppImage');
-    if (asset) {
-      primary.href = asset.browser_download_url;
-      desktop.href = asset.browser_download_url;
-      writeNote(release.tag_name.replace(/^v/, ''));
-    }
-  });
-
-  androidReleases.then((releases) => {
-    const release = releases.find((r) => !r.draft && !r.prerelease);
-    const apk = release && (release.assets || []).find((a) => a.name.endsWith('.apk'));
-    if (!apk) return;
-    apkUrl = apk.browser_download_url;
-    if (onDesktop) {
-      const link = note.querySelector('a');
-      if (link) link.href = apkUrl;
-    } else if (os !== 'apple') {
-      primary.href = apkUrl;
-    }
+    const asset = desktopOS && find(desktopOS.asset);
+    if (!asset) return;
+    if (primary) primary.href = asset.browser_download_url;
+    if (desktopLink) desktopLink.href = asset.browser_download_url;
   });
 }
 
-if (document.getElementById('features')) {
-  const links = [...document.querySelectorAll('.nav nav a[href^="/#"]')];
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      links.forEach((link) => {
-        if (link.hash === '#' + entry.target.id) link.setAttribute('aria-current', 'true');
-        else link.removeAttribute('aria-current');
-      });
-    });
-  }, { rootMargin: '-45% 0px -50% 0px' });
-  document.querySelectorAll('main section[id]').forEach((section) => observer.observe(section));
-}
-
-const track = document.querySelector('.tour-track');
-if (track) {
-  document.querySelectorAll('[data-scroll]').forEach((button) => {
+document.querySelectorAll('.tour').forEach((tour) => {
+  const track = tour.querySelector('.tour-track');
+  tour.querySelectorAll('[data-scroll]').forEach((button) => {
     button.addEventListener('click', () => {
-      track.scrollBy({ left: Number(button.dataset.scroll) * 288, behavior: 'smooth' });
+      const step = track.firstElementChild.offsetWidth + 28;
+      track.scrollBy({ left: Number(button.dataset.scroll) * step, behavior: 'smooth' });
     });
   });
-}
+});
