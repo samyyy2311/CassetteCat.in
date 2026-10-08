@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Changelog · CassetteCat</title>
-  <meta name="description" content="Release notes and version history for CassetteCat, open-source music player.">
+  <meta name="description" content="Release notes for CassetteCat on Android, Windows, macOS and Linux.">
   <meta property="og:title" content="Changelog · CassetteCat">
-  <meta property="og:description" content="Release notes and version history for CassetteCat.">
+  <meta property="og:description" content="Release notes for CassetteCat on Android, Windows, macOS and Linux.">
   <meta property="og:url" content="https://cassettecat.caffeinelabs.in/changelog">
   <meta property="og:image" content="https://cassettecat.caffeinelabs.in/assets/feature_graphic_1024x500.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Changelog · CassetteCat">
-  <meta name="twitter:description" content="Release notes and version history for CassetteCat.">
+  <meta name="twitter:description" content="Release notes for CassetteCat on Android, Windows, macOS and Linux.">
   <meta name="twitter:image" content="https://cassettecat.caffeinelabs.in/assets/feature_graphic_1024x500.png">
   <meta name="theme-color" content="#000000">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%C2%B7%26-.:&display=swap">
-  <link rel="stylesheet" href="assets/style.css?v=20261002">
+  <link rel="stylesheet" href="assets/style.css?v=20261009">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,8 +54,8 @@
     <div class="wrap nav">
       <a href="/" class="brand"><img src="assets/play_store_icon_512.png" alt="" width="26" height="26"><span>CassetteCat</span></a>
       <nav aria-label="Main">
-        <a href="/#features" class="wide">Features</a>
-        <a href="/#desktop" class="wide">Desktop</a>
+        <a href="/android" class="wide">Android</a>
+        <a href="/desktop" class="wide">Desktop</a>
         <a href="/#faq" class="wide">FAQ</a>
         <a href="/changelog" class="wide" aria-current="page">Changelog</a>
         <a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener" class="gh cap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.35.95.1-.74.4-1.25.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.04 11.04 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>GitHub<span id="gh-stars" hidden></span></a>
@@ -70,72 +70,196 @@
       <div class="doc-head">
         <h1>Changelog</h1>
         <div class="doc-head-meta">
-          <span><b>App</b> CassetteCat</span>
+          <span><b>Android</b> v1.7.7</span>
           <span class="sep">·</span>
-          <span><b>Latest</b> v1.7.0</span>
+          <span><b>Desktop</b> v0.8.0</span>
           <span class="sep">·</span>
-          <span><b>Source</b> <a href="https://github.com/samyyy2311/CassetteCat/blob/main/CHANGELOG.md" target="_blank" rel="noopener">CHANGELOG.md</a></span>
+          <span><b>Source</b> GitHub Releases for <a href="https://github.com/samyyy2311/CassetteCat/releases" target="_blank" rel="noopener">Android</a> and <a href="https://github.com/samyyy2311/CassetteCat-Desktop/releases" target="_blank" rel="noopener">Desktop</a></span>
         </div>
       </div>
 
       <aside class="doc-toc">
         <h4>Versions</h4>
         <ol>
-          <li><a href="#v1-7-0"><span class="toc-num">01</span>v1.7.0</a></li>
-          <li><a href="#v1-6-5"><span class="toc-num">02</span>v1.6.5</a></li>
-          <li><a href="#v1-6-3"><span class="toc-num">03</span>v1.6.3</a></li>
-          <li><a href="#v1-6-2"><span class="toc-num">04</span>v1.6.2</a></li>
-          <li><a href="#v1-6-1"><span class="toc-num">05</span>v1.6.1</a></li>
-          <li><a href="#v1-6-0"><span class="toc-num">06</span>v1.6.0</a></li>
-          <li><a href="#v1-5-0"><span class="toc-num">07</span>v1.5.0</a></li>
-          <li><a href="#v1-4-5"><span class="toc-num">08</span>v1.4.5</a></li>
-          <li><a href="#v1-4-1"><span class="toc-num">09</span>v1.4.1</a></li>
-          <li><a href="#v1-4-0"><span class="toc-num">10</span>v1.4.0</a></li>
-          <li><a href="#v1-3-1"><span class="toc-num">11</span>v1.3.1</a></li>
-          <li><a href="#v1-3-0"><span class="toc-num">12</span>v1.3.0</a></li>
-          <li><a href="#v1-2-0"><span class="toc-num">13</span>v1.2.0</a></li>
-          <li><a href="#v1-1-0"><span class="toc-num">14</span>v1.1.0</a></li>
-          <li><a href="#v1-0-0"><span class="toc-num">15</span>v1.0.0</a></li>
+          <!-- releases:toc -->
+          <li class="toc-group">Android</li>
+          <li><a href="#android-v1-7-7">v1.7.7</a></li>
+          <li><a href="#android-v1-7-6">v1.7.6</a></li>
+          <li><a href="#android-v1-7-5">v1.7.5</a></li>
+          <li><a href="#android-v1-7-4">v1.7.4</a></li>
+          <li><a href="#android-v1-7-3">v1.7.3</a></li>
+          <li><a href="#android-v1-7-2">v1.7.2</a></li>
+          <li><a href="#android-v1-7-1">v1.7.1</a></li>
+          <li><a href="#android-v1-7-0">v1.7.0</a></li>
+          <li><a href="#android-v1-6-5">v1.6.5</a></li>
+          <li><a href="#android-v1-6-3">v1.6.3</a></li>
+          <li><a href="#android-v1-6-2">v1.6.2</a></li>
+          <li><a href="#android-v1-6-1">v1.6.1</a></li>
+          <li><a href="#android-v1-6-0">v1.6.0</a></li>
+          <li><a href="#android-v1-5-0">v1.5.0</a></li>
+          <li><a href="#android-v1-4-1">v1.4.1</a></li>
+          <li><a href="#android-v1-4-0">v1.4.0</a></li>
+          <li><a href="#android-v1-3-1">v1.3.1</a></li>
+          <li><a href="#android-v1-3-0">v1.3.0</a></li>
+          <li><a href="#android-v1-2-0">v1.2.0</a></li>
+          <li><a href="#android-v1-1-1">v1.1.1</a></li>
+          <li><a href="#android-v1-1-0">v1.1.0</a></li>
+          <li><a href="#android-v1-0-0">v1.0.0</a></li>
+          <li class="toc-group">Desktop</li>
+          <li><a href="#desktop-v0-8-0">v0.8.0</a></li>
+          <li><a href="#desktop-v0-7-0">v0.7.0</a></li>
+          <li><a href="#desktop-v0-6-0">v0.6.0</a></li>
+          <li><a href="#desktop-v0-5-1">v0.5.1</a></li>
+          <!-- /releases:toc -->
         </ol>
       </aside>
 
       <div class="doc-body">
-        <p class="doc-lede">All notable changes to CassetteCat are documented here, in the same order as <a href="https://github.com/samyyy2311/CassetteCat/blob/main/CHANGELOG.md" target="_blank" rel="noopener">CHANGELOG.md</a> in the repository.</p>
+        <p class="doc-lede">Every release of the Android and desktop apps, newest first. The Android app and the desktop app have their own version numbers.</p>
 
-        <section id="v1-7-0">
-          <h2><span class="sec-num">01.</span>v1.7.0</h2>
+        <!-- releases:notes -->
+        <h2 class="doc-group" id="android">Android</h2>
+
+        <section id="android-v1-7-7">
+          <h3>v1.7.7</h3>
+          <p><strong>[1.7.7]</strong></p>
+          <ul>
+            <li>Pair with your computer by tapping it and clicking Allow there, with no code to type. Nearby computers also show up in the player's devices button, so you can connect from there.</li>
+            <li>Your phone finds the computer again when it gets a new address on your Wi-Fi, without pairing again.</li>
+            <li>Likes stay in sync with your computer in both directions, and playlists can be sent to it or copied from it.</li>
+            <li>One Listening Record across both: songs you play on your phone show up on the computer, and the computer's listening counts in your phone's Stats.</li>
+            <li>Stats now shows top genres, recent listens, your busiest month and your first listen. Plays count once 90% of a song has been heard, like the desktop app.</li>
+            <li>Play Next on Computer from any song's menu, and the computer can send songs to play next on your phone.</li>
+            <li>Backs up to your computer once a day, and you can restore from it in Backup &amp; Restore.</li>
+            <li>Find duplicate songs in Settings, under Storage &amp; Cache, and delete the extra copies.</li>
+            <li>Play and pause fade in and out from the app, notification, lock screen and headphones.</li>
+            <li>Fixed the notification's shuffle button showing the wrong state, likes from the notification not showing up right away, the notification heart for radio stations, and a glitchy back gesture.</li>
+          </ul>
+        </section>
+
+        <section id="android-v1-7-6">
+          <h3>v1.7.6</h3>
+          <p><strong>[1.7.6]</strong></p>
+          <ul>
+            <li>Your computer shows up in Android's own output switcher, next to This phone and Bluetooth. Pick it there to move your music to the computer, and set its volume from the same place.</li>
+            <li>Control your computer from the notification, lock screen, headphone buttons and volume keys while your phone is playing on it.</li>
+            <li>Pairing checks the code before connecting, accepts the whole address pasted from the computer, and asks for the new code when the computer's code changes.</li>
+            <li>The computer no longer drops out of the notification when Wi-Fi naps for a moment.</li>
+            <li>Uses less battery in the background: fewer check-ins with the computer and no waveform analysis while the lyrics screen is closed.</li>
+            <li>Fixed a crash on launch when the computer was selected.</li>
+          </ul>
+        </section>
+
+        <section id="android-v1-7-5">
+          <h3>v1.7.5</h3>
+          <p><strong>[1.7.5]</strong></p>
+          <ul>
+            <li>Control CassetteCat on your computer from your phone. Pick it from the devices button and the same Now Playing screen, queue and lyrics work for the computer. Your song, queue and position move with you when you switch, and the computer can pause, skip or take over what your phone is playing. Computers on your Wi-Fi are found without typing an address.</li>
+            <li>Edit tags for several songs at once from the library selection bar. Only the fields you change are saved.</li>
+            <li>The song that's playing is highlighted in every list.</li>
+            <li>Radio: HLS stations play, switching stations works again, stations load on mobile data, and a station no longer counts as a play, scrobbles, or replaces the queue restored on launch.</li>
+            <li>Smoother lyrics: the word highlight no longer stutters, centered lines stay in place, the first line leads during the intro, and interlude dots fold away once the break ends.</li>
+            <li>New releases are offered once when the app starts, at most once a day.</li>
+          </ul>
+        </section>
+
+        <section id="android-v1-7-4">
+          <h3>v1.7.4</h3>
+          <p><strong>[1.7.4]</strong></p>
+          <ul>
+            <li>Shuffle now mixes up upcoming songs without interrupting what's playing, and turning it off brings back your original queue order.</li>
+            <li>Pull down to refresh anywhere in your library: songs, albums, artists, playlists, liked tracks, and folders.</li>
+            <li>Much better radio: skip between stations like normal tracks, tap quick genre pills to find new broadcasts, and easily play or pause from the station cards.</li>
+            <li>Polished Now Playing controls, smoother lyrics, and fixed jumping bottom sheets.</li>
+            <li>Vinyl record player empty state, fallback artwork, and desktop-style bordered buttons.</li>
+            <li>Fixed a crash on the Home screen while music was still loading.</li>
+          </ul>
+        </section>
+
+        <section id="android-v1-7-3">
+          <h3>v1.7.3</h3>
+          <p><strong>[1.7.3]</strong></p>
+          <ul>
+            <li>Smart shuffle now remembers what you skipped and pushes those tracks to the end of the queue so they don't come back right away.</li>
+            <li>Online cover search is much more reliable with search fallbacks and support across local and streaming music libraries.</li>
+            <li>Big battery and memory tune-ups: reduced background CPU wakeups during playback, lighter accelerometer polling for shake to skip, and leaner image caching.</li>
+            <li>The system back button now behaves consistently everywhere, including the player sheet, drive mode, and your chosen start screen.</li>
+            <li>Removed full-screen artwork viewer to keep the player fast and focused.</li>
+            <li>Lyrics search has a new optional artist field and cleaner result cards to make picking the right match easier.</li>
+            <li>Track actions sheet is now split into labeled sections, scrolls past the navigation bar, and highlights active options like Bluetooth, Sleep Timer, and Playback Speed in red.</li>
+            <li>Autoplay is smarter about collaborations, related genres, and era when picking what to play next.</li>
+            <li>Direct in-app updates: download and install new releases right from Settings without needing to open GitHub in a browser.</li>
+            <li>All in-app text is now stored in Android string resources, laying the groundwork for translations.</li>
+          </ul>
+        </section>
+
+        <section id="android-v1-7-2">
+          <h3>v1.7.2</h3>
+          <p><strong>[1.7.2]</strong></p>
+          <ul>
+            <li>Fixed shuffle controls in the notification center and Now Playing screen getting out of sync.</li>
+            <li>Improved the active shuffle state so it is clearer without changing the icon style.</li>
+            <li>Fixed queue drag-and-drop reordering stopping after the first move.</li>
+            <li>Fixed queue order updates not always continuing correctly during playback.</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.7.1...v1.7.2</li>
+          </ul>
+        </section>
+
+        <section id="android-v1-7-1">
+          <h3>v1.7.1</h3>
+          <p><strong>[1.7.1]</strong></p>
+          <ul>
+            <li>Choose album covers from your gallery or search for artwork online.</li>
+            <li>Filter the library by Local, Subsonic, or Jellyfin and use the updated library and search layouts.</li>
+            <li>Improved Jellyfin album grouping and artist metadata fallbacks.</li>
+            <li>Added cat illustrations to empty screens and a small surprise in Credits.</li>
+            <li>Adjusted artwork caching to release large images when the app is hidden while keeping thumbnails handy.</li>
+            <li>Removed unused screens and controls and cleaned up comments.</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.7.0...v1.7.1</li>
+          </ul>
+        </section>
+
+        <section id="android-v1-7-0">
+          <h3>v1.7.0</h3>
+          <p><strong>[1.7.0]</strong></p>
           <ul>
             <li>Fixed playback pausing between songs when autoplay is on.</li>
             <li>Fixed queue not advancing automatically at the end of a track.</li>
             <li>Padded the launcher icon so it stays centered inside circular launcher masks.</li>
             <li>Refreshed the welcome screen with the new app icon.</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.6.5...v1.7.0</li>
           </ul>
         </section>
 
-        <section id="v1-6-5">
-          <h2><span class="sec-num">02.</span>v1.6.5 - CassetteCat Player Gets a Control Panel</h2>
+        <section id="android-v1-6-5">
+          <h3>v1.6.5</h3>
+          <p><strong>[1.6.5] - CassetteCat Player Gets a Control Panel</strong></p>
           <ul>
             <li>Folders now show a parent-folder label, album-art thumbnails, and support custom cover art.</li>
             <li>Added sort and filter options for the songs inside a folder, and you can now delete a song directly from a folder.</li>
             <li>Fixed the back button in Library returning you to the Songs tab instead of whatever tab or folder you were actually browsing.</li>
             <li>Redesigned the multi-select toolbar: the old one broke on longer selection counts, the new one uses clear action chips instead.</li>
             <li>Fixed a crash when tapping Direct Hotspot in CassetteCat Player settings.</li>
-            <li>CassetteCat Player now has a real control panel: sync your local songs onto the hardware player&#39;s SD card, remote play/pause/skip/volume, browse and manage files on its SD card, rename it or restart it, and update its firmware, including an automatic check against GitHub releases.</li>
+            <li>CassetteCat Player now has a real control panel: sync your local songs onto the hardware player's SD card, remote play/pause/skip/volume, browse and manage files on its SD card, rename it or restart it, and update its firmware, including an automatic check against GitHub releases.</li>
             <li>These talk to a wire protocol the app is ready for today; the firmware side is still being built (see docs/device-sync-protocol.md and docs/device-control-protocol.md).</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.6.3...v1.6.5</li>
           </ul>
         </section>
 
-        <section id="v1-6-3">
-          <h2><span class="sec-num">03.</span>v1.6.3 - Autoplay Actually Continues Now</h2>
+        <section id="android-v1-6-3">
+          <h3>v1.6.3</h3>
+          <p><strong>[1.6.3] - Autoplay Actually Continues Now</strong></p>
           <ul>
             <li>Fixed Autoplay silently failing to continue at the end of your queue instead of picking new songs.</li>
             <li>Fixed Restore from Backup getting interrupted if you tapped Continue during setup too quickly.</li>
             <li>Recently Played now correctly pauses its 30-second timer while a song is paused.</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.6.2...v1.6.3</li>
           </ul>
         </section>
 
-        <section id="v1-6-2">
-          <h2><span class="sec-num">04.</span>v1.6.2 - Cleaner Setup &amp; a Skip Bug Squashed</h2>
+        <section id="android-v1-6-2">
+          <h3>v1.6.2</h3>
+          <p><strong>[1.6.2] - Cleaner Setup &amp; a Skip Bug Squashed</strong></p>
           <ul>
             <li>Reworked the setup flow: cleaner, more consistent screens, and one less step.</li>
             <li>You can now restore a backup right from setup, handy on a reinstall.</li>
@@ -144,31 +268,33 @@
             <li>Fixed Next/skip going dead at the end of your queue when Autoplay was on.</li>
             <li>Fixed Google Assistant/Gemini not being able to trigger playback in CassetteCat.</li>
             <li>Recently Played no longer counts a song you skipped after a second or two.</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.6.1...v1.6.2</li>
           </ul>
         </section>
 
-        <section id="v1-6-1">
-          <h2><span class="sec-num">05.</span>v1.6.1 - Performance &amp; Reliability</h2>
+        <section id="android-v1-6-1">
+          <h3>v1.6.1</h3>
           <p><strong>Performance</strong></p>
           <ul>
             <li>Reduced memory usage and smoother scrolling across the library and Now Playing screens.</li>
-            <li>Lower memory usage from the equalizer&#39;s audio effects.</li>
+            <li>Lower memory usage from the equalizer's audio effects.</li>
           </ul>
           <p><strong>Fixes</strong></p>
           <ul>
-            <li>Fixed Playlist Suggestions occasionally splitting one genre into separate suggestions when songs were tagged with different capitalization (e.g. &quot;Rock&quot; vs &quot;ROCK&quot;).</li>
+            <li>Fixed Playlist Suggestions occasionally splitting one genre into separate suggestions when songs were tagged with different capitalization (e.g. "Rock" vs "ROCK").</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.6.0...v1.6.1</li>
           </ul>
         </section>
 
-        <section id="v1-6-0">
-          <h2><span class="sec-num">06.</span>v1.6.0 - Drive Mode, Wave to Skip &amp; Reliability Fixes</h2>
+        <section id="android-v1-6-0">
+          <h3>v1.6.0</h3>
           <p><strong>Playback</strong></p>
           <ul>
-            <li><strong>Drive Mode</strong>: a stripped, high-contrast full-screen playback view with large touch targets, launches automatically when connected to a car&#39;s Bluetooth audio.</li>
+            <li><strong>Drive Mode</strong>: a stripped, high-contrast full-screen playback view with large touch targets, launches automatically when connected to a car's Bluetooth audio.</li>
             <li><strong>Wave to Skip</strong>: wave your hand over the top of your phone to skip to the next track.</li>
             <li><strong>Audio Quality Badge</strong>: Now Playing shows a Lossless/Hi-Res badge with format, bit depth, and sample rate details.</li>
             <li>Fixed playback sometimes stopping early instead of continuing to the next queued song, and next/previous sometimes not following the queue order.</li>
-            <li>Shuffle now re-randomizes the upcoming queue every time it&#39;s turned on, and restores the original order when turned off.</li>
+            <li>Shuffle now re-randomizes the upcoming queue every time it's turned on, and restores the original order when turned off.</li>
             <li>Fixed the seek bar visually snapping back after a manual seek; dragging it now feels more responsive.</li>
             <li>Fixed a flip-to-pause edge case leaving the shake and wave-to-skip sensors active while paused.</li>
             <li>Rewritten shake-to-skip detection with fewer false triggers from being in a pocket or bag.</li>
@@ -187,16 +313,17 @@
           <ul>
             <li>Fixed Equalizer Reset silently re-enabling a disabled equalizer, leaving a stale calibration label, and not appearing for preamp-only adjustments.</li>
             <li>Fixed radio search occasionally showing results for the wrong country after quickly switching filters.</li>
-            <li>Radio Browser being fully unreachable now shows a clear retry option instead of an endless &quot;Loading stations…&quot;.</li>
+            <li>Radio Browser being fully unreachable now shows a clear retry option instead of an endless "Loading stations…".</li>
             <li>Custom radio stations now require a valid stream URL before saving.</li>
-            <li>Fixed a connection error being shown as a raw technical message when a server URL was entered without &quot;https://&quot;.</li>
+            <li>Fixed a connection error being shown as a raw technical message when a server URL was entered without "https://".</li>
             <li>Fixed nearby Listening Room discovery continuing to run in the background after leaving the sheet.</li>
             <li>Reduced memory usage from playlist cover images.</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.5.0...v1.6.0</li>
           </ul>
         </section>
 
-        <section id="v1-5-0">
-          <h2><span class="sec-num">07.</span>v1.5.0 - Gestures, Smart Playlists &amp; Custom Fonts</h2>
+        <section id="android-v1-5-0">
+          <h3>v1.5.0</h3>
           <p><strong>Playback</strong></p>
           <ul>
             <li><strong>Shake to Skip</strong>: Shake your phone to skip to the next track, with adjustable sensitivity.</li>
@@ -206,7 +333,7 @@
           <p><strong>Library</strong></p>
           <ul>
             <li><strong>Smart Playlists</strong>: Auto-populated playlists built from rules like Recently Added, Favorites Only, song length, or decade, instead of a manually curated song list.</li>
-            <li><strong>Edit Song Tags</strong>: Override a local song&#39;s title, artist, album, or release year from Now Playing, without touching the file on disk.</li>
+            <li><strong>Edit Song Tags</strong>: Override a local song's title, artist, album, or release year from Now Playing, without touching the file on disk.</li>
             <li>Recent searches are now remembered and quickly reselectable.</li>
           </ul>
           <p><strong>Lyrics</strong></p>
@@ -217,30 +344,12 @@
           <ul>
             <li><strong>Choose Your Font</strong>: Pick from Space Grotesk, IBM Plex Sans, Outfit, Inter, Plus Jakarta Sans, or Silkscreen for the UI, with a separate font choice for lyrics.</li>
             <li><strong>Now Playing Backdrop Style</strong>: Choose between AMOLED Pure Black, Ambient Glow, or Liquid Gradient.</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.4.1...v1.5.0</li>
           </ul>
         </section>
 
-        <section id="v1-4-5">
-          <h2><span class="sec-num">08.</span>v1.4.5 - Fixes &amp; Reliability</h2>
-          <p><strong>Fixes</strong></p>
-          <ul>
-            <li>Fixed shuffle sometimes duplicating songs already in the queue.</li>
-            <li>Fixed &quot;Add to Queue&quot; behaving identically to &quot;Play Next&quot; instead of appending to the end of the queue.</li>
-            <li>Fixed the back button collapsing the whole Now Playing sheet instead of returning to the Player view from Lyrics/Queue.</li>
-            <li>Fixed equalizer presets sometimes applying the wrong preset on devices with an unnamed preset slot.</li>
-            <li>Fixed a brief &quot;Connecting…&quot; flash when changing local tracks.</li>
-            <li>Fixed a potential resource leak from rapidly tapping &quot;Find Nearby Rooms&quot; in Listening Room.</li>
-            <li>Fixed the playback notification&#39;s icon.</li>
-          </ul>
-          <p><strong>Performance</strong></p>
-          <ul>
-            <li>Smoother scrolling through long song lists and search results.</li>
-            <li>Faster equalizer preset loading.</li>
-          </ul>
-        </section>
-
-        <section id="v1-4-1">
-          <h2><span class="sec-num">09.</span>v1.4.1 - Shortcuts &amp; Playback Polish</h2>
+        <section id="android-v1-4-1">
+          <h3>v1.4.1</h3>
           <p><strong>Playback</strong></p>
           <ul>
             <li>Save the current queue as a playlist and start an Instant Mix from Now Playing.</li>
@@ -254,11 +363,12 @@
           <p><strong>Launcher</strong></p>
           <ul>
             <li>Added shortcuts for Shuffle All, Play Favorites, and Radio Favorites with distinct icons.</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.4.0...v1.4.1</li>
           </ul>
         </section>
 
-        <section id="v1-4-0">
-          <h2><span class="sec-num">10.</span>v1.4.0 - Jellyfin Quick Connect &amp; Playback Fixes</h2>
+        <section id="android-v1-4-0">
+          <h3>v1.4.0</h3>
           <p><strong>Streaming</strong></p>
           <ul>
             <li><strong>Jellyfin Quick Connect</strong>: Sign in without typing a password by approving a code from an already-signed-in client.</li>
@@ -269,7 +379,7 @@
             <li>Fixed a brief pause when skipping to the next track.</li>
             <li>Fixed Autoplay replaying the song that just ended before moving to the next pick, and fixed manually pressing Next at the end of the queue not triggering Autoplay.</li>
             <li><strong>Volume Limit (Ear Protection)</strong>: optional hard cap on maximum output level, independent of system volume.</li>
-            <li>External media button presses (e.g. from a swipe-to-skip widget) now reach the app even when it isn&#39;t in the foreground.</li>
+            <li>External media button presses (e.g. from a swipe-to-skip widget) now reach the app even when it isn't in the foreground.</li>
           </ul>
           <p><strong>Display</strong></p>
           <ul>
@@ -280,11 +390,12 @@
           <p><strong>Fixes</strong></p>
           <ul>
             <li>Fixed a crash on launch affecting devices running Android 13 and below.</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.3.1...v1.4.0</li>
           </ul>
         </section>
 
-        <section id="v1-3-1">
-          <h2><span class="sec-num">11.</span>v1.3.1 - Performance &amp; Reliability</h2>
+        <section id="android-v1-3-1">
+          <h3>v1.3.1</h3>
           <p><strong>Performance</strong></p>
           <ul>
             <li>Smoother transitions between songs during playback.</li>
@@ -294,11 +405,16 @@
           <p><strong>Also</strong></p>
           <ul>
             <li>Home screen icon now supports Android 13+ themed icons.</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.3.0...v1.3.1</li>
           </ul>
         </section>
 
-        <section id="v1-3-0">
-          <h2><span class="sec-num">12.</span>v1.3.0 - Internet Radio &amp; Onboarding Fixes</h2>
+        <section id="android-v1-3-0">
+          <h3>v1.3.0</h3>
+          <p><strong>Changelog</strong></p>
+          <ul>
+            <li>All notable changes to CassetteCat are documented in this file.</li>
+          </ul>
           <p><strong>Radio</strong></p>
           <ul>
             <li><strong>Internet Radio</strong>: Search and browse tens of thousands of live stations from Radio Browser by name, tag, or country. Favorite stations sync to Android Auto, which also gets a dedicated Radio browse tree and voice search support.</li>
@@ -312,47 +428,35 @@
             <li><strong>Onboarding</strong>: Fixed the folder setup step letting you continue with an empty folder selection.</li>
             <li><strong>Gapless Playback</strong>: Fixed the Gapless Playback setting not working correctly.</li>
           </ul>
-        </section>
-
-        <section id="v1-2-0">
-          <h2><span class="sec-num">13.</span>v1.2.0 - Android Auto &amp; Real Hotspot Pairing</h2>
           <p><strong>Companion Hardware</strong></p>
           <ul>
-            <li><strong>Real SoftAP Auto-Connect</strong>: On Android 13+, pairing to the player&#39;s direct hotspot now associates automatically via <code>WifiNetworkSpecifier</code> instead of assuming the user already switched Wi-Fi networks manually. Older devices keep the existing connect-then-scan flow.</li>
+            <li><strong>Real SoftAP Auto-Connect</strong>: On Android 13+, pairing to the player's direct hotspot now associates automatically via <code>WifiNetworkSpecifier</code> instead of assuming the user already switched Wi-Fi networks manually. Older devices keep the existing connect-then-scan flow.</li>
             <li><strong>Disconnect Fixed</strong>: The companion Disconnect button now actually disconnects instead of restarting hotspot discovery.</li>
           </ul>
           <p><strong>Device Integration</strong></p>
           <ul>
             <li><strong>Android Auto &amp; Automotive OS</strong>: Browse your local library (Liked Songs, Playlists, Albums, Artists, All Songs) and control playback directly from the car.</li>
-            <li><strong>Quick Settings Tile</strong>: Play, pause, and see what&#39;s playing without opening the app.</li>
+            <li><strong>Quick Settings Tile</strong>: Play, pause, and see what's playing without opening the app.</li>
           </ul>
           <p><strong>Polish</strong></p>
           <ul>
             <li>Haptic feedback now fires on every toggle switch throughout Settings, not just the row tap.</li>
             <li>Fixed cramped accent color swatch spacing in Theme customization.</li>
           </ul>
-        </section>
-
-        <section id="v1-1-0">
-          <h2><span class="sec-num">14.</span>v1.1.0 - Share Cards &amp; UI Polish</h2>
           <p><strong>Share &amp; Social</strong></p>
           <ul>
             <li><strong>1:1 Share Card Export</strong>: Exported posters for both Song and Lyrics cards now render identically to the in-app preview card.</li>
-            <li><strong>Ultra-HD Resolution</strong>: Exported cards render at 2160 &#215; 2700 with subpixel antialiasing and lossless PNG output.</li>
+            <li><strong>Ultra-HD Resolution</strong>: Exported cards render at 2160 × 2700 with subpixel antialiasing and lossless PNG output.</li>
             <li><strong>Atmospheric Background Blur</strong>: Upgraded live backdrop shader to generate silk-smooth Gaussian blur directly from current song artwork with dark gradient scrims.</li>
             <li><strong>Authentic Branding &amp; Icons</strong>: Integrated Lucide quote marks, cassette tape glyphs, Space Grotesk Bold, and IBM Plex Mono fonts directly into the canvas rendering pipeline.</li>
             <li><strong>Native App Launcher Icons</strong>: Share tray now dynamically queries and displays installed WhatsApp and Instagram launcher icons directly from device <code>PackageManager</code>.</li>
-            <li><strong>Now Playing Share Access</strong>: Connected the 3-dots Now Playing menu&#39;s Share option directly to the interactive screenshot and lyrics card sheet.</li>
+            <li><strong>Now Playing Share Access</strong>: Connected the 3-dots Now Playing menu's Share option directly to the interactive screenshot and lyrics card sheet.</li>
           </ul>
           <p><strong>UI &amp; Credits</strong></p>
           <ul>
             <li>Refreshed Credits screen with official vector logos for Android, Internet Archive, Simple Icons, and GNU GPL v3.0.</li>
             <li>Scaled and balanced share action pill vectors for seamless visual padding.</li>
           </ul>
-        </section>
-
-        <section id="v1-0-0">
-          <h2><span class="sec-num">15.</span>v1.0.0 - Initial Release</h2>
           <p><strong>Audio &amp; Playback</strong></p>
           <ul>
             <li>High-fidelity audio engine built on AndroidX Media3 (ExoPlayer).</li>
@@ -387,8 +491,318 @@
             <li>Server passwords encrypted with hardware-backed Android Keystore.</li>
             <li>Free and open-source software licensed under GPL-3.0.</li>
           </ul>
+          <p><strong>What's Changed</strong></p>
+          <ul>
+            <li>fix: address code review issues by @samyyy2311 in https://github.com/samyyy2311/CassetteCat/pull/8</li>
+          </ul>
+          <p><strong>New Contributors</strong></p>
+          <ul>
+            <li>@samyyy2311 made their first contribution in https://github.com/samyyy2311/CassetteCat/pull/8</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.2.0...v1.3.0</li>
+          </ul>
         </section>
 
+        <section id="android-v1-2-0">
+          <h3>v1.2.0</h3>
+          <p><strong>Changelog</strong></p>
+          <ul>
+            <li>All notable changes to CassetteCat are documented in this file.</li>
+          </ul>
+          <p><strong>Companion Hardware</strong></p>
+          <ul>
+            <li><strong>Real SoftAP Auto-Connect</strong>: On Android 13+, pairing to the player's direct hotspot now associates automatically via <code>WifiNetworkSpecifier</code> instead of assuming the user already switched Wi-Fi networks manually. Older devices keep the existing connect-then-scan flow.</li>
+            <li><strong>Disconnect Fixed</strong>: The companion Disconnect button now actually disconnects instead of restarting hotspot discovery.</li>
+          </ul>
+          <p><strong>Device Integration</strong></p>
+          <ul>
+            <li><strong>Android Auto &amp; Automotive OS</strong>: Browse your local library (Liked Songs, Playlists, Albums, Artists, All Songs) and control playback directly from the car.</li>
+            <li><strong>Quick Settings Tile</strong>: Play, pause, and see what's playing without opening the app.</li>
+          </ul>
+          <p><strong>Polish</strong></p>
+          <ul>
+            <li>Haptic feedback now fires on every toggle switch throughout Settings, not just the row tap.</li>
+            <li>Fixed cramped accent color swatch spacing in Theme customization.</li>
+          </ul>
+          <p><strong>Share &amp; Social</strong></p>
+          <ul>
+            <li><strong>1:1 Share Card Export</strong>: Exported posters for both Song and Lyrics cards now render identically to the in-app preview card.</li>
+            <li><strong>Ultra-HD Resolution</strong>: Exported cards render at 2160 × 2700 with subpixel antialiasing and lossless PNG output.</li>
+            <li><strong>Atmospheric Background Blur</strong>: Upgraded live backdrop shader to generate silk-smooth Gaussian blur directly from current song artwork with dark gradient scrims.</li>
+            <li><strong>Authentic Branding &amp; Icons</strong>: Integrated Lucide quote marks, cassette tape glyphs, Space Grotesk Bold, and IBM Plex Mono fonts directly into the canvas rendering pipeline.</li>
+            <li><strong>Native App Launcher Icons</strong>: Share tray now dynamically queries and displays installed WhatsApp and Instagram launcher icons directly from device <code>PackageManager</code>.</li>
+            <li><strong>Now Playing Share Access</strong>: Connected the 3-dots Now Playing menu's Share option directly to the interactive screenshot and lyrics card sheet.</li>
+          </ul>
+          <p><strong>UI &amp; Credits</strong></p>
+          <ul>
+            <li>Refreshed Credits screen with official vector logos for Android, Internet Archive, Simple Icons, and GNU GPL v3.0.</li>
+            <li>Scaled and balanced share action pill vectors for seamless visual padding.</li>
+          </ul>
+          <p><strong>Audio &amp; Playback</strong></p>
+          <ul>
+            <li>High-fidelity audio engine built on AndroidX Media3 (ExoPlayer).</li>
+            <li>Hardware-accelerated DSP effects: parametric equalizer, bass boost, and spatial virtualizer.</li>
+            <li>Real-time synchronized and plain lyrics via embedded LRC/ID3 tags and LRCLIB.</li>
+            <li>Configurable sleep timer and precise playback speed adjustment.</li>
+          </ul>
+          <p><strong>Cloud &amp; Streaming</strong></p>
+          <ul>
+            <li>Native Subsonic API integration compatible with Navidrome, Gonic, and Airsonic.</li>
+            <li>Jellyfin music library streaming with secure token authentication.</li>
+            <li>Offline song downloads with dedicated cache management and background sync.</li>
+            <li>User-owned scrobbling support for ListenBrainz and Libre.fm.</li>
+          </ul>
+          <p><strong>Companion Hardware</strong></p>
+          <ul>
+            <li>Wireless pairing and sync for standalone ESP32 audio players over direct SoftAP hotspot or local Wi-Fi mDNS.</li>
+            <li>Live hardware telemetry: battery level, charging status, SD card capacity, and firmware version.</li>
+          </ul>
+          <p><strong>Library &amp; User Experience</strong></p>
+          <ul>
+            <li>Fast local search across songs, artists, and albums with artist portraits.</li>
+            <li>Custom playlist creation, cover art customization, and M3U/M3U8 import and export.</li>
+            <li>Device-local listening stats: monthly playback time, top artists, and repeat metrics.</li>
+            <li>Fine-grained folder scan filters (whitelist and blacklist modes).</li>
+            <li>Full JSON backup and restore for playlists, favorites, and user settings.</li>
+            <li>Credits and open-source attributions in Settings.</li>
+          </ul>
+          <p><strong>Privacy &amp; Architecture</strong></p>
+          <ul>
+            <li>100% local-first: no tracking, no analytics, and zero Google Play Services dependencies.</li>
+            <li>Server passwords encrypted with hardware-backed Android Keystore.</li>
+            <li>Free and open-source software licensed under GPL-3.0.</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/commits/v1.2.0</li>
+          </ul>
+        </section>
+
+        <section id="android-v1-1-1">
+          <h3>v1.1.1</h3>
+          <p><strong>Changelog</strong></p>
+          <ul>
+            <li>All notable changes to CassetteCat are documented in this file.</li>
+          </ul>
+          <p><strong>Share &amp; Social</strong></p>
+          <ul>
+            <li><strong>1:1 Share Card Export</strong>: Exported posters for both Song and Lyrics cards now render identically to the in-app preview card.</li>
+            <li><strong>Ultra-HD Resolution</strong>: Exported cards render at 2160 × 2700 with subpixel antialiasing and lossless PNG output.</li>
+            <li><strong>Atmospheric Background Blur</strong>: Upgraded live backdrop shader to generate silk-smooth Gaussian blur directly from current song artwork with dark gradient scrims.</li>
+            <li><strong>Authentic Branding &amp; Icons</strong>: Integrated Lucide quote marks, cassette tape glyphs, Space Grotesk Bold, and IBM Plex Mono fonts directly into the canvas rendering pipeline.</li>
+            <li><strong>Native App Launcher Icons</strong>: Share tray now dynamically queries and displays installed WhatsApp and Instagram launcher icons directly from device <code>PackageManager</code>.</li>
+            <li><strong>Now Playing Share Access</strong>: Connected the 3-dots Now Playing menu's Share option directly to the interactive screenshot and lyrics card sheet.</li>
+          </ul>
+          <p><strong>UI &amp; Credits</strong></p>
+          <ul>
+            <li>Refreshed Credits screen with official vector logos for Android, Internet Archive, Simple Icons, and GNU GPL v3.0.</li>
+            <li>Scaled and balanced share action pill vectors for seamless visual padding.</li>
+          </ul>
+          <p><strong>Audio &amp; Playback</strong></p>
+          <ul>
+            <li>High-fidelity audio engine built on AndroidX Media3 (ExoPlayer).</li>
+            <li>Hardware-accelerated DSP effects: parametric equalizer, bass boost, and spatial virtualizer.</li>
+            <li>Real-time synchronized and plain lyrics via embedded LRC/ID3 tags and LRCLIB.</li>
+            <li>Configurable sleep timer and precise playback speed adjustment.</li>
+          </ul>
+          <p><strong>Cloud &amp; Streaming</strong></p>
+          <ul>
+            <li>Native Subsonic API integration compatible with Navidrome, Gonic, and Airsonic.</li>
+            <li>Jellyfin music library streaming with secure token authentication.</li>
+            <li>Offline song downloads with dedicated cache management and background sync.</li>
+            <li>User-owned scrobbling support for ListenBrainz and Libre.fm.</li>
+          </ul>
+          <p><strong>Companion Hardware</strong></p>
+          <ul>
+            <li>Wireless pairing and sync for standalone ESP32 audio players over direct SoftAP hotspot or local Wi-Fi mDNS.</li>
+            <li>Live hardware telemetry: battery level, charging status, SD card capacity, and firmware version.</li>
+          </ul>
+          <p><strong>Library &amp; User Experience</strong></p>
+          <ul>
+            <li>Fast local search across songs, artists, and albums with artist portraits.</li>
+            <li>Custom playlist creation, cover art customization, and M3U/M3U8 import and export.</li>
+            <li>Device-local listening stats: monthly playback time, top artists, and repeat metrics.</li>
+            <li>Fine-grained folder scan filters (whitelist and blacklist modes).</li>
+            <li>Full JSON backup and restore for playlists, favorites, and user settings.</li>
+            <li>Credits and open-source attributions in Settings.</li>
+          </ul>
+          <p><strong>Privacy &amp; Architecture</strong></p>
+          <ul>
+            <li>100% local-first: no tracking, no analytics, and zero Google Play Services dependencies.</li>
+            <li>Server passwords encrypted with hardware-backed Android Keystore.</li>
+            <li>Free and open-source software licensed under GPL-3.0.</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.1.0...v1.1.1</li>
+          </ul>
+        </section>
+
+        <section id="android-v1-1-0">
+          <h3>v1.1.0</h3>
+          <p><strong>Changelog</strong></p>
+          <ul>
+            <li>All notable changes to CassetteCat are documented in this file.</li>
+          </ul>
+          <p><strong>Share &amp; Social</strong></p>
+          <ul>
+            <li><strong>1:1 Share Card Export</strong>: Exported posters for both Song and Lyrics cards now render identically to the in-app preview card.</li>
+            <li><strong>Ultra-HD Resolution</strong>: Exported cards render at 2160 × 2700 with subpixel antialiasing and lossless PNG output.</li>
+            <li><strong>Atmospheric Background Blur</strong>: Upgraded live backdrop shader to generate silk-smooth Gaussian blur directly from current song artwork with dark gradient scrims.</li>
+            <li><strong>Authentic Branding &amp; Icons</strong>: Integrated Lucide quote marks, cassette tape glyphs, Space Grotesk Bold, and IBM Plex Mono fonts directly into the canvas rendering pipeline.</li>
+            <li><strong>Native App Launcher Icons</strong>: Share tray now dynamically queries and displays installed WhatsApp and Instagram launcher icons directly from device <code>PackageManager</code>.</li>
+            <li><strong>Now Playing Share Access</strong>: Connected the 3-dots Now Playing menu's Share option directly to the interactive screenshot and lyrics card sheet.</li>
+          </ul>
+          <p><strong>UI &amp; Credits</strong></p>
+          <ul>
+            <li>Refreshed Credits screen with official vector logos for Android, Internet Archive, Simple Icons, and GNU GPL v3.0.</li>
+            <li>Scaled and balanced share action pill vectors for seamless visual padding.</li>
+          </ul>
+          <p><strong>Audio &amp; Playback</strong></p>
+          <ul>
+            <li>High-fidelity audio engine built on AndroidX Media3 (ExoPlayer).</li>
+            <li>Hardware-accelerated DSP effects: parametric equalizer, bass boost, and spatial virtualizer.</li>
+            <li>Real-time synchronized and plain lyrics via embedded LRC/ID3 tags and LRCLIB.</li>
+            <li>Configurable sleep timer and precise playback speed adjustment.</li>
+          </ul>
+          <p><strong>Cloud &amp; Streaming</strong></p>
+          <ul>
+            <li>Native Subsonic API integration compatible with Navidrome, Gonic, and Airsonic.</li>
+            <li>Jellyfin music library streaming with secure token authentication.</li>
+            <li>Offline song downloads with dedicated cache management and background sync.</li>
+            <li>User-owned scrobbling support for ListenBrainz and Libre.fm.</li>
+          </ul>
+          <p><strong>Companion Hardware</strong></p>
+          <ul>
+            <li>Wireless pairing and sync for standalone ESP32 audio players over direct SoftAP hotspot or local Wi-Fi mDNS.</li>
+            <li>Live hardware telemetry: battery level, charging status, SD card capacity, and firmware version.</li>
+          </ul>
+          <p><strong>Library &amp; User Experience</strong></p>
+          <ul>
+            <li>Fast local search across songs, artists, and albums with artist portraits.</li>
+            <li>Custom playlist creation, cover art customization, and M3U/M3U8 import and export.</li>
+            <li>Device-local listening stats: monthly playback time, top artists, and repeat metrics.</li>
+            <li>Fine-grained folder scan filters (whitelist and blacklist modes).</li>
+            <li>Full JSON backup and restore for playlists, favorites, and user settings.</li>
+            <li>Credits and open-source attributions in Settings.</li>
+          </ul>
+          <p><strong>Privacy &amp; Architecture</strong></p>
+          <ul>
+            <li>100% local-first: no tracking, no analytics, and zero Google Play Services dependencies.</li>
+            <li>Server passwords encrypted with hardware-backed Android Keystore.</li>
+            <li>Free and open-source software licensed under GPL-3.0.</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.0.0...v1.1.0</li>
+          </ul>
+        </section>
+
+        <section id="android-v1-0-0">
+          <h3>v1.0.0</h3>
+          <p><strong>Changelog</strong></p>
+          <ul>
+            <li>All notable changes to CassetteCat are documented in this file.</li>
+          </ul>
+          <p><strong>Audio &amp; Playback</strong></p>
+          <ul>
+            <li>High-fidelity audio engine built on AndroidX Media3 (ExoPlayer).</li>
+            <li>Hardware-accelerated DSP effects: parametric equalizer, bass boost, and spatial virtualizer.</li>
+            <li>Real-time synchronized and plain lyrics via embedded LRC/ID3 tags and LRCLIB.</li>
+            <li>Configurable sleep timer and precise playback speed adjustment.</li>
+          </ul>
+          <p><strong>Cloud &amp; Streaming</strong></p>
+          <ul>
+            <li>Native Subsonic API integration compatible with Navidrome, Gonic, and Airsonic.</li>
+            <li>Jellyfin music library streaming with secure token authentication.</li>
+            <li>Offline song downloads with dedicated cache management and background sync.</li>
+            <li>User-owned scrobbling support for ListenBrainz and Libre.fm.</li>
+          </ul>
+          <p><strong>Companion Hardware</strong></p>
+          <ul>
+            <li>Wireless pairing and sync for standalone ESP32 audio players over direct SoftAP hotspot or local Wi-Fi mDNS.</li>
+            <li>Live hardware telemetry: battery level, charging status, SD card capacity, and firmware version.</li>
+          </ul>
+          <p><strong>Library &amp; User Experience</strong></p>
+          <ul>
+            <li>Fast local search across songs, artists, and albums with artist portraits.</li>
+            <li>Custom playlist creation, cover art customization, and M3U/M3U8 import and export.</li>
+            <li>Device-local listening stats: monthly playback time, top artists, and repeat metrics.</li>
+            <li>Fine-grained folder scan filters (whitelist and blacklist modes).</li>
+            <li>Full JSON backup and restore for playlists, favorites, and user settings.</li>
+            <li>Credits and open-source attributions in Settings.</li>
+          </ul>
+          <p><strong>Privacy &amp; Architecture</strong></p>
+          <ul>
+            <li>100% local-first: no tracking, no analytics, and zero Google Play Services dependencies.</li>
+            <li>Server passwords encrypted with hardware-backed Android Keystore.</li>
+            <li>Free and open-source software licensed under GPL-3.0.</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/commits/v1.0.0</li>
+          </ul>
+        </section>
+
+        <h2 class="doc-group" id="desktop">Desktop</h2>
+
+        <section id="desktop-v0-8-0">
+          <h3>v0.8.0</h3>
+          <p><strong>Phone remote</strong></p>
+          <ul>
+            <li>Control CassetteCat from the Android app on the same Wi-Fi, and move a song, its queue and position between phone and computer.</li>
+            <li>Pair a phone by clicking Allow when it asks. The phone remote is on by default.</li>
+            <li>Likes stay in sync with your phone, and playlists copy both ways.</li>
+            <li>Your phone's listening shows up in your Listening Record, and its daily backups are kept here.</li>
+            <li>Play Next on Phone from a song's right-click menu, and songs your phone sends here play next.</li>
+          </ul>
+          <p><strong>Library and playback</strong></p>
+          <ul>
+            <li>Edit tags for several songs at once.</li>
+            <li>Sync plain lyrics by tapping along.</li>
+            <li>Crossfade between songs.</li>
+            <li>Autoplay keeps going with similar songs.</li>
+            <li>New releases are offered once when the app starts.</li>
+          </ul>
+        </section>
+
+        <section id="desktop-v0-7-0">
+          <h3>v0.7.0</h3>
+          <p><strong>What's Changed</strong></p>
+          <ul>
+            <li>Fix empty Search sections, cover warnings and Library layout warnings by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/22</li>
+            <li>Add a yearly listening recap by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/23</li>
+            <li>Show the playing song as a Discord status by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/24</li>
+            <li>Bring the docs up to date by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/25</li>
+            <li>Let the Flatpak show media controls and a Discord status by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/26</li>
+            <li>Add screenshots to the store listing and README by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/27</li>
+            <li>Release 0.7.0 by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/28</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat-Desktop/compare/v0.6.0...v0.7.0</li>
+          </ul>
+        </section>
+
+        <section id="desktop-v0-6-0">
+          <h3>v0.6.0</h3>
+          <p><strong>What's Changed</strong></p>
+          <ul>
+            <li>Fix GitHub release publishing context by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/9</li>
+            <li>Finalize Windows installer integration by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/10</li>
+            <li>Harden network and Linux packaging by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/11</li>
+            <li>Secure Linux credential storage by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/12</li>
+            <li>Update security workflow actions by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/14</li>
+            <li>Bump actions/upload-artifact from 4.6.2 to 7.0.1 by @dependabot[bot] in https://github.com/samyyy2311/CassetteCat-Desktop/pull/4</li>
+            <li>Bump actions/checkout from 4.2.2 to 7.0.1 by @dependabot[bot] in https://github.com/samyyy2311/CassetteCat-Desktop/pull/1</li>
+            <li>Pin reproducible build dependencies by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/15</li>
+            <li>Bump the github-actions group across 1 directory with 8 updates by @dependabot[bot] in https://github.com/samyyy2311/CassetteCat-Desktop/pull/18</li>
+            <li>Desktop enhancements: ReplayGain, MPRIS 2, diagnostic logs, and UI modernization by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/19</li>
+            <li>Performance improvements, smooth scrolling, and UI refinements (v0.6.0) by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/20</li>
+            <li>Set the 0.6.0 release date by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/21</li>
+          </ul>
+          <p><strong>New Contributors</strong></p>
+          <ul>
+            <li>@dependabot[bot] made their first contribution in https://github.com/samyyy2311/CassetteCat-Desktop/pull/4</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat-Desktop/compare/v0.5.1...v0.6.0</li>
+          </ul>
+        </section>
+
+        <section id="desktop-v0-5-1">
+          <h3>v0.5.1</h3>
+          <p><strong>What's Changed</strong></p>
+          <ul>
+            <li>Fix Flatpak release CI user scope by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/5</li>
+            <li>Fix Flatpak Qt runtime and release branch by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/7</li>
+            <li>Prepare CassetteCat 0.5.1 by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/8</li>
+            <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat-Desktop/compare/v0.5.0...v0.5.1</li>
+          </ul>
+        </section>
+        <!-- /releases:notes -->
       </div>
     </div>
   </main>
@@ -406,7 +820,7 @@
     </div>
   </footer>
 
-  <script src="assets/main.js?v=20261002"></script>
+  <script src="assets/main.js?v=20261009"></script>
 </body>
 
 </html>
