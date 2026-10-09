@@ -70,9 +70,9 @@
       <div class="doc-head">
         <h1>Changelog</h1>
         <div class="doc-head-meta">
-          <span><b>Android</b> v1.7.7</span>
+          <span><b>Android</b> v1.8.0</span>
           <span class="sep">·</span>
-          <span><b>Desktop</b> v0.8.0</span>
+          <span><b>Desktop</b> v0.9.0</span>
           <span class="sep">·</span>
           <span><b>Source</b> GitHub Releases for <a href="https://github.com/samyyy2311/CassetteCat/releases" target="_blank" rel="noopener">Android</a> and <a href="https://github.com/samyyy2311/CassetteCat-Desktop/releases" target="_blank" rel="noopener">Desktop</a></span>
         </div>
@@ -83,6 +83,7 @@
         <ol>
           <!-- releases:toc -->
           <li class="toc-group">Android</li>
+          <li><a href="#android-v1-8-0">v1.8.0</a></li>
           <li><a href="#android-v1-7-7">v1.7.7</a></li>
           <li><a href="#android-v1-7-6">v1.7.6</a></li>
           <li><a href="#android-v1-7-5">v1.7.5</a></li>
@@ -106,6 +107,7 @@
           <li><a href="#android-v1-1-0">v1.1.0</a></li>
           <li><a href="#android-v1-0-0">v1.0.0</a></li>
           <li class="toc-group">Desktop</li>
+          <li><a href="#desktop-v0-9-0">v0.9.0</a></li>
           <li><a href="#desktop-v0-8-0">v0.8.0</a></li>
           <li><a href="#desktop-v0-7-0">v0.7.0</a></li>
           <li><a href="#desktop-v0-6-0">v0.6.0</a></li>
@@ -119,6 +121,22 @@
 
         <!-- releases:notes -->
         <h2 class="doc-group" id="android">Android</h2>
+
+        <section id="android-v1-8-0">
+          <h3>v1.8.0</h3>
+          <p><strong>[1.8.0]</strong></p>
+          <ul>
+            <li>Browse your computer's music from the phone and play it there or stream it here.</li>
+            <li>While you control the computer, songs you pick play on it. It shows up by name in your media controls, and its volume follows your phone's.</li>
+            <li>The computer shows what your phone is playing, with the cover and progress, and can take over or control it. Music plays on one device at a time.</li>
+            <li>One Listening Record with your computer: your whole history is shared, both rank songs the same way, songs you skip still add listening time, and a Sync button in Stats brings them together.</li>
+            <li>Last.fm scrobbling, alongside ListenBrainz and Libre.fm.</li>
+            <li>Skip Silence skips long quiet stretches, such as pauses in live recordings and podcasts.</li>
+            <li>A shorter setup: restore a backup first, then choose your folders, your Listening Record and scrobbling, and how the app looks.</li>
+            <li>Your phone finds the computer again as soon as your Wi-Fi changes.</li>
+            <li>Lossless audio is called Lossless rather than Lossless Uncompressed.</li>
+          </ul>
+        </section>
 
         <section id="android-v1-7-7">
           <h3>v1.7.7</h3>
@@ -732,6 +750,66 @@
         </section>
 
         <h2 class="doc-group" id="desktop">Desktop</h2>
+
+        <section id="desktop-v0-9-0">
+          <h3>v0.9.0</h3>
+          <p><strong>Added</strong></p>
+          <ul>
+            <li>Your phone can browse this computer's music and play it, on the computer or streamed to the phone.</li>
+            <li>The player bar shows what your phone is playing and controls it. Play Here moves the song to the computer, and music plays on one device at a time.</li>
+            <li>Phone Remote has its own page in Settings, with the pairing code and a list of paired phones you can remove.</li>
+            <li>One Listening Record with your phone: plays count the same way on both, songs you skip still add listening time, and a Sync button brings them together.</li>
+            <li>A ten-band equalizer with AutoEq correction for your headphones.</li>
+            <li>Last.fm scrobbling, alongside ListenBrainz and Libre.fm.</li>
+            <li>Search shows matching artists and albums, remembers your recent searches, and can play or shuffle every result.</li>
+            <li>A short setup when you first open the app, to choose your music folder and colours.</li>
+            <li>Windows: Snap Layouts on the maximize button, rounded window corners, and play controls in the taskbar preview.</li>
+            <li>macOS: media keys and Now Playing in Control Center.</li>
+            <li>The Windows installer can start CassetteCat when you sign in, and asks before deleting your settings and Listening Record on uninstall.</li>
+          </ul>
+          <p><strong>Changed</strong></p>
+          <ul>
+            <li>Songs play back to back with no gap, and changing songs fades briefly instead of cutting.</li>
+            <li>Buttons and choices look the same throughout the app, and the player bar is calmer.</li>
+            <li>The Listening Record names months Jan, Feb, Mar instead of single letters.</li>
+            <li>Lossless audio is called Lossless rather than Lossless Uncompressed.</li>
+          </ul>
+          <p><strong>Fixed</strong></p>
+          <ul>
+            <li>The app no longer uses CPU while idle because of hidden loading bars.</li>
+          </ul>
+          <p><strong>Also new since 0.8.0</strong></p>
+          <ul>
+            <li>0.8.1 wasn't released on its own, so its changes arrive with this version.</li>
+          </ul>
+          <p><strong>Added</strong></p>
+          <ul>
+            <li><strong>macOS</strong>: A universal app for Apple silicon and Intel Macs, shipped as a disk image. Passwords are kept in the Keychain. The app is not notarized yet.</li>
+            <li><strong>Linux ARM64</strong>: <code>.AppImage</code>, <code>.deb</code>, <code>.rpm</code> and <code>.tar.gz</code> packages for ARM64 alongside x86_64.</li>
+            <li><strong>Audio quality badge</strong>: Now Playing shows Hi-Res Lossless, Lossless or the codec under the artist. Click it for the format, sample rate, bit depth, bitrate and encoding, matching the Android app.</li>
+            <li><strong>Publisher details</strong>: The Windows executable, macOS bundle and Linux listing name CaffeineLabs as the publisher. Settings, Credits &amp; Legal shows the version, website and privacy policy.</li>
+            <li>The Microsoft Store package is attached to each GitHub release.</li>
+          </ul>
+          <p><strong>Changed</strong></p>
+          <ul>
+            <li>Uses less memory: about 500 MB instead of 720 MB on Home, and about 10-20 MB while hidden in the tray instead of about 500 MB (as shown in Task Manager).</li>
+            <li>Downloaded covers are stored at up to 1536 px instead of full size, and covers already cached are shrunk in the background. The covers folder takes well under half the space, with no visible change.</li>
+            <li>The mini player's controls match the main player bar, with tooltips and keyboard focus.</li>
+            <li>Home shows a loading bar while it builds, like the other pages.</li>
+            <li>Grey and accent-colored text meets WCAG AA contrast on every surface.</li>
+          </ul>
+          <p><strong>Fixed</strong></p>
+          <ul>
+            <li>Clicking the mini player's taskbar button minimizes it.</li>
+            <li>The playing song's cover is shown at full resolution instead of a stretched 512 px copy, and the phone remote shows covers for queued songs again.</li>
+            <li>The README and installer no longer mention gapless playback, which the app does not have.</li>
+          </ul>
+          <p><strong>Before you update</strong></p>
+          <ul>
+            <li>The phone remote's connection is now encrypted, so it needs CassetteCat for Android 1.8.0 or later. Pair your phone again after updating both.</li>
+            <li>Checksums are in SHA256SUMS.txt. The macOS app isn't notarized yet: the first time, right-click it in Applications and choose Open.</li>
+          </ul>
+        </section>
 
         <section id="desktop-v0-8-0">
           <h3>v0.8.0</h3>
