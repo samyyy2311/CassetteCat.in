@@ -39,9 +39,12 @@ const DESKTOP_DOWNLOADS = {
   linux: { name: 'Linux', asset: 'linux-x86_64.AppImage' },
 };
 
-getJSON(REPO + 'CassetteCat').then((data) => {
-  if (data) show('gh-stars', '★ ' + data.stargazers_count.toLocaleString());
-});
+const repoLink = document.querySelector('.nav .gh');
+if (repoLink) {
+  getJSON(REPO + repoLink.pathname.split('/')[2]).then((data) => {
+    if (data) show('gh-stars', '★ ' + data.stargazers_count.toLocaleString());
+  });
+}
 
 const os = detectOS();
 const desktopOS = DESKTOP_DOWNLOADS[os];

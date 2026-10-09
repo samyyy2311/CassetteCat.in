@@ -77,7 +77,8 @@
           "https://cassettecat.caffeinelabs.in/assets/screenshots/desktop/library.webp",
           "https://cassettecat.caffeinelabs.in/assets/screenshots/desktop/now-playing.webp",
           "https://cassettecat.caffeinelabs.in/assets/screenshots/desktop/listening-record.webp",
-          "https://cassettecat.caffeinelabs.in/assets/screenshots/desktop/radio.webp"
+          "https://cassettecat.caffeinelabs.in/assets/screenshots/desktop/radio.webp",
+          "https://cassettecat.caffeinelabs.in/assets/screenshots/desktop/jellyfin.webp"
         ],
         "featureList": [
           "Plays FLAC, MP3, AAC, ALAC, OGG, Opus and WAV",
@@ -107,7 +108,7 @@
         <a href="/desktop" class="wide" aria-current="page">Desktop</a>
         <a href="/#faq" class="wide">FAQ</a>
         <a href="/changelog" class="wide">Changelog</a>
-        <a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener" class="gh cap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.35.95.1-.74.4-1.25.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.04 11.04 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>GitHub<span id="gh-stars" hidden></span></a>
+        <a href="https://github.com/samyyy2311/CassetteCat-Desktop" target="_blank" rel="noopener" class="gh cap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.35.95.1-.74.4-1.25.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.04 11.04 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>GitHub<span id="gh-stars" hidden></span></a>
         <a href="/#download" class="narrow nav-dl cap cap-accent">Download</a>
       </nav>
     </div>
@@ -119,7 +120,7 @@
       <div class="wrap block-head page-head">
         <div class="head">
           <h1>CassetteCat for Desktop</h1>
-          <p>For Windows 10 and 11, macOS 13 and later on Apple silicon and Intel, and Linux on x86_64 and ARM64.</p>
+          <p>For Windows 10 and 11, macOS 13 and later on Apple silicon and Intel, and Linux on x86_64 and ARM64. The source code is on <a href="https://github.com/samyyy2311/CassetteCat-Desktop" target="_blank" rel="noopener">GitHub</a>.</p>
         </div>
         <div class="actions">
           <a id="dl-desktop" href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest" class="btn btn-primary">
@@ -134,7 +135,6 @@
       </div>
       <div class="tour tour-wide" aria-label="Desktop screens">
         <div class="wrap tour-head">
-          <p>The same player on a bigger screen, with room for your whole library.</p>
           <div class="tour-nav">
             <button type="button" class="cap" data-scroll="-1" aria-label="Previous desktop screens"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
             <button type="button" class="cap" data-scroll="1" aria-label="Next desktop screens"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
@@ -143,39 +143,71 @@
         <div class="tour-track">
           <figure><img src="assets/screenshots/desktop/home.webp" alt="CassetteCat desktop Home screen with a shuffle card and picks from the library" width="1600" height="1000" loading="lazy"><figcaption><b>Home</b><span>Picks from your library, changing with the time of day.</span></figcaption></figure>
           <figure><img src="assets/screenshots/desktop/library.webp" alt="CassetteCat desktop library showing an album grid" width="1600" height="1000" loading="lazy"><figcaption><b>Library</b><span>Songs, artists, albums, genres, folders and playlists, with a tag editor for fixing many files at once.</span></figcaption></figure>
+          <figure><img src="assets/screenshots/desktop/jellyfin.webp" alt="CassetteCat desktop showing albums from a Jellyfin server" width="1600" height="1000" loading="lazy"><figcaption><b>Jellyfin</b><span>Your Jellyfin library next to your own files, with Quick Connect sign-in.</span></figcaption></figure>
+          <figure><img src="assets/screenshots/desktop/subsonic.webp" alt="CassetteCat desktop sign-in page for a Subsonic server" width="1600" height="1000" loading="lazy"><figcaption><b>Subsonic</b><span>Sign in to Navidrome, Gonic or another Subsonic server. Your password stays in the system's credential store.</span></figcaption></figure>
           <figure><img src="assets/screenshots/desktop/now-playing.webp" alt="CassetteCat desktop Now Playing screen with large album art" width="1600" height="1000" loading="lazy"><figcaption><b>Now Playing</b><span>Big artwork, the audio format, and synced lyrics one click away.</span></figcaption></figure>
           <figure><img src="assets/screenshots/desktop/listening-record.webp" alt="CassetteCat desktop Listening Record with listening time and top artists" width="1600" height="1000" loading="lazy"><figcaption><b>Listening Record</b><span>Your top songs, artists and albums, your history, and a yearly Rewind.</span></figcaption></figure>
           <figure><img src="assets/screenshots/desktop/radio.webp" alt="CassetteCat desktop Radio page with station artwork" width="1600" height="1000" loading="lazy"><figcaption><b>Radio</b><span>Stations from the Radio Browser directory, apart from your library.</span></figcaption></figure>
         </div>
       </div>
-      <div class="wrap block">
-        <div class="jcard">
-          <div class="jcard-top"><span>CassetteCat for Desktop</span><span>C-90 &middot; Type II</span></div>
-          <div class="tape-stripe"></div>
-          <div class="jcard-body">
-            <div class="side">
-              <h3>Side A &middot; Listening</h3>
-              <ol>
-                <li><span>A1</span><div><b>Your music folder</b><small>FLAC, MP3, AAC, ALAC, OGG, Opus and WAV, sorted by song, album, artist and folder.</small></div></li>
-                <li><span>A2</span><div><b>Your own server</b><small>Navidrome, Gonic, Airsonic or Jellyfin, next to your local files.</small></div></li>
-                <li><span>A3</span><div><b>Synced lyrics</b><small>From .lrc files, tags or LRCLIB. Tap along once to time plain lyrics.</small></div></li>
-                <li><span>A4</span><div><b>EQ with AutoEq</b><small>Ten bands, with correction curves made for your headphones.</small></div></li>
-                <li><span>A5</span><div><b>Gapless and crossfade</b><small>Songs play back to back, with ReplayGain to keep the volume even.</small></div></li>
-                <li><span>A6</span><div><b>Internet radio</b><small>Search stations by name, genre or country.</small></div></li>
-              </ol>
-            </div>
-            <div class="side">
-              <h3>Side B &middot; Your stuff</h3>
-              <ol>
-                <li><span>B1</span><div><b>Tag editor</b><small>Fix artist, album, genre, year and cover art on many songs at once.</small></div></li>
-                <li><span>B2</span><div><b>Listening Record</b><small>Play counts, top artists, your history, and monthly and yearly Rewind.</small></div></li>
-                <li><span>B3</span><div><b>Scrobbling</b><small>Last.fm, ListenBrainz and Libre.fm, plus an optional Discord status.</small></div></li>
-                <li><span>B4</span><div><b>Mini player</b><small>A small floating player, tray controls and your keyboard's media keys.</small></div></li>
-                <li><span>B5</span><div><b>Keyboard shortcuts</b><small>For playback, volume, seeking, search and the quick switcher.</small></div></li>
-                <li><span>B6</span><div><b>Offline Blackout</b><small>One switch turns off every internet request.</small></div></li>
-              </ol>
-            </div>
-          </div>
+      <div class="wrap block features">
+        <h2 class="features-title">Everything in the desktop app</h2>
+        <div class="feature-groups">
+          <section>
+            <h3>Playback and sound</h3>
+            <ul>
+              <li><b>Gapless playback and crossfade</b><span>Songs play back to back, with a short fade when you skip and crossfade up to 10 seconds.</span></li>
+              <li><b>Equalizer with AutoEq</b><span>Ten bands and a preamp, with correction curves for your headphones.</span></li>
+              <li><b>ReplayGain and volume limit</b><span>Even loudness by track or album, and a cap on the loudest level.</span></li>
+              <li><b>Sleep timer</b><span>Stops after a set time or at the end of the song, with a gentle fade.</span></li>
+              <li><b>Synced lyrics</b><span>From .lrc files, tags, Jellyfin or LRCLIB. Time plain lyrics by tapping along once.</span></li>
+              <li><b>Audio details</b><span>Hi-Res Lossless, Lossless or the codec, with sample rate, bit depth and bitrate.</span></li>
+              <li><b>Output device</b><span>Choose which speakers or headphones it plays through.</span></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Your library</h3>
+            <ul>
+              <li><b>Local music</b><span>Pick your folders and leave some out. New files are picked up as you add them.</span></li>
+              <li><b>Tag editor</b><span>Fix the artist, album, genre, year, lyrics and cover of many songs at once.</span></li>
+              <li><b>Covers</b><span>Search online catalogues for a better cover, and use cover.jpg or folder.jpg files.</span></li>
+              <li><b>Playlists</b><span>From a selection or the queue, with M3U import and export.</span></li>
+              <li><b>Search</b><span>Songs, artists and albums from anywhere with Ctrl+K.</span></li>
+              <li><b>Library health</b><span>Lists songs with missing tags, duplicates and albums without art.</span></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Streaming and radio</h3>
+            <ul>
+              <li><b>Your own server</b><span>Navidrome, Gonic, Airsonic and other Subsonic servers, and Jellyfin with Quick Connect.</span></li>
+              <li><b>Internet radio</b><span>Stations from Radio Browser, plus any stream you add yourself.</span></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Listening Record</h3>
+            <ul>
+              <li><b>Your stats</b><span>Top songs, artists and albums, and your full history.</span></li>
+              <li><b>Rewind</b><span>Monthly and yearly summaries.</span></li>
+              <li><b>Scrobbling</b><span>Last.fm, ListenBrainz and Libre.fm, and an optional Discord status.</span></li>
+            </ul>
+          </section>
+          <section>
+            <h3>On your desktop</h3>
+            <ul>
+              <li><b>Mini player</b><span>A small floating player with the cover, lyrics or queue, kept on top if you like.</span></li>
+              <li><b>System controls</b><span>Media keys, the Windows media overlay and taskbar buttons, macOS Control Center and MPRIS on Linux.</span></li>
+              <li><b>Keyboard shortcuts</b><span>For playback, volume, seeking and search, all changeable.</span></li>
+              <li><b>Tray</b><span>Keep playing in the system tray, start minimised, and get a notification when the song changes.</span></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Yours to set up</h3>
+            <ul>
+              <li><b>Your phone</b><span>Pair the Android app as a remote, move music between the two and share one Listening Record.</span></li>
+              <li><b>Backups</b><span>Settings, favourites and saved queues in one file.</span></li>
+              <li><b>Private</b><span>No account or tracking. Passwords stay in the system&#x27;s credential store, and Offline Blackout Mode turns off every internet request.</span></li>
+            </ul>
+          </section>
         </div>
         <dl class="formats">
           <dt>Windows</dt>
@@ -197,11 +229,12 @@
     <div class="wrap">
       <span>CassetteCat · GPL-3.0 · by <a href="https://caffeinelabs.in" target="_blank" rel="noopener">CaffeineLabs</a></span>
       <nav aria-label="Footer">
-        <a href="https://github.com/samyyy2311/CassetteCat" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/samyyy2311/CassetteCat-Desktop" target="_blank" rel="noopener">GitHub</a>
         <a href="/changelog">Changelog</a>
         <a href="/privacy">Privacy</a>
         <a href="/terms">Terms</a>
       </nav>
+      <a href="https://usefulshelf.co/apps/cassettecat?utm_source=cassettecat.caffeinelabs.in&amp;utm_medium=referral&amp;utm_campaign=badge&amp;utm_content=light" target="_blank" rel="noopener"><img src="https://usefulshelf.co/badge/cassettecat.svg" alt="Featured on UsefulShelf" width="248" height="66"></a>
     </div>
   </footer>
 
