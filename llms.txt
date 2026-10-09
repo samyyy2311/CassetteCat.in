@@ -20,7 +20,7 @@
 
 - Windows 10 and 11 (64-bit): [Microsoft Store](https://apps.microsoft.com/detail/9NXNRR95X3K0), `winget install CassetteCat`, or the installer or portable .zip from [GitHub Releases](https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest).
 - macOS 13 or later: a universal disk image for Apple silicon and Intel. It is not notarized yet, so the first launch needs right-click, Open.
-- Linux on x86_64 and ARM64: AppImage, .deb, .rpm and .tar.gz, plus Flatpak on x86_64.
+- Linux on x86_64 and ARM64: AppImage, .deb, .rpm, Flatpak and .tar.gz.
 - Plays FLAC, MP3, AAC, ALAC, OGG, Opus and WAV, and streams from Navidrome, Gonic, Airsonic or Jellyfin.
 - Synced lyrics from .lrc files, tags or LRCLIB, with tap-along timing for plain lyrics.
 - Ten-band equalizer with AutoEq, gapless playback, crossfade and ReplayGain.
