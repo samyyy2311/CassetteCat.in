@@ -223,10 +223,11 @@ code { font: 0.88em var(--mono); background: var(--bg-2); padding: 0.1em 0.35em;
 .credits strong { color: var(--ink); font-weight: 500; }
 
 .site-footer { padding: 28px 0 40px; font-size: 14px; color: var(--ink-3); }
-.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 24px; }
 .site-footer nav { display: flex; gap: 20px; }
 .site-footer a { color: var(--ink-2); text-decoration: none; }
 .site-footer a:hover { color: var(--ink); }
+.site-footer a[href^="https://usefulshelf.co/"] img { height: 40px; width: auto; }
 
 .frame { max-width: 1080px; margin: 0 auto; padding: 64px 24px 96px; }
 
