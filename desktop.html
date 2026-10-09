@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%C2%B7%26-.:&display=swap">
-  <link rel="stylesheet" href="assets/style.css?v=20261010">
+  <link rel="stylesheet" href="assets/style.css?v=20261011">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -120,7 +120,7 @@
       <div class="wrap block-head page-head">
         <div class="head">
           <h1>CassetteCat for Desktop</h1>
-          <p>For Windows 10 and 11, macOS 13 and later on Apple silicon and Intel, and Linux on x86_64 and ARM64. The source code is on <a href="https://github.com/samyyy2311/CassetteCat-Desktop" target="_blank" rel="noopener">GitHub</a>.</p>
+          <p>For Windows 10 and 11, macOS 13 and later on Apple silicon and Intel, and Linux on x86_64 and ARM64. The source code is on <a href="https://github.com/samyyy2311/CassetteCat-Desktop" target="_blank" rel="noopener">GitHub</a>. Every change is reviewed with <a href="https://coderabbit.ai" target="_blank" rel="noopener noreferrer">CodeRabbit</a>.</p>
         </div>
         <div class="actions">
           <a id="dl-desktop" href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest" class="btn btn-primary">
@@ -154,61 +154,62 @@
         <h2 class="features-title">Everything in the desktop app</h2>
         <div class="feature-groups">
           <section>
-            <h3>Playback and sound</h3>
+            <div class="feature-group-head"><h3>Playback</h3><p>How your music sounds and plays.</p></div>
             <ul>
-              <li><b>Gapless playback and crossfade</b><span>Songs play back to back, with a short fade when you skip and crossfade up to 10 seconds.</span></li>
-              <li><b>Equalizer with AutoEq</b><span>Ten bands and a preamp, with correction curves for your headphones.</span></li>
-              <li><b>ReplayGain and volume limit</b><span>Even loudness by track or album, and a cap on the loudest level.</span></li>
-              <li><b>Sleep timer</b><span>Stops after a set time or at the end of the song, with a gentle fade.</span></li>
-              <li><b>Synced lyrics</b><span>From .lrc files, tags, Jellyfin or LRCLIB. Time plain lyrics by tapping along once.</span></li>
-              <li><b>Audio details</b><span>Hi-Res Lossless, Lossless or the codec, with sample rate, bit depth and bitrate.</span></li>
-              <li><b>Queue and Autoplay</b><span>The queue survives restarts, and Autoplay keeps playing similar songs when it ends.</span></li>
-              <li><b>Output device</b><span>Choose which speakers or headphones it plays through.</span></li>
+              <li><b>Gapless and crossfade</b><span>No gaps between songs, or a fade of up to 10 seconds.</span></li>
+              <li><b>Equalizer with AutoEq</b><span>Ten bands, tuned for your headphones.</span></li>
+              <li><b>ReplayGain and volume limit</b><span>Even loudness, and a cap on the loudest level.</span></li>
+              <li><b>Sleep timer</b><span>Stops after a set time, with a gentle fade.</span></li>
+              <li><b>Queue and Autoplay</b><span>Survives restarts, then plays similar songs.</span></li>
+              <li><b>Audio details</b><span>Format, sample rate, bit depth and bitrate.</span></li>
+              <li><b>Output device</b><span>Pick which speakers or headphones to use.</span></li>
+              <li><b>Synced lyrics</b><span>From .lrc files, tags or LRCLIB. Time plain lyrics yourself.</span></li>
             </ul>
           </section>
           <section>
-            <h3>Your library</h3>
+            <div class="feature-group-head"><h3>Library</h3><p>Your own files, sorted and searchable.</p></div>
             <ul>
-              <li><b>Local music</b><span>Pick your folders and leave some out. New files are picked up as you add them.</span></li>
-              <li><b>Tag editor</b><span>Fix the artist, album, genre, year, lyrics and cover of many songs at once.</span></li>
-              <li><b>Covers</b><span>Search online catalogues for a better cover, and use cover.jpg or folder.jpg files.</span></li>
-              <li><b>Playlists</b><span>From a selection or the queue, with M3U import and export.</span></li>
-              <li><b>Search</b><span>Songs, artists and albums from anywhere with Ctrl+K.</span></li>
-              <li><b>Library health</b><span>Lists songs with missing tags, duplicates and albums without art.</span></li>
+              <li><b>Local music</b><span>Your folders, with new files picked up as you add them.</span></li>
+              <li><b>Tag editor</b><span>Fix tags and covers on many songs at once.</span></li>
+              <li><b>Covers</b><span>Find better covers from online catalogues.</span></li>
+              <li><b>Playlists</b><span>From a selection or the queue, with M3U import.</span></li>
+              <li><b>Search</b><span>Songs, artists and albums with Ctrl+K.</span></li>
+              <li><b>Library health</b><span>Finds missing tags, duplicates and missing art.</span></li>
             </ul>
           </section>
           <section>
-            <h3>Streaming and radio</h3>
+            <div class="feature-group-head"><h3>Streaming and radio</h3><p>Your server, and stations from around the world.</p></div>
             <ul>
-              <li><b>Jellyfin</b><span>Stream your Jellyfin music library next to your own files, signing in with your password or Quick Connect.</span></li>
-              <li><b>Navidrome and Subsonic</b><span>Navidrome, Gonic, Airsonic and other servers that speak the Subsonic API.</span></li>
-              <li><b>Internet radio</b><span>Stations from Radio Browser, plus any stream you add yourself.</span></li>
+              <li><b>Jellyfin</b><span>Your Jellyfin library, with Quick Connect.</span></li>
+              <li><b>Navidrome and Subsonic</b><span>Navidrome, Gonic, Airsonic and more.</span></li>
+              <li><b>Internet radio</b><span>Radio Browser stations, plus your own streams.</span></li>
             </ul>
           </section>
           <section>
-            <h3>Listening Record</h3>
+            <div class="feature-group-head"><h3>Listening Record</h3><p>What you play, kept on your device.</p></div>
             <ul>
               <li><b>Your stats</b><span>Top songs, artists and albums, and your full history.</span></li>
               <li><b>Rewind</b><span>Monthly and yearly summaries.</span></li>
-              <li><b>Scrobbling</b><span>Last.fm, ListenBrainz and Libre.fm, and an optional Discord status.</span></li>
+              <li><b>Scrobbling</b><span>Last.fm, ListenBrainz and Libre.fm.</span></li>
+              <li><b>Discord status</b><span>Show what you&#x27;re playing on Discord.</span></li>
             </ul>
           </section>
           <section>
-            <h3>On your desktop</h3>
+            <div class="feature-group-head"><h3>On your desktop</h3><p>Made for a keyboard and a big screen.</p></div>
             <ul>
-              <li><b>Mini player</b><span>A small floating player with the cover, lyrics or queue, kept on top if you like.</span></li>
-              <li><b>System controls</b><span>Media keys, the Windows media overlay and taskbar buttons, macOS Control Center and MPRIS on Linux.</span></li>
-              <li><b>Keyboard shortcuts</b><span>For playback, volume, seeking and search, all changeable.</span></li>
-              <li><b>Tray</b><span>Keep playing in the system tray, start minimised, and get a notification when the song changes.</span></li>
-              <li><b>Windows installer</b><span>Optional Open with entries for audio files, and starting CassetteCat when you sign in.</span></li>
+              <li><b>Mini player</b><span>A small floating player, kept on top if you like.</span></li>
+              <li><b>System controls</b><span>Media keys and each system&#x27;s own media controls.</span></li>
+              <li><b>Keyboard shortcuts</b><span>For everything, and all changeable.</span></li>
+              <li><b>System tray</b><span>Keeps playing in the tray, with song change notifications.</span></li>
+              <li><b>Windows installer</b><span>Open with entries and start at sign-in, if you want them.</span></li>
             </ul>
           </section>
           <section>
-            <h3>Yours to set up</h3>
+            <div class="feature-group-head"><h3>Yours</h3><p>Your look, your backups, your privacy.</p></div>
             <ul>
-              <li><b>Your phone</b><span>Pair with the Android app as a remote. See below on the home page.</span></li>
+              <li><b>Your phone</b><span>Pair the Android app as a remote, and share one Listening Record.</span></li>
               <li><b>Backups</b><span>Settings, favourites and saved queues in one file.</span></li>
-              <li><b>Private</b><span>No account or tracking. Passwords stay in the system&#x27;s credential store, and Offline Blackout Mode turns off every internet request.</span></li>
+              <li><b>Private</b><span>No account or tracking, and Offline Blackout Mode.</span></li>
             </ul>
           </section>
         </div>

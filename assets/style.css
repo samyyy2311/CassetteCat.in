@@ -176,11 +176,12 @@ code { font: 0.88em var(--mono); background: var(--bg-2); padding: 0.1em 0.35em;
 .page-head h1 { font-size: clamp(36px, 5vw, 56px); margin-bottom: 14px; }
 
 .features-title { font-size: clamp(28px, 3.4vw, 36px); margin-bottom: 40px; }
-.feature-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 48px; }
-.feature-groups h3 { font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: 0.04em; color: var(--accent-hi); margin-bottom: 8px; }
-.feature-groups ul { list-style: none; margin: 0; padding: 0; }
-.feature-groups li { padding: 12px 0; border-top: 1px solid var(--rule); }
-.feature-groups li b { display: block; font: 500 16px var(--display); margin-bottom: 2px; }
+.feature-groups { display: flex; flex-direction: column; gap: 16px; }
+.feature-groups section { display: grid; grid-template-columns: 240px 1fr; gap: 20px 48px; padding: 32px; background: var(--bg-2); border: 1px solid var(--bg-3); border-radius: 12px; }
+.feature-group-head h3 { font-size: 22px; margin-bottom: 8px; }
+.feature-group-head p { font-size: 14px; color: var(--ink-3); margin: 0; }
+.feature-groups ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 40px; }
+.feature-groups li b { display: block; font: 500 16px var(--display); margin-bottom: 4px; }
 .feature-groups li span { font-size: 14px; color: var(--ink-2); }
 .tour-head .tour-nav { margin-left: auto; }
 
@@ -284,7 +285,7 @@ code { font: 0.88em var(--mono); background: var(--bg-2); padding: 0.1em 0.35em;
   .tour-track figure:nth-child(even) { margin-top: 36px; }
   .block { padding: 80px 0; }
   .faq, .apps { grid-template-columns: 1fr; }
-  .feature-groups { grid-template-columns: 1fr 1fr; }
+  .feature-groups section { grid-template-columns: 1fr; padding: 24px; }
   .faq { gap: 32px; }
   .credits { grid-template-columns: 1fr; gap: 24px; }
   .doc-layout { grid-template-columns: 1fr; }
@@ -302,7 +303,7 @@ code { font: 0.88em var(--mono); background: var(--bg-2); padding: 0.1em 0.35em;
   .hero .actions { flex-wrap: wrap; }
   .hero-devices { padding-left: 24px; }
   .hero-phone { border-radius: 16px; border-width: 3px; }
-  .together ul, .feature-groups { grid-template-columns: 1fr; }
+  .together ul, .feature-groups ul { grid-template-columns: 1fr; }
   .formats { grid-template-columns: 1fr; gap: 4px; }
   .formats dd { margin-bottom: 12px; }
   .platform { padding: 28px 22px; }
