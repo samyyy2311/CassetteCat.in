@@ -7,31 +7,49 @@ CassetteCat plays music stored on your phone, music on your own Subsonic or Jell
 
 ## Install
 
-Pick one:
+<Tabs>
+  <Tab title="Google Play">
+    Get [CassetteCat on Google Play](https://play.google.com/store/apps/details?id=in.caffeinelabs.cassettecat). Updates arrive through the Play Store.
+  </Tab>
+  <Tab title="GitHub">
+    Download `CassetteCat-vX.Y.Z.apk` from the [latest release](https://github.com/samyyy2311/CassetteCat/releases/latest) and open it. The first time, Android asks you to allow installs from your browser or file manager.
 
-- **Google Play**: [CassetteCat on Google Play](https://play.google.com/store/apps/details?id=in.caffeinelabs.cassettecat). Updates arrive through the Play Store.
-- **GitHub**: download `CassetteCat-vX.Y.Z.apk` from the [latest release](https://github.com/samyyy2311/CassetteCat/releases/latest) and open it. Android asks you to allow installs from your browser or file manager the first time. Each release also has a `.sha256` file if you want to check the download.
-- **Obtainium**: with [Obtainium](https://github.com/ImranR98/Obtainium) installed, [add CassetteCat in one tap](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/samyyy2311/CassetteCat), or add `https://github.com/samyyy2311/CassetteCat` by hand. Obtainium then installs new GitHub releases as they come out.
-
-The app can also tell you about new GitHub releases: **Settings > Check for Updates**.
+    Each release also has a `.sha256` file if you want to check the download. The app can tell you when a new release is out: **Settings > Check for Updates**.
+  </Tab>
+  <Tab title="Obtainium">
+    With [Obtainium](https://github.com/ImranR98/Obtainium) installed, [add CassetteCat in one tap](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/samyyy2311/CassetteCat), or add `https://github.com/samyyy2311/CassetteCat` by hand. Obtainium then installs each new GitHub release for you.
+  </Tab>
+</Tabs>
 
 ## First launch
 
-The setup takes about a minute and every step can be changed later in **Settings**.
+Setup takes about a minute, and you can change every choice later in **Settings**.
 
-1. **Welcome**: tap **Set up my library**.
-2. **Permissions**: CassetteCat asks for:
-   - **Music and audio**, to find the songs on your phone. Without it, only streaming and radio work.
-   - **Notifications**, to show playback controls outside the app and on the lock screen.
-   - **Nearby devices**, only used to pair a CassetteCat hardware player. You can skip it.
-3. **Choose your music folders**:
-   - **All music** finds audio anywhere Android allows. Start here if you're unsure.
-   - **Only these folders** builds the library from folders you pick. Use it if your phone also holds podcasts, voice notes or audiobooks you don't want mixed in.
-   - **Everything except these folders** scans everything but the folders you pick.
-4. **Make it yours**: pick an accent colour, font, Now Playing backdrop, start screen and gestures. If you already have a CassetteCat backup file, tap **Restore from Backup** here to bring back your playlists, favourites and settings.
-5. **Add your listening device**: this is for the CassetteCat hardware player. Tap **Skip** if you don't have one.
+<Steps>
+  <Step title="Welcome">
+    Tap **Set up my library**.
+  </Step>
+  <Step title="Permissions">
+    CassetteCat asks for three:
 
-Your library appears on **Home** once the scan finishes. If it stays empty, see [Troubleshooting](/android/troubleshooting#my-songs-dont-show-up).
+    - **Music and audio**, to find the songs on your phone. Without it, only streaming and radio work.
+    - **Notifications**, for playback controls outside the app and on the lock screen.
+    - **Nearby devices**, only for pairing a CassetteCat hardware player. You can skip it.
+  </Step>
+  <Step title="Choose your music folders">
+    - **All music** finds audio anywhere Android allows. Start here if you're not sure.
+    - **Only these folders** builds the library from folders you pick. Handy if your phone also holds podcasts, voice notes or audiobooks you don't want mixed in.
+    - **Everything except these folders** scans everything but the folders you pick.
+  </Step>
+  <Step title="Make it yours">
+    Pick an accent colour, font, Now Playing backdrop, start screen and gestures. Already have a CassetteCat backup? Tap **Restore from Backup** here to bring back your playlists, favourites and settings.
+  </Step>
+  <Step title="Add your listening device">
+    This is for the CassetteCat hardware player. Tap **Skip** if you don't have one.
+  </Step>
+</Steps>
+
+Your library appears on **Home** once the scan finishes. If it stays empty, see [Troubleshooting](/android/troubleshooting#library).
 
 ## Finding your way around
 
@@ -48,4 +66,4 @@ The **mini-player** at the bottom shows what's playing. Tap it to open **Now Pla
 - [Library and playlists](/android/library-and-playlists)
 - [Playback and sound](/android/playback-and-sound)
 - [Streaming, downloads and radio](/android/streaming-and-radio)
-- [Using CassetteCat with your computer](/phone-and-computer)
+- [Phone and computer](/phone-and-computer)
