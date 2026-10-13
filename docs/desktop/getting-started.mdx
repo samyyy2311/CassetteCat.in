@@ -7,22 +7,25 @@ CassetteCat plays the music on your computer, music on your own Subsonic or Jell
 
 ## Install
 
-### Windows
-
-Pick one:
+<Tabs>
+<Tab title="Windows">
 
 - **Microsoft Store**: [CassetteCat on the Microsoft Store](https://apps.microsoft.com/detail/9NXNRR95X3K0). The Store keeps it up to date.
-- **Windows Package Manager**: run `winget install CassetteCat`, and `winget upgrade CassetteCat` later for new versions.
-- **Installer**: download `CassetteCat-vX.Y.Z-windows-x64-setup.exe` from the [latest release](https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest). The installer can add "Open with CassetteCat" for audio files and start CassetteCat when you sign in. Uninstalling asks before it deletes your settings and Listening Record.
-- **Portable**: download the `windows-x64.zip`, unzip it anywhere and run `CassetteCat\bin\CassetteCat.exe`. Nothing is installed.
+- **winget**: run `winget install CassetteCat`, and `winget upgrade CassetteCat` later for new versions.
+- **Installer**: download `CassetteCat-vX.Y.Z-windows-x64-setup.exe` from the [latest release](https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest). It can add **Open with CassetteCat** for audio files and start CassetteCat when you sign in. Uninstalling asks before it deletes your settings and Listening Record.
+- **Portable**: download the `windows-x64.zip`, unzip it anywhere and run `CassetteCat\bin\CassetteCat.exe`. Nothing gets installed.
 
-### macOS
+</Tab>
+<Tab title="macOS">
 
-Download `CassetteCat-vX.Y.Z-macos-universal.dmg`, open it and drag CassetteCat to Applications. One app runs on both Apple silicon and Intel Macs.
+Download `CassetteCat-vX.Y.Z-macos-universal.dmg`, open it and drag CassetteCat to Applications. The same app runs on Apple silicon and Intel Macs.
 
-The app isn't notarized by Apple yet, so macOS blocks the first launch. Right-click CassetteCat in Applications and choose **Open**, or allow it under **System Settings > Privacy & Security**. You only need to do this once.
+<Warning>
+Apple hasn't notarized the app yet, so macOS blocks the first launch. Right-click CassetteCat in Applications and choose **Open**, or allow it under **System Settings > Privacy & Security**. You only need to do this once.
+</Warning>
 
-### Linux
+</Tab>
+<Tab title="Linux">
 
 Every package comes for x86_64 and ARM64 (aarch64). Pick the one that suits your system:
 
@@ -34,17 +37,28 @@ Every package comes for x86_64 and ARM64 (aarch64). Pick the one that suits your
 | `.flatpak` | Any distribution with Flatpak | `flatpak install --user CassetteCat-*.flatpak` |
 | `.tar.gz` | Anywhere, without installing | Unpack it and run `CassetteCat/bin/CassetteCat` |
 
+</Tab>
+</Tabs>
+
 Each release has a `SHA256SUMS.txt` if you want to check your download.
 
 ## First launch
 
-A short setup runs the first time. Everything in it can be changed later in **Settings**.
+A short setup runs the first time. You can change all of it later in **Settings**.
 
-1. **Welcome**: an introduction to what CassetteCat does.
-2. **Choose your music**: add the folders that hold your music. CassetteCat builds your library from them and picks up new files as you add them. You can add more folders, or exclude some, in **Settings > Music Library** later.
-3. **Make it yours**: pick an accent colour and how the app looks.
+<Steps>
+  <Step title="Welcome">
+    A quick look at what CassetteCat does.
+  </Step>
+  <Step title="Choose your music">
+    Add the folders that hold your music. CassetteCat builds your library from them and picks up new files as you add them. You can add more folders, or leave some out, in **Settings > Music Library** later.
+  </Step>
+  <Step title="Make it yours">
+    Pick an accent colour and how the app looks.
+  </Step>
+</Steps>
 
-Your library appears on **Home** once the first scan finishes. If songs are missing, see [Troubleshooting](/desktop/troubleshooting#my-songs-dont-show-up).
+Your library appears on **Home** once the first scan finishes. If songs are missing, see [Troubleshooting](/desktop/troubleshooting#library).
 
 ## Finding your way around
 
@@ -66,4 +80,4 @@ The **player bar** at the bottom shows what's playing. Click the cover to open *
 
 - [Library and playlists](/desktop/library-and-playlists)
 - [Playback and sound](/desktop/playback-and-sound)
-- [Using CassetteCat with your phone](/phone-and-computer)
+- [Phone and computer](/phone-and-computer)

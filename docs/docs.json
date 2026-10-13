@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "willow",
+  "theme": "mint",
   "name": "CassetteCat",
   "description": "How to use CassetteCat, the music player for the music you own, on Android and on your computer.",
   "colors": {
@@ -10,47 +10,106 @@
   },
   "favicon": "/favicon.ico",
   "appearance": {
-    "default": "dark"
+    "default": "dark",
+    "strict": true
   },
   "fonts": {
-    "family": "IBM Plex Sans"
+    "heading": {
+      "family": "Space Grotesk"
+    },
+    "body": {
+      "family": "IBM Plex Sans"
+    }
   },
   "icons": {
     "library": "lucide"
   },
   "navbar": {
     "links": [
-      { "label": "Website", "href": "https://cassettecat.caffeinelabs.in" }
-    ]
-  },
-  "navigation": {
-    "groups": [
       {
-        "group": "Overview",
-        "pages": ["index", "phone-and-computer"]
+        "label": "Website",
+        "href": "https://cassettecat.caffeinelabs.in"
       },
       {
-        "group": "Android",
-        "pages": [
-          "android/getting-started",
-          "android/library-and-playlists",
-          "android/playback-and-sound",
-          "android/streaming-and-radio",
-          "android/listening-room",
-          "android/car-widgets-shortcuts",
-          "android/backup-and-privacy",
-          "android/troubleshooting"
+        "label": "GitHub",
+        "href": "https://github.com/samyyy2311/CassetteCat"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Download",
+      "href": "https://cassettecat.caffeinelabs.in/#download"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Overview",
+        "icon": "house",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "index",
+              "phone-and-computer"
+            ]
+          }
         ]
       },
       {
-        "group": "Desktop",
-        "pages": [
-          "desktop/getting-started",
-          "desktop/library-and-playlists",
-          "desktop/playback-and-sound",
-          "desktop/streaming-and-radio",
-          "desktop/settings-and-privacy",
-          "desktop/troubleshooting"
+        "tab": "Android",
+        "icon": "smartphone",
+        "groups": [
+          {
+            "group": "Get started",
+            "pages": [
+              "android/getting-started"
+            ]
+          },
+          {
+            "group": "Using the app",
+            "pages": [
+              "android/library-and-playlists",
+              "android/playback-and-sound",
+              "android/streaming-and-radio",
+              "android/listening-room",
+              "android/car-widgets-shortcuts",
+              "android/backup-and-privacy"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "android/troubleshooting"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Desktop",
+        "icon": "monitor",
+        "groups": [
+          {
+            "group": "Get started",
+            "pages": [
+              "desktop/getting-started"
+            ]
+          },
+          {
+            "group": "Using the app",
+            "pages": [
+              "desktop/library-and-playlists",
+              "desktop/playback-and-sound",
+              "desktop/streaming-and-radio",
+              "desktop/settings-and-privacy"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "desktop/troubleshooting"
+            ]
+          }
         ]
       }
     ]
@@ -59,5 +118,15 @@
     "socials": {
       "github": "https://github.com/samyyy2311/CassetteCat"
     }
+  },
+  "background": {
+    "color": {
+      "dark": "#000000",
+      "light": "#FFFFFF"
+    }
+  },
+  "logo": {
+    "light": "/logo.png",
+    "dark": "/logo.png"
   }
 }

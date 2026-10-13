@@ -3,42 +3,42 @@ title: "Phone and computer"
 description: "Pair CassetteCat for Android with CassetteCat Desktop to control playback, move music between them and keep your library in sync."
 ---
 
-Pair the Android app with CassetteCat Desktop on the same Wi-Fi, and the two work as one:
+Pair the Android app with CassetteCat Desktop on the same Wi-Fi and they work as one. Your phone becomes a remote for the computer, what you're playing moves between them with its queue, and your likes, playlists and Listening Record stay in sync. The phone also backs itself up to the computer every day.
 
-- your phone controls the computer's playback, like a remote;
-- what you're listening to moves from one to the other, with the queue and position;
-- your phone can browse the computer's music and play it on either device;
-- likes, playlists and your Listening Record stay in sync;
-- your phone backs itself up to the computer every day.
-
-Each app works fine on its own, so pairing is optional. Everything travels over your own network, encrypted, without an account or the internet.
+Both apps work fine on their own, so pairing is optional. Everything stays on your own network, encrypted, with no account and no internet connection involved.
 
 You need CassetteCat for Android 1.8.0 or later and CassetteCat Desktop 0.9.0 or later.
 
 ## Pair your phone
 
-**On the computer**, make sure **Settings > Phone Remote > Control From Your Phone** is on. It's on by default.
+<Steps>
+  <Step title="Turn on the phone remote on the computer">
+    In CassetteCat Desktop, check that **Settings > Phone Remote > Control From Your Phone** is on. It's on by default.
 
-The first time you turn it on, Windows may ask whether CassetteCat can use your network. Allow it on private networks, or your phone won't find the computer.
+    The first time it's on, Windows may ask whether CassetteCat can use your network. Allow it on private networks, or your phone won't find the computer.
+  </Step>
+  <Step title="Find the computer on your phone">
+    On the phone, open **Settings > Library & Hardware > Desktop Remote**, or tap **Devices** in Now Playing and then **Set up a computer**. Your computer appears under **Computers on this Wi-Fi**. Tap it. If it isn't there, tap **Search again**.
+  </Step>
+  <Step title="Allow the phone on the computer">
+    The computer asks **Connect *your phone*?** Click **Allow**. The phone shows **Paired**, and the computer lists it under **Paired Phones**.
+  </Step>
+</Steps>
 
-**On the phone**
+Pairing is remembered, even when the computer gets a new address on your network.
 
-1. Open **Settings > Library & Hardware > Desktop Remote**. You can also tap the **Devices** button in Now Playing, beside the lyrics and queue buttons, then **Set up a computer**.
-2. Under **Computers on this Wi-Fi**, tap your computer. If it isn't listed, tap **Search again**.
-3. The computer asks **Connect *your phone*?** Click **Allow**.
-
-The phone now shows **Paired**, and the computer lists it under **Paired Phones**. Pairing is remembered, also when the computer gets a new address on your network.
-
+<Warning>
 Only allow phones you own. A paired phone can control playback, sync your library data and back up to that computer.
+</Warning>
 
 ### Pair by address instead
 
-If your phone can't find the computer, often because of a guest network or a router that stops devices seeing each other:
+When the phone can't find the computer, it's usually a guest network or a router that keeps devices apart. You can type the address in instead:
 
-1. On the computer, open **Settings > Phone Remote > Pair Manually** and click **Copy**. The address looks like `192.168.1.20:47800#ABC234`: the computer's address, then `#`, then the pairing code.
-2. On the phone, in **Desktop Remote**, enter the whole address, including the part after `#`.
+1. On the computer, open **Settings > Phone Remote > Pair Manually** and click **Copy**. You get something like `192.168.1.20:47800#ABC234`: the computer's address, then `#`, then the pairing code.
+2. On the phone, enter the whole thing in **Desktop Remote**, including the part after `#`.
 
-**New Code** on the computer makes a new pairing code, which unpairs phones that were paired by address. Phones you approved with **Allow** stay paired.
+**New Code** on the computer makes a fresh pairing code. Phones paired by address have to pair again; phones you approved with **Allow** stay paired.
 
 ## Control the computer from your phone
 
@@ -98,7 +98,8 @@ Everything stays on your network. The connection is encrypted: the computer make
 
 ## If something goes wrong
 
-### The phone can't find the computer
+<AccordionGroup>
+<Accordion title="The phone can't find the computer">
 
 - Both devices must be on the same Wi-Fi network. Guest networks and some office, hotel or router setups stop devices seeing each other; use your main network.
 - On the computer, CassetteCat Desktop must be open, **Settings > Phone Remote > Control From Your Phone** on, and **Offline Blackout Mode** off.
@@ -106,18 +107,25 @@ Everything stays on your network. The connection is encrypted: the computer make
 - CassetteCat uses port 47800 for the connection (TCP) and for being found (UDP). If you run your own firewall, allow both on your local network.
 - If it still isn't found, [pair by address](#pair-by-address-instead).
 
-### "That code doesn't match the one on the computer"
+</Accordion>
+<Accordion title="The phone says the code doesn't match">
 
 Copy the address again from the computer and enter all of it, including the part after `#`. After ten wrong codes in a row the computer refuses all requests for one minute, so wait a minute before trying again.
 
-### The phone asks to pair again
+</Accordion>
+<Accordion title="The phone asks to pair again">
 
 That happens when someone clicked **New Code** on the computer, when the phone was removed under **Paired Phones**, or when the computer's certificate changed, for example after its data was deleted. Pair again as above.
 
-### A song didn't move to the other device
+</Accordion>
+<Accordion title="A song didn't move to the other device">
 
 Songs are matched by title and artist. If the other library has different tags for the song, or doesn't have it, it can't move. Make the title and artist match.
 
-### Backups to the computer fail
+</Accordion>
+<Accordion title="Backups to the computer fail">
 
 The computer must be on, with CassetteCat Desktop open, on the same Wi-Fi. The phone tries again the next day, or tap **Back Up to Computer** in **Settings > Backup & Restore**.
+
+</Accordion>
+</AccordionGroup>
