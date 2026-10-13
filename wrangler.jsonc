@@ -1,9 +1,13 @@
 // Cloudflare builds and deploys this site from GitHub: the build command in the dashboard writes the site to _site.
 {
   "name": "cassettecat-in",
+  "main": "worker.js",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./_site",
-    "not_found_handling": "404-page"
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // The site has no /docs files, so these requests go to worker.js instead of the 404 page.
+    "run_worker_first": ["/docs", "/docs/*"]
   }
 }
