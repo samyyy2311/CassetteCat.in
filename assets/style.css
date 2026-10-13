@@ -290,6 +290,13 @@ code { font: 0.88em var(--mono); background: var(--bg-2); padding: 0.1em 0.35em;
   .credits { grid-template-columns: 1fr; gap: 24px; }
   .doc-layout { grid-template-columns: 1fr; }
   .doc-toc { position: static; max-height: none; }
+  .nav nav { gap: 20px; }
+}
+
+/* Below this the header links no longer fit beside the name, so they fold into the Download button. */
+@media (max-width: 760px) {
+  .nav .wide { display: none; }
+  .nav .narrow { display: inline-flex; }
 }
 
 @media (max-width: 560px) {
@@ -298,8 +305,6 @@ code { font: 0.88em var(--mono); background: var(--bg-2); padding: 0.1em 0.35em;
   .tour-nav { display: none; }
   .brand span { display: none; }
   .nav nav { gap: 16px; }
-  .nav .wide { display: none; }
-  .nav .narrow { display: inline-flex; }
   .hero .actions { flex-wrap: wrap; }
   .hero-devices { padding-left: 24px; }
   .hero-phone { border-radius: 16px; border-width: 3px; }
