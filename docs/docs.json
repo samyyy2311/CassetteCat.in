@@ -1,0 +1,63 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "willow",
+  "name": "CassetteCat",
+  "description": "How to use CassetteCat, the music player for the music you own, on Android and on your computer.",
+  "colors": {
+    "primary": "#C23B30",
+    "light": "#D64337",
+    "dark": "#C23B30"
+  },
+  "favicon": "/favicon.ico",
+  "appearance": {
+    "default": "dark"
+  },
+  "fonts": {
+    "family": "IBM Plex Sans"
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "navbar": {
+    "links": [
+      { "label": "Website", "href": "https://cassettecat.caffeinelabs.in" }
+    ]
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Overview",
+        "pages": ["index", "phone-and-computer"]
+      },
+      {
+        "group": "Android",
+        "pages": [
+          "android/getting-started",
+          "android/library-and-playlists",
+          "android/playback-and-sound",
+          "android/streaming-and-radio",
+          "android/listening-room",
+          "android/car-widgets-shortcuts",
+          "android/backup-and-privacy",
+          "android/troubleshooting"
+        ]
+      },
+      {
+        "group": "Desktop",
+        "pages": [
+          "desktop/getting-started",
+          "desktop/library-and-playlists",
+          "desktop/playback-and-sound",
+          "desktop/streaming-and-radio",
+          "desktop/settings-and-privacy",
+          "desktop/troubleshooting"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/samyyy2311/CassetteCat"
+    }
+  }
+}

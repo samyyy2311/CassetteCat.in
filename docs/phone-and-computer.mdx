@@ -1,0 +1,123 @@
+---
+title: "Phone and computer"
+description: "Pair CassetteCat for Android with CassetteCat Desktop to control playback, move music between them and keep your library in sync."
+---
+
+Pair the Android app with CassetteCat Desktop on the same Wi-Fi, and the two work as one:
+
+- your phone controls the computer's playback, like a remote;
+- what you're listening to moves from one to the other, with the queue and position;
+- your phone can browse the computer's music and play it on either device;
+- likes, playlists and your Listening Record stay in sync;
+- your phone backs itself up to the computer every day.
+
+Each app works fine on its own, so pairing is optional. Everything travels over your own network, encrypted, without an account or the internet.
+
+You need CassetteCat for Android 1.8.0 or later and CassetteCat Desktop 0.9.0 or later.
+
+## Pair your phone
+
+**On the computer**, make sure **Settings > Phone Remote > Control From Your Phone** is on. It's on by default.
+
+The first time you turn it on, Windows may ask whether CassetteCat can use your network. Allow it on private networks, or your phone won't find the computer.
+
+**On the phone**
+
+1. Open **Settings > Library & Hardware > Desktop Remote**. You can also tap the **Devices** button in Now Playing, beside the lyrics and queue buttons, then **Set up a computer**.
+2. Under **Computers on this Wi-Fi**, tap your computer. If it isn't listed, tap **Search again**.
+3. The computer asks **Connect *your phone*?** Click **Allow**.
+
+The phone now shows **Paired**, and the computer lists it under **Paired Phones**. Pairing is remembered, also when the computer gets a new address on your network.
+
+Only allow phones you own. A paired phone can control playback, sync your library data and back up to that computer.
+
+### Pair by address instead
+
+If your phone can't find the computer, often because of a guest network or a router that stops devices seeing each other:
+
+1. On the computer, open **Settings > Phone Remote > Pair Manually** and click **Copy**. The address looks like `192.168.1.20:47800#ABC234`: the computer's address, then `#`, then the pairing code.
+2. On the phone, in **Desktop Remote**, enter the whole address, including the part after `#`.
+
+**New Code** on the computer makes a new pairing code, which unpairs phones that were paired by address. Phones you approved with **Allow** stay paired.
+
+## Control the computer from your phone
+
+In **Desktop Remote**, tap your computer. The row changes to **Controlling from this phone**, and Now Playing on the phone shows and controls what the computer plays: play, pause, skip, seek, volume, shuffle, repeat and the queue. The phone's notification, lock screen and volume keys work too.
+
+While a phone is in control, the computer shows a phone icon in its player bar saying **Controlled from *your phone***.
+
+Tap the row again to stop controlling it. The computer keeps playing.
+
+## Move music between phone and computer
+
+Music plays on one device at a time, and the song, queue and position move with it.
+
+- **Phone to computer**: tap **Devices** in Now Playing and choose your computer. The phone stops. The computer also appears in Android's own output switcher, in the quick settings media controls.
+- **Computer to phone**: on the computer, open the phone remote from the phone button in the player bar and click **Continue on *your phone***. The phone picks up the same song at the same position.
+- **Take over what the phone plays**: when the phone is playing and the computer isn't, the computer's player bar shows **Playing on *your phone*** with play, pause and next buttons. **Play Here** moves the music to the computer.
+
+To queue a single song on the other device, use **Play Next on Computer** in a song's options on the phone, or **Play Next on Phone** in a song's menu on the computer.
+
+Songs are matched by title and artist, so a song only moves if both libraries have it.
+
+## Play your computer's music on the phone
+
+Open the computer's library from **Library** on the phone (the computer button at the top), or **Desktop Remote > Browse your computer's music** in Settings.
+
+- **Search** by song, artist or album.
+- **Tap a song** to play it where you're listening: on the computer while you're controlling it, otherwise streamed to the phone over Wi-Fi.
+- **The three dots** beside a song choose the other one: **Play on This Phone** or **Play on Computer**.
+
+Streaming needs the computer on, with CassetteCat Desktop open, on the same Wi-Fi. Songs streamed this way aren't saved on the phone.
+
+## What stays in sync
+
+- **Likes** sync both ways, for songs both libraries have.
+- **Playlists**: on the phone, open a playlist's options and choose **Send to Computer**. A playlist with the same name on the computer is replaced, and you're told how many songs matched. To copy one the other way, tap **Get a playlist from your computer** in **Library > Playlists**.
+- **Listening Record**: plays on either device count in one history and rank the same way. The **Sync** button on the computer's Listening Record page brings them together straight away.
+
+## Back up to your computer
+
+The phone backs itself up to the paired computer once a day when you open the app. The backup includes your playlists, favourites, listening statistics, folder filters and settings. Server passwords are left out; see [Backup, restore and privacy](/android/backup-and-privacy).
+
+On the phone, **Settings > Backup & Restore** has two buttons under **Computer**:
+
+- **Back Up to Computer** makes a backup now.
+- **Restore from Computer** replaces the phone's data with the latest backup on the computer. Use it after resetting or replacing your phone.
+
+The computer keeps the previous backup alongside the latest one.
+
+## Privacy and security
+
+Everything stays on your network. The connection is encrypted: the computer makes its own certificate the first time, and the phone remembers it when you pair. If the computer's certificate ever changes, for example after a reinstall that removed its data, the phone asks you to pair again.
+
+## Stop using it
+
+- **On the phone**: **Desktop Remote > Forget this computer**.
+- **On the computer**: click **Remove** next to the phone under **Paired Phones**. To stop phones connecting at all, turn off **Control From Your Phone**.
+
+## If something goes wrong
+
+### The phone can't find the computer
+
+- Both devices must be on the same Wi-Fi network. Guest networks and some office, hotel or router setups stop devices seeing each other; use your main network.
+- On the computer, CassetteCat Desktop must be open, **Settings > Phone Remote > Control From Your Phone** on, and **Offline Blackout Mode** off.
+- On Windows, allow CassetteCat through the firewall on private networks. If you said no to the prompt earlier, allow it in **Windows Security > Firewall & network protection > Allow an app through firewall**.
+- CassetteCat uses port 47800 for the connection (TCP) and for being found (UDP). If you run your own firewall, allow both on your local network.
+- If it still isn't found, [pair by address](#pair-by-address-instead).
+
+### "That code doesn't match the one on the computer"
+
+Copy the address again from the computer and enter all of it, including the part after `#`. After ten wrong codes in a row the computer refuses all requests for one minute, so wait a minute before trying again.
+
+### The phone asks to pair again
+
+That happens when someone clicked **New Code** on the computer, when the phone was removed under **Paired Phones**, or when the computer's certificate changed, for example after its data was deleted. Pair again as above.
+
+### A song didn't move to the other device
+
+Songs are matched by title and artist. If the other library has different tags for the song, or doesn't have it, it can't move. Make the title and artist match.
+
+### Backups to the computer fail
+
+The computer must be on, with CassetteCat Desktop open, on the same Wi-Fi. The phone tries again the next day, or tap **Back Up to Computer** in **Settings > Backup & Restore**.
