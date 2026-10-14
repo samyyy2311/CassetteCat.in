@@ -11,7 +11,7 @@ description: "Choose your music folders, browse and edit your library, and build
 - **Only these folders**: tap **Add folder** and pick each folder to include.
 - **Everything except these folders**: pick folders to leave out, such as a voice recorder or podcast folder.
 
-Two more filters are in **Settings > Customisation > Storage & Cache**:
+Two more filters are in **Settings > Storage & Cache**, beside **Fix Tags** (see [Fixing song details](#fixing-song-details)):
 
 - **Ignore Short Audio Clips** hides anything shorter than 30 seconds, such as ringtones and voice notes.
 - **Duplicates** lists songs saved more than once, with the bitrate of each copy, so you can delete the copy you don't want. Deleting removes the file from your phone.
@@ -39,7 +39,7 @@ Tap the three dots beside a song for:
 | **Play Next** | Puts the song right after the current one. |
 | **Add to Queue** | Adds it to the end of the queue. |
 | **Add to Playlist** | Saves it to one of your playlists. |
-| **Edit Details** | Changes the title, artist, album, genre or year shown in CassetteCat. |
+| **Edit Details** | Changes the title, artist, album, genre or year shown in CassetteCat. **Fill from MusicBrainz** fills them in for you. |
 | **Search Album Cover Online** | Finds artwork online and applies it. You can also pick an image from your phone. |
 | **Reset to Original Cover** | Removes a cover you applied and goes back to the embedded one. |
 | **Download** | Saves a streamed song for offline playback. |
@@ -47,6 +47,14 @@ Tap the three dots beside a song for:
 | **Play Next on Computer** | Shown when your phone is paired with CassetteCat Desktop. See [Phone and computer](/phone-and-computer). |
 
 **Edit Details** doesn't change the audio file. Your changes are stored in CassetteCat and only the fields you edit are replaced, so other apps still see the original tags. **Revert to Original Tags** in the same sheet undoes them.
+
+### Fixing song details
+
+**Fill from MusicBrainz**, in **Edit Details**, looks the song up on [MusicBrainz](https://musicbrainz.org) and fills in its title, artist, album and year. Nothing is saved until you tap **Save**, so check the fields first.
+
+To check your whole library, open **Settings > Storage & Cache > Fix Tags** and tap **Start**. CassetteCat checks about a song a second in the background, so you can leave the screen, or close the app and **Continue** later. It then lists only the songs whose details would change, with a switch on each. Tap **Apply** to save the ones left on. Fixes are saved like any edit, so **Revert to Original Tags** undoes them, and songs already checked are skipped next time until **Check All Again**.
+
+It's careful about which match it uses: the song's length has to agree, an album like "Currents (Deluxe)" keeps its edition, and a year is only filled in when a song has none. MusicBrainz must be on in **Settings > Streaming & Services > External Services**.
 
 ### Selecting several songs
 
@@ -73,7 +81,7 @@ You can also save whatever is in the queue as a playlist from Now Playing: **Mor
 
 ## Favourites
 
-Tap the heart on any song to like it. Liked songs are in **Liked Songs** in the Library and on Home. With **Settings > Customisation > Storage & Cache > Auto-Cache Favourite Tracks** on, liked songs from a server are also cached for offline use.
+Tap the heart on any song to like it. Liked songs are in **Liked Songs** in the Library and on Home. With **Settings > Storage & Cache > Auto-Cache Favourite Tracks** on, liked songs from a server are also cached for offline use.
 
 ## Listening Record
 

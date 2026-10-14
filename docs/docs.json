@@ -111,6 +111,38 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Developers",
+        "icon": "code",
+        "groups": [
+          {
+            "group": "Developers",
+            "pages": [
+              "developers/index"
+            ]
+          },
+          {
+            "group": "Android",
+            "pages": [
+              "developers/android/building",
+              "developers/android/architecture",
+              "developers/android/how-to",
+              "developers/android/theme",
+              "developers/android/desktop-remote-protocol",
+              "developers/android/releasing"
+            ]
+          },
+          {
+            "group": "Desktop",
+            "pages": [
+              "developers/desktop/building",
+              "developers/desktop/architecture",
+              "developers/desktop/design",
+              "developers/desktop/releasing"
+            ]
+          }
+        ]
       }
     ]
   },

@@ -35,6 +35,7 @@ Right-click a song for:
 - **Play Next on Phone**, when your phone is paired and playing. See [Phone and computer](/phone-and-computer).
 - **Go to Artist** and **Go to Album**.
 - **Search Cover Art**, to pick a new cover from online catalogues.
+- **Edit Metadata**, to change the song's details. See [Editing tags and covers](#editing-tags-and-covers).
 - **Show in Folder**, to open the file in your file manager.
 - **Copy Title**.
 
@@ -44,9 +45,18 @@ The heart button on a song, or in the player bar, adds it to your favourites. Fa
 
 Ctrl-click songs (Cmd-click on a Mac) to select them, then choose **Edit Tags** to change the artist, album, genre, year, track and disc numbers, label, comment and lyrics. With one song selected you can also change its title. With several, a field the songs disagree on shows **Mixed**, and only the fields you edit are changed. **Change cover art** sets one image for all of them. **Find with LRCLIB** fetches lyrics for the song.
 
-Changes are written to the files themselves, so other players see them too.
+**Edit Metadata** in a song's menu edits one song. **Fill from MusicBrainz** there looks the song up on [MusicBrainz](https://musicbrainz.org) and fills in its title, artist, album, year, and track and disc numbers. Nothing is saved until you click **Save**.
 
-**Library health**, on the Library page, counts songs with a missing title, artist or album, possible duplicates, and albums without folder artwork, so you know what to fix.
+Changes are written to the files themselves, so other players see them too. A cover you pick with **Search Cover Art** is also saved into the album's files, so File Explorer and other players show it. Turn off **Also save the cover into the music files** under the cover search to keep it in CassetteCat only.
+
+## Library Health
+
+**Settings > Library Health**, or the info button on the Library page, shows how many songs are missing a title, artist, album or cover, and how many are duplicates.
+
+- **Fix Tags** checks every song with MusicBrainz, or only the songs you selected when you start it from **Fix Tags** in the Library's selection bar. It runs in the background at about a song a second, so you can keep listening. If you close the app, **Continue** picks it up where it stopped. When it's done, **Song Details** lists what would change on each song and **Album Covers** lists albums it found a cover for, each with a switch. Nothing is written until you click **Apply**.
+- **Duplicates** groups copies of the same song and keeps the best one: lossless first, then the largest file. The copies you pick move to the Recycle Bin (the trash on Linux), so you can restore them.
+
+Fix Tags is careful about which match it uses: the song's length has to agree, an album like "Currents (Deluxe)" keeps its edition, and on a whole-library check a year, track or disc number is only filled in when a song has none. MusicBrainz must be on in **Settings > Network & Services**.
 
 ## Playlists
 
