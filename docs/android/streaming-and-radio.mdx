@@ -7,22 +7,47 @@ description: "Subsonic, Navidrome and Jellyfin, downloads, internet radio, onlin
 
 CassetteCat works with servers that speak the Subsonic API, including [Navidrome](https://www.navidrome.org/), gonic and Airsonic.
 
-1. Open **Settings > Streaming & Services > Subsonic**.
-2. Enter the **Server URL**, for example `https://music.example.com` or `http://192.168.1.20:4533`.
-3. Enter your **Username** and **Password**, then tap **Connect**.
+<Steps>
+  <Step title="Open Subsonic">
+    Open **Settings > Streaming & Services > Subsonic**.
+  </Step>
+  <Step title="Enter the server">
+    Enter the **Server URL**, for example `https://music.example.com` or `http://192.168.1.20:4533`.
+  </Step>
+  <Step title="Sign in">
+    Enter your **Username** and **Password**, then tap **Connect**.
+  </Step>
+</Steps>
 
 When it works, the row in Settings shows the server name and how many songs it has, and the songs appear in your Library alongside the ones on your phone. Use the source filter in the Library to show only one.
 
 ## Connecting a Jellyfin server
 
-1. Open **Settings > Streaming & Services > Jellyfin**.
-2. Enter the **Server URL**.
-3. Either enter your username and password, or tap **Sign in with Quick Connect**. Quick Connect shows a code; enter it in Jellyfin under your profile's **Quick Connect** page. No password is typed on the phone.
+<Steps>
+  <Step title="Open Jellyfin">
+    Open **Settings > Streaming & Services > Jellyfin**.
+  </Step>
+  <Step title="Enter the server">
+    Enter the **Server URL**.
+  </Step>
+  <Step title="Sign in">
+    Enter your username and password, or tap **Sign in with Quick Connect**.
+  </Step>
+</Steps>
+
+<Tip>
+Quick Connect shows a code; enter it in Jellyfin under your profile's **Quick Connect** page. No password is typed on the phone.
+</Tip>
 
 ## Security warnings when connecting
 
-- **Use HTTPS if possible**: you see this when the URL starts with `http://`. Your password travels unencrypted, so only continue for a server on your own network.
-- **Untrusted certificate**: you see this for a server with a self-signed certificate, which is common for home servers. It shows the certificate's fingerprint. Tap **Trust & Connect** only if it matches your server's certificate.
+<Warning>
+**Use HTTPS if possible** appears when the URL starts with `http://`. Your password travels unencrypted, so only continue for a server on your own network.
+</Warning>
+
+<Warning>
+**Untrusted certificate** appears for a server with a self-signed certificate, which is common for home servers. It shows the certificate's fingerprint. Tap **Trust & Connect** only if it matches your server's certificate.
+</Warning>
 
 Passwords and tokens are encrypted on the phone with the Android Keystore. To remove them all, use **Settings > Privacy & Security > Disconnect all servers and remove credentials**.
 

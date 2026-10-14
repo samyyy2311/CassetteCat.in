@@ -327,3 +327,13 @@ code { font: 0.88em var(--mono); background: var(--bg-2); padding: 0.1em 0.35em;
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* A thin bar with no track, like the apps' scroll bars: brighter and wider while hovered, red while dragged. */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgb(255 255 255 / 0.38) content-box; border: 3px solid transparent; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background-color: rgb(255 255 255 / 0.82); border-width: 2px; }
+::-webkit-scrollbar-thumb:active { background-color: #D64337; }
+@supports not selector(::-webkit-scrollbar) {
+  * { scrollbar-width: thin; scrollbar-color: rgb(255 255 255 / 0.38) transparent; }
+}

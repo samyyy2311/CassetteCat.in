@@ -10,28 +10,77 @@ CassetteCat plays the music on your computer, music on your own Subsonic or Jell
 <Tabs>
 <Tab title="Windows">
 
-- **Microsoft Store**: [CassetteCat on the Microsoft Store](https://apps.microsoft.com/detail/9NXNRR95X3K0). The Store keeps it up to date.
-- **winget**: run `winget install CassetteCat`, and `winget upgrade CassetteCat` later for new versions.
-- **Installer**: download `CassetteCat-vX.Y.Z-windows-x64-setup.exe` from the [latest release](https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest). It can add **Open with CassetteCat** for audio files and start CassetteCat when you sign in. Uninstalling asks before it deletes your settings and Listening Record.
-- **Portable**: download the `windows-x64.zip`, unzip it anywhere and run `CassetteCat\bin\CassetteCat.exe`. Nothing gets installed.
+<CardGroup cols={3}>
+  <Card title="Microsoft Store" icon="store" href="https://apps.microsoft.com/detail/9NXNRR95X3K0">
+    Installs in one click, and the Store keeps it up to date.
+  </Card>
+  <Card title="Installer" icon="download" href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest">
+    The setup file. It can add **Open with CassetteCat** and start the app when you sign in.
+  </Card>
+  <Card title="Portable" icon="folder-archive" href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest">
+    Unzip anywhere and run `CassetteCat.exe` from `bin`. Nothing gets installed.
+  </Card>
+</CardGroup>
+
+<Note>
+Uninstalling with the installer asks before it deletes your settings and Listening Record.
+</Note>
 
 </Tab>
 <Tab title="Linux">
 
-Every package comes for x86_64 and ARM64 (aarch64). Pick the one that suits your system:
+Every package comes for x86_64 and ARM64 (aarch64). Download the one for your system from the [latest release](https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest), then install it:
 
-| Package | Use it on | Install |
-| :--- | :--- | :--- |
-| `.AppImage` | Most distributions | Make it executable (`chmod +x`) and run it |
-| `.deb` | Debian, Ubuntu, Linux Mint, Pop!_OS | `sudo apt install ./CassetteCat-*.deb` |
-| `.rpm` | Fedora, openSUSE, RHEL | `sudo dnf install ./CassetteCat-*.rpm` |
-| `.flatpak` | Any distribution with Flatpak | `flatpak install --user CassetteCat-*.flatpak` |
-| `.tar.gz` | Anywhere, without installing | Unpack it and run `CassetteCat/bin/CassetteCat` |
+<CodeGroup>
+```bash Debian, Ubuntu
+sudo apt install ./CassetteCat-*.deb
+```
+
+```bash Fedora, RHEL
+sudo dnf install ./CassetteCat-*.rpm
+```
+
+```bash openSUSE
+sudo zypper install ./CassetteCat-*.rpm
+```
+
+```bash Flatpak
+flatpak install --user CassetteCat-*.flatpak
+```
+
+```bash AppImage
+chmod +x CassetteCat-*.AppImage
+./CassetteCat-*.AppImage
+```
+
+```bash tar.gz
+tar -xzf CassetteCat-*.tar.gz
+./CassetteCat/bin/CassetteCat
+```
+</CodeGroup>
+
+The AppImage and the `.tar.gz` run on most distributions without installing anything. The Flatpak works on any distribution with Flatpak.
 
 </Tab>
 </Tabs>
 
-Each release has a `SHA256SUMS.txt` if you want to check your download.
+<Accordion title="Check your download" icon="shield-check">
+
+Each release has a `SHA256SUMS.txt`. Download it next to your file, then:
+
+<CodeGroup>
+```bash Linux
+sha256sum --check --ignore-missing SHA256SUMS.txt
+```
+
+```powershell Windows
+Get-FileHash .\CassetteCat-*-windows-x64-setup.exe -Algorithm SHA256
+```
+</CodeGroup>
+
+On Windows, compare the hash with your file's line in `SHA256SUMS.txt`.
+
+</Accordion>
 
 ## First launch
 
