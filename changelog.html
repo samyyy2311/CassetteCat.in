@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%C2%B7%26-.:&display=swap">
-  <link rel="stylesheet" href="assets/style.css?v=20261011">
+  <link rel="stylesheet" href="assets/style.css?v=20261015">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -71,48 +71,54 @@
       <div class="doc-head">
         <h1>Changelog</h1>
         <div class="doc-head-meta">
-          <span><b>Android</b> v1.8.0</span>
+          <span><b>Android</b> v1.9.0</span>
           <span class="sep">·</span>
-          <span><b>Desktop</b> v0.9.0</span>
+          <span><b>Desktop</b> v1.0.0</span>
           <span class="sep">·</span>
           <span><b>Source</b> GitHub Releases for <a href="https://github.com/samyyy2311/CassetteCat/releases" target="_blank" rel="noopener">Android</a> and <a href="https://github.com/samyyy2311/CassetteCat-Desktop/releases" target="_blank" rel="noopener">Desktop</a></span>
         </div>
+      </div>
+
+      <!-- Shown by main.js; without scripts both apps' releases are listed one after the other. -->
+      <div class="release-tabs" role="tablist" aria-label="App" hidden>
+        <button type="button" role="tab" data-platform="android" aria-controls="android"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>Android</button>
+        <button type="button" role="tab" data-platform="desktop" aria-controls="desktop"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Desktop</button>
       </div>
 
       <aside class="doc-toc">
         <h4>Versions</h4>
         <ol>
           <!-- releases:toc -->
-          <li class="toc-group">Android</li>
-          <li><a href="#android-v1-8-0">v1.8.0</a></li>
-          <li><a href="#android-v1-7-7">v1.7.7</a></li>
-          <li><a href="#android-v1-7-6">v1.7.6</a></li>
-          <li><a href="#android-v1-7-5">v1.7.5</a></li>
-          <li><a href="#android-v1-7-4">v1.7.4</a></li>
-          <li><a href="#android-v1-7-3">v1.7.3</a></li>
-          <li><a href="#android-v1-7-2">v1.7.2</a></li>
-          <li><a href="#android-v1-7-1">v1.7.1</a></li>
-          <li><a href="#android-v1-7-0">v1.7.0</a></li>
-          <li><a href="#android-v1-6-5">v1.6.5</a></li>
-          <li><a href="#android-v1-6-3">v1.6.3</a></li>
-          <li><a href="#android-v1-6-2">v1.6.2</a></li>
-          <li><a href="#android-v1-6-1">v1.6.1</a></li>
-          <li><a href="#android-v1-6-0">v1.6.0</a></li>
-          <li><a href="#android-v1-5-0">v1.5.0</a></li>
-          <li><a href="#android-v1-4-1">v1.4.1</a></li>
-          <li><a href="#android-v1-4-0">v1.4.0</a></li>
-          <li><a href="#android-v1-3-1">v1.3.1</a></li>
-          <li><a href="#android-v1-3-0">v1.3.0</a></li>
-          <li><a href="#android-v1-2-0">v1.2.0</a></li>
-          <li><a href="#android-v1-1-1">v1.1.1</a></li>
-          <li><a href="#android-v1-1-0">v1.1.0</a></li>
-          <li><a href="#android-v1-0-0">v1.0.0</a></li>
-          <li class="toc-group">Desktop</li>
-          <li><a href="#desktop-v0-9-0">v0.9.0</a></li>
-          <li><a href="#desktop-v0-8-0">v0.8.0</a></li>
-          <li><a href="#desktop-v0-7-0">v0.7.0</a></li>
-          <li><a href="#desktop-v0-6-0">v0.6.0</a></li>
-          <li><a href="#desktop-v0-5-1">v0.5.1</a></li>
+          <li data-platform="android"><a href="#android-v1-9-0">v1.9.0</a></li>
+          <li data-platform="android"><a href="#android-v1-8-0">v1.8.0</a></li>
+          <li data-platform="android"><a href="#android-v1-7-7">v1.7.7</a></li>
+          <li data-platform="android"><a href="#android-v1-7-6">v1.7.6</a></li>
+          <li data-platform="android"><a href="#android-v1-7-5">v1.7.5</a></li>
+          <li data-platform="android"><a href="#android-v1-7-4">v1.7.4</a></li>
+          <li data-platform="android"><a href="#android-v1-7-3">v1.7.3</a></li>
+          <li data-platform="android"><a href="#android-v1-7-2">v1.7.2</a></li>
+          <li data-platform="android"><a href="#android-v1-7-1">v1.7.1</a></li>
+          <li data-platform="android"><a href="#android-v1-7-0">v1.7.0</a></li>
+          <li data-platform="android"><a href="#android-v1-6-5">v1.6.5</a></li>
+          <li data-platform="android"><a href="#android-v1-6-3">v1.6.3</a></li>
+          <li data-platform="android"><a href="#android-v1-6-2">v1.6.2</a></li>
+          <li data-platform="android"><a href="#android-v1-6-1">v1.6.1</a></li>
+          <li data-platform="android"><a href="#android-v1-6-0">v1.6.0</a></li>
+          <li data-platform="android"><a href="#android-v1-5-0">v1.5.0</a></li>
+          <li data-platform="android"><a href="#android-v1-4-1">v1.4.1</a></li>
+          <li data-platform="android"><a href="#android-v1-4-0">v1.4.0</a></li>
+          <li data-platform="android"><a href="#android-v1-3-1">v1.3.1</a></li>
+          <li data-platform="android"><a href="#android-v1-3-0">v1.3.0</a></li>
+          <li data-platform="android"><a href="#android-v1-2-0">v1.2.0</a></li>
+          <li data-platform="android"><a href="#android-v1-1-1">v1.1.1</a></li>
+          <li data-platform="android"><a href="#android-v1-1-0">v1.1.0</a></li>
+          <li data-platform="android"><a href="#android-v1-0-0">v1.0.0</a></li>
+          <li data-platform="desktop"><a href="#desktop-v1-0-0">v1.0.0</a></li>
+          <li data-platform="desktop"><a href="#desktop-v0-9-0">v0.9.0</a></li>
+          <li data-platform="desktop"><a href="#desktop-v0-8-0">v0.8.0</a></li>
+          <li data-platform="desktop"><a href="#desktop-v0-7-0">v0.7.0</a></li>
+          <li data-platform="desktop"><a href="#desktop-v0-6-0">v0.6.0</a></li>
+          <li data-platform="desktop"><a href="#desktop-v0-5-1">v0.5.1</a></li>
           <!-- /releases:toc -->
         </ol>
       </aside>
@@ -121,7 +127,21 @@
         <p class="doc-lede">Every release of the Android and desktop apps, newest first. The Android app and the desktop app have their own version numbers.</p>
 
         <!-- releases:notes -->
-        <h2 class="doc-group" id="android">Android</h2>
+        <div class="release-panel" id="android" data-platform="android" role="tabpanel" aria-label="Android">
+
+        <section id="android-v1-9-0">
+          <h3>v1.9.0</h3>
+          <p><strong>[1.9.0]</strong></p>
+          <ul>
+            <li>Fix Tags checks your whole library with MusicBrainz in the background and lists the titles, artists, albums and years it would correct. Nothing changes until you review the list and tap Apply, and Revert to Original Tags still undoes it.</li>
+            <li>Fill from MusicBrainz in the tag editor looks up one song and fills in its details for you to check before saving.</li>
+            <li>Disconnect from the computer, so the phone and the computer each play their own music. They stay paired, and picking the computer again connects them.</li>
+            <li>Listening Room guests stay in step with the host, even when the host changes playback speed.</li>
+            <li>Scrobbling settings say why ListenBrainz refused your listens, such as an email address that isn't verified yet.</li>
+            <li>Storage has moved out of Customization into the main Settings list.</li>
+            <li>In External Services, Cover Art Archive is now called MusicBrainz, since it also looks up song details.</li>
+          </ul>
+        </section>
 
         <section id="android-v1-8-0">
           <h3>v1.8.0</h3>
@@ -749,8 +769,36 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/commits/v1.0.0</li>
           </ul>
         </section>
+        </div>
 
-        <h2 class="doc-group" id="desktop">Desktop</h2>
+        <div class="release-panel" id="desktop" data-platform="desktop" role="tabpanel" aria-label="Desktop">
+
+        <section id="desktop-v1-0-0">
+          <h3>v1.0.0</h3>
+          <p><strong>Added</strong></p>
+          <ul>
+            <li>Library Health in Settings. Fix Tags checks every song, or the ones you select, with MusicBrainz in the background, and lists the song details and album covers it would fix. Nothing changes until you review the lists and click Apply.</li>
+            <li>Library Health also finds duplicate songs, keeps the best copy, and moves the copies you pick to the Recycle Bin.</li>
+            <li>Fill from MusicBrainz in the tag editor, and Edit Metadata in every song's right-click menu.</li>
+            <li>Covers you pick are also saved into the music files, so File Explorer and other players show them. A switch under the cover search turns this off.</li>
+            <li>Search in Settings, in the title bar or with Ctrl+F.</li>
+            <li>Disconnect in the Phone Remote window, so the phone and the computer each play their own music. They stay paired.</li>
+          </ul>
+          <p><strong>Changed</strong></p>
+          <ul>
+            <li>Liking a Subsonic or Jellyfin song likes it on the server too.</li>
+            <li>System Default follows Windows' default output, and a chosen output that's unplugged plays on the default until it's back.</li>
+            <li>Network &amp; Services calls the Cover Art Archive switch MusicBrainz, since it also looks up song details.</li>
+            <li>Scrobbling settings say why ListenBrainz refused your listens, such as an email address that isn't verified yet.</li>
+            <li>The macOS app is in development, so this release doesn't include it.</li>
+          </ul>
+          <p><strong>Fixed</strong></p>
+          <ul>
+            <li>Previous goes back to the song you heard after turning shuffle off, Play Next keeps its place, and Autoplay no longer turns shuffle off.</li>
+            <li>No more silence after resuming when the audio output dropped while paused, such as after moving music to the phone.</li>
+            <li>Maximizing works with the mini player open, the window corners are square while maximized, and hovered covers aren't cut off on artist pages and in search.</li>
+          </ul>
+        </section>
 
         <section id="desktop-v0-9-0">
           <h3>v0.9.0</h3>
@@ -881,6 +929,7 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat-Desktop/compare/v0.5.0...v0.5.1</li>
           </ul>
         </section>
+        </div>
         <!-- /releases:notes -->
       </div>
     </div>
@@ -901,7 +950,7 @@
     </div>
   </footer>
 
-  <script src="assets/main.js?v=20261009"></script>
+  <script src="assets/main.js?v=20261015"></script>
 </body>
 
 </html>
