@@ -242,6 +242,12 @@ code { font: 0.88em var(--mono); background: var(--bg-2); padding: 0.1em 0.35em;
 .doc-head-meta { display: flex; flex-wrap: wrap; gap: 6px 10px; font: 13px var(--mono); color: var(--ink-2); }
 .doc-head-meta b { font-weight: 500; color: var(--ink-3); margin-right: 4px; }
 .doc-head-meta .sep { color: var(--rule); }
+.release-tabs { grid-column: 1 / -1; display: flex; gap: 32px; margin: -16px 0 8px; border-bottom: 1px solid var(--rule); }
+.release-tabs button { display: flex; align-items: center; gap: 10px; padding: 14px 0; margin-bottom: -1px; background: none; border: 0; border-bottom: 2px solid transparent; color: var(--ink-2); font: 500 17px var(--display); cursor: pointer; }
+.release-tabs button:hover { color: var(--ink); }
+.release-tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.release-panel > section:first-child { border-top: 0; padding-top: 8px; }
+.release-tabs svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
 .doc-toc { position: sticky; top: 84px; align-self: start; max-height: calc(100vh - 100px); overflow-y: auto; }
 .doc-toc h4 { font: 400 12px var(--pixel); text-transform: uppercase; color: var(--ink-3); margin: 0 0 12px; }

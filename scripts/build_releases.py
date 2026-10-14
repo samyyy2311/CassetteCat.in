@@ -67,11 +67,11 @@ def fetch_releases(repo):
     return releases
 
 def render(platform, label, releases):
-    toc, content = [f"          <li class=\"toc-group\">{label}</li>"], [f'        <h2 class="doc-group" id="{platform}">{label}</h2>']
+    toc, content = [], [f'        <div class="release-panel" id="{platform}" data-platform="{platform}" role="tabpanel" aria-label="{label}">']
     for release in releases:
         tag = release["tag_name"].removeprefix("v")
         anchor = f"{platform}-v{tag.replace('.', '-')}"
-        toc.append(f'          <li><a href="#{anchor}">v{html.escape(tag)}</a></li>')
+        toc.append(f'          <li data-platform="{platform}"><a href="#{anchor}">v{html.escape(tag)}</a></li>')
         name = re.sub(r"^CassetteCat\s+", "", release.get("name") or "")
         title = re.sub(rf"^v?{re.escape(tag)}\s*[-\u2013\u2014:]?\s*", "", name).strip()
         lines = [f'        <section id="{anchor}">', f'          <h3>v{html.escape(tag)}{(" - " + inline(title)) if title else ""}</h3>']
@@ -81,6 +81,7 @@ def render(platform, label, releases):
             lines += ["          <ul>", *(f"            <li>{inline(item)}</li>" for item in items), "          </ul>"]
         lines.append("        </section>")
         content.append("\n".join(lines))
+    content[-1] += "\n        </div>"
     return toc, content
 
 def main():

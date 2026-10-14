@@ -1,6 +1,6 @@
 # CassetteCat
 
-> CassetteCat is a free, open-source music player for Android, Windows, macOS and Linux, made by CaffeineLabs. It plays local music files, streams from your own Navidrome, Jellyfin or other Subsonic server, shows synced lyrics and plays internet radio. The Android app and the desktop app work on their own, and can be paired over Wi-Fi so the phone controls the computer. It has no ads, no analytics and no account. Licensed under GPL-3.0.
+> CassetteCat is a free, open-source music player for Android, Windows and Linux, made by CaffeineLabs. It plays local music files, streams from your own Navidrome, Jellyfin or other Subsonic server, shows synced lyrics and plays internet radio. The Android app and the desktop app work on their own, and can be paired over Wi-Fi so the phone controls the computer. It has no ads, no analytics and no account. Licensed under GPL-3.0.
 
 ## Android app
 
@@ -19,7 +19,7 @@
 ## Desktop app
 
 - Windows 10 and 11 (64-bit): [Microsoft Store](https://apps.microsoft.com/detail/9NXNRR95X3K0), or the installer or portable .zip from [GitHub Releases](https://github.com/samyyy2311/CassetteCat-Desktop/releases/latest).
-- macOS 13 or later: a universal disk image for Apple silicon and Intel. It is not notarized yet, so the first launch needs right-click, Open.
+- macOS: in development, not available yet.
 - Linux on x86_64 and ARM64: AppImage, .deb, .rpm, Flatpak and .tar.gz.
 - Plays FLAC, MP3, AAC, ALAC, OGG, Opus and WAV, and streams from Navidrome, Gonic, Airsonic or Jellyfin.
 - Synced lyrics from .lrc files, tags or LRCLIB, with tap-along timing for plain lyrics.

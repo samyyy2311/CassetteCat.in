@@ -35,7 +35,6 @@ function detectOS() {
 // The download each desktop system gets from the main button; Linux gets the x86_64 AppImage.
 const DESKTOP_DOWNLOADS = {
   windows: { name: 'Windows', asset: 'windows-x64-setup.exe' },
-  mac: { name: 'macOS', asset: 'macos-universal.dmg' },
   linux: { name: 'Linux', asset: 'linux-x86_64.AppImage' },
 };
 
@@ -93,6 +92,39 @@ if ((primary && desktopOS) || desktopLink || assetLinks.length) {
     if (primary) primary.href = asset.browser_download_url;
     if (desktopLink) desktopLink.href = asset.browser_download_url;
   });
+}
+
+const releaseTabs = document.querySelector('.release-tabs');
+if (releaseTabs) {
+  const tabs = [...releaseTabs.querySelectorAll('[role="tab"]')];
+  const select = (platform) => {
+    tabs.forEach((tab) => {
+      const selected = tab.dataset.platform === platform;
+      tab.setAttribute('aria-selected', String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+    });
+    document.querySelectorAll('.doc-toc [data-platform], .release-panel').forEach((el) => {
+      el.hidden = el.dataset.platform !== platform;
+    });
+  };
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      select(tab.dataset.platform);
+      history.replaceState(null, '', '#' + tab.dataset.platform);
+    });
+    tab.addEventListener('keydown', (event) => {
+      const step = { ArrowRight: 1, ArrowLeft: -1 }[event.key];
+      if (!step) return;
+      const next = tabs[(index + step + tabs.length) % tabs.length];
+      next.click();
+      next.focus();
+    });
+  });
+  // A link to a release, like #desktop-v1-0-0, opens its app's tab and scrolls to it once it's shown.
+  const target = location.hash.slice(1);
+  select(target.startsWith('desktop') ? 'desktop' : 'android');
+  releaseTabs.hidden = false;
+  if (target) document.getElementById(target)?.scrollIntoView({ behavior: 'instant' });
 }
 
 document.querySelectorAll('.tour').forEach((tour) => {

@@ -3,6 +3,10 @@ title: "Settings, backups and privacy"
 description: "Appearance, the tray, updates, backups, logs and what stays on your computer."
 ---
 
+## Finding a setting
+
+The search box in the title bar, shown while Settings is open, finds settings by name or description. **Ctrl+F** jumps to it. **Open** next to a result goes straight to that setting.
+
 ## Appearance
 
 **Settings > Appearance** sets:
@@ -48,7 +52,6 @@ Passwords, tokens and other secrets are never written to a backup, so you sign i
 | | Settings (`settings.ini`) | Library cache, Listening Record and logs |
 | :--- | :--- | :--- |
 | Windows | `%LOCALAPPDATA%\CassetteCat\CassetteCat` | `%LOCALAPPDATA%\CassetteCat\CassetteCat` |
-| macOS | `~/Library/Preferences/CassetteCat/CassetteCat` | `~/Library/Application Support/CassetteCat/CassetteCat` |
 | Linux | `~/.config/CassetteCat/CassetteCat` | `~/.local/share/CassetteCat/CassetteCat` |
 
 The Flatpak keeps the same folders inside `~/.var/app/io.github.samyyy2311.CassetteCat`. Passwords and scrobbling sessions are in the system's credential store instead, not in these folders.
