@@ -12,13 +12,25 @@ CassetteCat streams from your own server alongside the music on your computer. S
 
 ### Connecting
 
-1. Open **Subsonic** or **Jellyfin** in the sidebar.
-2. Enter the **Server Address**, for example `music.example.com` or `192.168.1.20:4533`, with your username and password.
-3. Click **Connect**.
+<Steps>
+  <Step title="Open the server's page">
+    Click **Subsonic** or **Jellyfin** in the sidebar.
+  </Step>
+  <Step title="Enter your details">
+    Enter the **Server Address**, for example `music.example.com` or `192.168.1.20:4533`, with your username and password.
+  </Step>
+  <Step title="Connect">
+    Click **Connect**. The server's songs appear on its page.
+  </Step>
+</Steps>
 
+<Tip>
 For Jellyfin you can use **Quick Connect** instead of a password: CassetteCat shows a code, and you approve it in another Jellyfin app where you're already signed in.
+</Tip>
 
+<Note>
 If your server uses a certificate it made itself, or one from your own certificate authority, turn on **Trust self-signed certificate** before connecting.
+</Note>
 
 Your password is kept in the system's credential store: Windows Credential Locker, the macOS Keychain, or your Linux keyring through the Secret Service.
 
