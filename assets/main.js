@@ -39,11 +39,13 @@ const DESKTOP_DOWNLOADS = {
 };
 
 const repoLink = document.querySelector('.nav .gh');
-if (repoLink) {
-  getJSON(REPO + repoLink.pathname.split('/')[2]).then((data) => {
-    if (data) show('gh-stars', '★ ' + data.stargazers_count.toLocaleString());
+const showStars = () => {
+  const repo = repoLink.pathname.split('/')[2];
+  getJSON(REPO + repo).then((data) => {
+    if (data && repoLink.pathname.split('/')[2] === repo) show('gh-stars', '★ ' + data.stargazers_count.toLocaleString());
   });
-}
+};
+if (repoLink) showStars();
 
 const os = detectOS();
 const desktopOS = DESKTOP_DOWNLOADS[os];
@@ -106,6 +108,8 @@ if (releaseTabs) {
     document.querySelectorAll('.release-panel').forEach((el) => {
       el.hidden = el.dataset.platform !== platform;
     });
+    repoLink.href = 'https://github.com/samyyy2311/' + (platform === 'desktop' ? 'CassetteCat-Desktop' : 'CassetteCat');
+    showStars();
   };
   tabs.forEach((tab, index) => {
     tab.addEventListener('click', () => {
