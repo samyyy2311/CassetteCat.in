@@ -246,7 +246,14 @@ code { font: 0.88em var(--mono); background: var(--bg-2); padding: 0.1em 0.35em;
 .release-tabs button { display: flex; align-items: center; gap: 10px; padding: 14px 0; margin-bottom: -1px; background: none; border: 0; border-bottom: 2px solid transparent; color: var(--ink-2); font: 500 17px var(--display); cursor: pointer; }
 .release-tabs button:hover { color: var(--ink); }
 .release-tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
-.release-panel > section:first-child { border-top: 0; padding-top: 8px; }
+.release-panel > section:first-child { border-top: 0; }
+.release-panel > section { padding: 0; }
+.release-panel summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; }
+.release-panel summary::-webkit-details-marker { display: none; }
+.release-panel summary::after { content: '+'; font-family: var(--mono); color: var(--ink-3); }
+.release-panel details[open] summary::after { content: '−'; color: var(--accent-hi); }
+.release-panel summary h3 { margin: 0; }
+.release-panel details[open] { padding-bottom: 8px; }
 .release-tabs svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
 .doc-toc { position: sticky; top: 84px; align-self: start; max-height: calc(100vh - 100px); overflow-y: auto; }

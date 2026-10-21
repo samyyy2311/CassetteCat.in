@@ -120,11 +120,20 @@ if (releaseTabs) {
       next.focus();
     });
   });
-  // A link to a release, like #desktop-v1-0-0, opens its app's tab and scrolls to it once it's shown.
+  // Older releases start collapsed, so a link to one, like #desktop-v1-0-0, expands it.
+  const reveal = (id) => {
+    const details = document.getElementById(id)?.querySelector('details');
+    if (details) details.open = true;
+  };
+  window.addEventListener('hashchange', () => reveal(location.hash.slice(1)));
+  // A link to a release opens its app's tab and scrolls to it once it's shown.
   const target = location.hash.slice(1);
   select(target.startsWith('desktop') ? 'desktop' : 'android');
   releaseTabs.hidden = false;
-  if (target) document.getElementById(target)?.scrollIntoView({ behavior: 'instant' });
+  if (target) {
+    reveal(target);
+    document.getElementById(target)?.scrollIntoView({ behavior: 'instant' });
+  }
 }
 
 document.querySelectorAll('.tour').forEach((tour) => {

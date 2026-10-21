@@ -26,7 +26,11 @@ def parse(body):
             continue
         heading = re.match(r"^#{1,3}\s+(.+)$", line) or re.match(r"^\*\*([^*]+)\*\*$", line)
         if heading:
-            category = heading.group(1)
+            # The changelog's own version heading repeats the release: "[1.9.1]", "[1.0.0] - 2026-10-15", or
+            # "[1.6.5] - A title", of which only the title is kept.
+            text = re.sub(r"^\[?v?\d+(\.\d+)+\]?\s*(-\s*(\d{4}-\d{2}-\d{2})?)?\s*", "", heading.group(1))
+            if text:
+                category = text
             continue
         item = re.match(r"^(?:[-*+]\s+|\d+[.)]\s+)(.+)$", line)
         if not sections or sections[-1][0] != category:
@@ -68,18 +72,20 @@ def fetch_releases(repo):
 
 def render(platform, label, releases):
     toc, content = [], [f'        <div class="release-panel" id="{platform}" data-platform="{platform}" role="tabpanel" aria-label="{label}">']
-    for release in releases:
+    for index, release in enumerate(releases):
         tag = release["tag_name"].removeprefix("v")
         anchor = f"{platform}-v{tag.replace('.', '-')}"
         toc.append(f'          <li data-platform="{platform}"><a href="#{anchor}">v{html.escape(tag)}</a></li>')
         name = re.sub(r"^CassetteCat\s+", "", release.get("name") or "")
         title = re.sub(rf"^v?{re.escape(tag)}\s*[-\u2013\u2014:]?\s*", "", name).strip()
-        lines = [f'        <section id="{anchor}">', f'          <h3>v{html.escape(tag)}{(" - " + inline(title)) if title else ""}</h3>']
+        heading = f'v{html.escape(tag)}{(" - " + inline(title)) if title else ""}'
+        lines = [f'        <section id="{anchor}">', f'          <details{" open" if index == 0 else ""}>',
+                 f"          <summary><h3>{heading}</h3></summary>"]
         for category, items in parse(release.get("body") or ""):
             if category:
                 lines.append(f"          <p><strong>{inline(category)}</strong></p>")
             lines += ["          <ul>", *(f"            <li>{inline(item)}</li>" for item in items), "          </ul>"]
-        lines.append("        </section>")
+        lines += ["          </details>", "        </section>"]
         content.append("\n".join(lines))
     content[-1] += "\n        </div>"
     return toc, content
