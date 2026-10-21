@@ -51,7 +51,8 @@
             "group": "Overview",
             "pages": [
               "index",
-              "phone-and-computer"
+              "phone-and-computer",
+              "translate"
             ]
           }
         ]
