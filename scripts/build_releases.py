@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / "changelog.html"
 INDEX = ROOT / "index.html"
 SITEMAP = ROOT / "sitemap.xml"
+RECENT = 5
 
 def inline(text):
     text = html.escape(text, quote=False)
@@ -26,7 +27,11 @@ def parse(body):
             continue
         heading = re.match(r"^#{1,3}\s+(.+)$", line) or re.match(r"^\*\*([^*]+)\*\*$", line)
         if heading:
-            category = heading.group(1)
+            # The changelog's own version heading repeats the release: "[1.9.1]", "[1.0.0] - 2026-10-15", or
+            # "[1.6.5] - A title", of which only the title is kept.
+            text = re.sub(r"^\[?v?\d+(\.\d+)+\]?\s*(-\s*(\d{4}-\d{2}-\d{2})?)?\s*", "", heading.group(1))
+            if text:
+                category = text
             continue
         item = re.match(r"^(?:[-*+]\s+|\d+[.)]\s+)(.+)$", line)
         if not sections or sections[-1][0] != category:
@@ -67,35 +72,47 @@ def fetch_releases(repo):
     return releases
 
 def render(platform, label, releases):
-    toc, content = [], [f'        <div class="release-panel" id="{platform}" data-platform="{platform}" role="tabpanel" aria-label="{label}">']
-    for release in releases:
+    content = [f'        <div class="release-panel" id="{platform}" data-platform="{platform}" role="tabpanel" aria-label="{label}">']
+    for index, release in enumerate(releases):
         tag = release["tag_name"].removeprefix("v")
         anchor = f"{platform}-v{tag.replace('.', '-')}"
-        toc.append(f'          <li data-platform="{platform}"><a href="#{anchor}">v{html.escape(tag)}</a></li>')
         name = re.sub(r"^CassetteCat\s+", "", release.get("name") or "")
         title = re.sub(rf"^v?{re.escape(tag)}\s*[-\u2013\u2014:]?\s*", "", name).strip()
-        lines = [f'        <section id="{anchor}">', f'          <h3>v{html.escape(tag)}{(" - " + inline(title)) if title else ""}</h3>']
+        heading = f'v{html.escape(tag)}{(" - " + inline(title)) if title else ""}'
+        published = date.fromisoformat(release["published_at"][:10])
+        when = f'<time datetime="{published.isoformat()}">{published.day} {published:%b %Y}</time>'
+        # The latest release is always shown in full; earlier ones are rows that open.
+        if index == 0:
+            lines = [f'        <section id="{anchor}" class="release-latest">',
+                     f'          <div class="release-meta"><h3>{heading}</h3><span class="label">Latest</span> <span class="label">{when}</span></div>']
+        else:
+            lines = [f'        <section id="{anchor}">', "          <details>",
+                     f'          <summary><h3>{heading}</h3><span class="label">{when}</span></summary>']
+        lines.append('          <div class="release-body">')
         for category, items in parse(release.get("body") or ""):
             if category:
                 lines.append(f"          <p><strong>{inline(category)}</strong></p>")
             lines += ["          <ul>", *(f"            <li>{inline(item)}</li>" for item in items), "          </ul>"]
-        lines.append("        </section>")
+        lines.append(f'          <p class="release-link"><a href="{html.escape(release["html_url"])}">Release on GitHub</a></p>')
+        lines.append("          </div>")
+        lines +=["        </section>"] if index == 0 else ["          </details>", "        </section>"]
         content.append("\n".join(lines))
+    # Only the latest few releases show; older ones fold into one row.
+    if len(releases) > RECENT:
+        content.insert(RECENT + 1, '        <details class="older-releases">\n          <summary><h3>Older versions</h3></summary>')
+        content[-1] += "\n        </details>"
     content[-1] += "\n        </div>"
-    return toc, content
+    return content
 
 def main():
-    toc, content, latest = [], [], {}
+    content, latest = [], {}
     for platform, label, repo in PLATFORMS:
         releases = fetch_releases(repo)
         latest[platform] = releases[0]["tag_name"].removeprefix("v")
-        platform_toc, platform_content = render(platform, label, releases)
-        toc += platform_toc
-        content += platform_content
+        content += render(platform, label, releases)
     page = PAGE.read_text(encoding="utf-8")
     for platform, label, _ in PLATFORMS:
         page = re.sub(rf"(<span><b>{label}</b>\s*)v[^<]*(</span>)", rf"\g<1>v{html.escape(latest[platform])}\2", page)
-    page = re.sub(r"(<!-- releases:toc -->).*?(<!-- /releases:toc -->)", rf"\1\n{'\n'.join(toc)}\n          \2", page, flags=re.DOTALL)
     page = re.sub(r"(<!-- releases:notes -->).*?(<!-- /releases:notes -->)", rf"\1\n{'\n\n'.join(content)}\n        \2", page, flags=re.DOTALL)
     PAGE.write_text(page, encoding="utf-8")
     sync_structured_data(INDEX)
