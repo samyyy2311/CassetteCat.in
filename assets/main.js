@@ -39,11 +39,13 @@ const DESKTOP_DOWNLOADS = {
 };
 
 const repoLink = document.querySelector('.nav .gh');
-if (repoLink) {
-  getJSON(REPO + repoLink.pathname.split('/')[2]).then((data) => {
-    if (data) show('gh-stars', '★ ' + data.stargazers_count.toLocaleString());
+const showStars = () => {
+  const repo = repoLink.pathname.split('/')[2];
+  getJSON(REPO + repo).then((data) => {
+    if (data && repoLink.pathname.split('/')[2] === repo) show('gh-stars', '★ ' + data.stargazers_count.toLocaleString());
   });
-}
+};
+if (repoLink) showStars();
 
 const os = detectOS();
 const desktopOS = DESKTOP_DOWNLOADS[os];
@@ -103,9 +105,11 @@ if (releaseTabs) {
       tab.setAttribute('aria-selected', String(selected));
       tab.tabIndex = selected ? 0 : -1;
     });
-    document.querySelectorAll('.doc-toc [data-platform], .release-panel').forEach((el) => {
+    document.querySelectorAll('.release-panel').forEach((el) => {
       el.hidden = el.dataset.platform !== platform;
     });
+    repoLink.href = 'https://github.com/samyyy2311/' + (platform === 'desktop' ? 'CassetteCat-Desktop' : 'CassetteCat');
+    showStars();
   };
   tabs.forEach((tab, index) => {
     tab.addEventListener('click', () => {
@@ -120,11 +124,29 @@ if (releaseTabs) {
       next.focus();
     });
   });
-  // A link to a release, like #desktop-v1-0-0, opens its app's tab and scrolls to it once it's shown.
+  // Older releases start collapsed, so a link to one, like #desktop-v1-0-0, expands it and what it sits in.
+  const openAround = (el) => {
+    for (let details = el?.closest('details'); details; details = details.parentElement.closest('details')) details.open = true;
+  };
+  const reveal = (id) => {
+    const release = document.getElementById(id);
+    openAround(release?.querySelector('details'));
+    openAround(release);
+  };
+  // The browser scrolls before a collapsed release opens, so scroll again once it has.
+  window.addEventListener('hashchange', () => {
+    const id = location.hash.slice(1);
+    reveal(id);
+    document.getElementById(id)?.scrollIntoView({ behavior: 'instant' });
+  });
+  // A link to a release opens its app's tab and scrolls to it once it's shown.
   const target = location.hash.slice(1);
   select(target.startsWith('desktop') ? 'desktop' : 'android');
   releaseTabs.hidden = false;
-  if (target) document.getElementById(target)?.scrollIntoView({ behavior: 'instant' });
+  if (target) {
+    reveal(target);
+    document.getElementById(target)?.scrollIntoView({ behavior: 'instant' });
+  }
 }
 
 document.querySelectorAll('.tour').forEach((tour) => {
