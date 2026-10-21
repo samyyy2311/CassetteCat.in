@@ -103,7 +103,7 @@ if (releaseTabs) {
       tab.setAttribute('aria-selected', String(selected));
       tab.tabIndex = selected ? 0 : -1;
     });
-    document.querySelectorAll('.doc-toc [data-platform], .release-panel').forEach((el) => {
+    document.querySelectorAll('.release-panel').forEach((el) => {
       el.hidden = el.dataset.platform !== platform;
     });
   };
@@ -128,7 +128,6 @@ if (releaseTabs) {
     const release = document.getElementById(id);
     openAround(release?.querySelector('details'));
     openAround(release);
-    openAround(document.querySelector(`.doc-toc a[href="#${id}"]`));
   };
   // The browser scrolls before a collapsed release opens, so scroll again once it has.
   window.addEventListener('hashchange', () => {

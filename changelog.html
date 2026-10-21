@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%C2%B7%26-.:&display=swap">
-  <link rel="stylesheet" href="assets/style.css?v=20261022">
+  <link rel="stylesheet" href="assets/style.css?v=20261022c">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -85,35 +85,16 @@
         <button type="button" role="tab" data-platform="desktop" aria-controls="desktop"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Desktop</button>
       </div>
 
-      <aside class="doc-toc">
-        <h4>Versions</h4>
-        <ol>
-          <!-- releases:toc -->
-          <li data-platform="android"><a href="#android-v1-9-1">v1.9.1</a></li>
-          <li data-platform="android"><a href="#android-v1-9-0">v1.9.0</a></li>
-          <li data-platform="android"><a href="#android-v1-8-0">v1.8.0</a></li>
-          <li data-platform="android"><a href="#android-v1-7-7">v1.7.7</a></li>
-          <li data-platform="android"><a href="#android-v1-7-6">v1.7.6</a></li>
-          <li data-platform="android"><details><summary>Older versions</summary><ol><li><a href="#android-v1-7-5">v1.7.5</a></li><li><a href="#android-v1-7-4">v1.7.4</a></li><li><a href="#android-v1-7-3">v1.7.3</a></li><li><a href="#android-v1-7-2">v1.7.2</a></li><li><a href="#android-v1-7-1">v1.7.1</a></li><li><a href="#android-v1-7-0">v1.7.0</a></li><li><a href="#android-v1-6-5">v1.6.5</a></li><li><a href="#android-v1-6-3">v1.6.3</a></li><li><a href="#android-v1-6-2">v1.6.2</a></li><li><a href="#android-v1-6-1">v1.6.1</a></li><li><a href="#android-v1-6-0">v1.6.0</a></li><li><a href="#android-v1-5-0">v1.5.0</a></li><li><a href="#android-v1-4-1">v1.4.1</a></li><li><a href="#android-v1-4-0">v1.4.0</a></li><li><a href="#android-v1-3-1">v1.3.1</a></li><li><a href="#android-v1-3-0">v1.3.0</a></li><li><a href="#android-v1-2-0">v1.2.0</a></li><li><a href="#android-v1-1-1">v1.1.1</a></li><li><a href="#android-v1-1-0">v1.1.0</a></li><li><a href="#android-v1-0-0">v1.0.0</a></li></ol></details></li>
-          <li data-platform="desktop"><a href="#desktop-v1-0-0">v1.0.0</a></li>
-          <li data-platform="desktop"><a href="#desktop-v0-9-0">v0.9.0</a></li>
-          <li data-platform="desktop"><a href="#desktop-v0-8-0">v0.8.0</a></li>
-          <li data-platform="desktop"><a href="#desktop-v0-7-0">v0.7.0</a></li>
-          <li data-platform="desktop"><a href="#desktop-v0-6-0">v0.6.0</a></li>
-          <li data-platform="desktop"><details><summary>Older versions</summary><ol><li><a href="#desktop-v0-5-1">v0.5.1</a></li></ol></details></li>
-          <!-- /releases:toc -->
-        </ol>
-      </aside>
 
-      <div class="doc-body">
+      <div class="doc-body release-notes">
         <p class="doc-lede">Every release of the Android and desktop apps, newest first. The Android app and the desktop app have their own version numbers.</p>
 
         <!-- releases:notes -->
         <div class="release-panel" id="android" data-platform="android" role="tabpanel" aria-label="Android">
 
-        <section id="android-v1-9-1">
-          <details open>
-          <summary><h3>v1.9.1</h3><span class="label">Latest · <time datetime="2026-10-21">21 Oct 2026</time></span></summary>
+        <section id="android-v1-9-1" class="release-latest">
+          <div class="release-meta"><h3>v1.9.1</h3><span class="label">Latest</span> <span class="label"><time datetime="2026-10-21">21 Oct 2026</time></span></div>
+          <div class="release-body">
           <ul>
             <li>Search finds songs by a line from their lyrics. Turn on Find Songs by Their Lyrics in Customisation &gt; Lyrics to download lyrics for your library over Wi-Fi, so search has them to look through.</li>
             <li>Choose which tabs sit on the bottom bar and in what order, in Customisation &gt; Navigation &gt; Bottom Bar. Library and Settings always stay.</li>
@@ -128,12 +109,13 @@
             <li>All of the app's text can now be translated.</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.9.1">Release on GitHub</a></p>
-          </details>
+          </div>
         </section>
 
         <section id="android-v1-9-0">
           <details>
           <summary><h3>v1.9.0</h3><span class="label"><time datetime="2026-10-14">14 Oct 2026</time></span></summary>
+          <div class="release-body">
           <ul>
             <li>Fix Tags checks your whole library with MusicBrainz in the background and lists the titles, artists, albums and years it would correct. Nothing changes until you review the list and tap Apply, and Revert to Original Tags still undoes it.</li>
             <li>Fill from MusicBrainz in the tag editor looks up one song and fills in its details for you to check before saving.</li>
@@ -144,12 +126,14 @@
             <li>In External Services, Cover Art Archive is now called MusicBrainz, since it also looks up song details.</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.9.0">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-8-0">
           <details>
           <summary><h3>v1.8.0</h3><span class="label"><time datetime="2026-10-09">9 Oct 2026</time></span></summary>
+          <div class="release-body">
           <ul>
             <li>Browse your computer's music from the phone and play it there or stream it here.</li>
             <li>While you control the computer, songs you pick play on it. It shows up by name in your media controls, and its volume follows your phone's.</li>
@@ -162,12 +146,14 @@
             <li>Lossless audio is called Lossless rather than Lossless Uncompressed.</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.8.0">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-7-7">
           <details>
           <summary><h3>v1.7.7</h3><span class="label"><time datetime="2026-10-05">5 Oct 2026</time></span></summary>
+          <div class="release-body">
           <ul>
             <li>Pair with your computer by tapping it and clicking Allow there, with no code to type. Nearby computers also show up in the player's devices button, so you can connect from there.</li>
             <li>Your phone finds the computer again when it gets a new address on your Wi-Fi, without pairing again.</li>
@@ -181,12 +167,14 @@
             <li>Fixed the notification's shuffle button showing the wrong state, likes from the notification not showing up right away, the notification heart for radio stations, and a glitchy back gesture.</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.7.7">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-7-6">
           <details>
           <summary><h3>v1.7.6</h3><span class="label"><time datetime="2026-09-27">27 Sep 2026</time></span></summary>
+          <div class="release-body">
           <ul>
             <li>Your computer shows up in Android's own output switcher, next to This phone and Bluetooth. Pick it there to move your music to the computer, and set its volume from the same place.</li>
             <li>Control your computer from the notification, lock screen, headphone buttons and volume keys while your phone is playing on it.</li>
@@ -196,6 +184,7 @@
             <li>Fixed a crash on launch when the computer was selected.</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.7.6">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
@@ -205,6 +194,7 @@
         <section id="android-v1-7-5">
           <details>
           <summary><h3>v1.7.5</h3><span class="label"><time datetime="2026-09-26">26 Sep 2026</time></span></summary>
+          <div class="release-body">
           <ul>
             <li>Control CassetteCat on your computer from your phone. Pick it from the devices button and the same Now Playing screen, queue and lyrics work for the computer. Your song, queue and position move with you when you switch, and the computer can pause, skip or take over what your phone is playing. Computers on your Wi-Fi are found without typing an address.</li>
             <li>Edit tags for several songs at once from the library selection bar. Only the fields you change are saved.</li>
@@ -214,12 +204,14 @@
             <li>New releases are offered once when the app starts, at most once a day.</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.7.5">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-7-4">
           <details>
           <summary><h3>v1.7.4</h3><span class="label"><time datetime="2026-09-22">22 Sep 2026</time></span></summary>
+          <div class="release-body">
           <ul>
             <li>Shuffle now mixes up upcoming songs without interrupting what's playing, and turning it off brings back your original queue order.</li>
             <li>Pull down to refresh anywhere in your library: songs, albums, artists, playlists, liked tracks, and folders.</li>
@@ -229,12 +221,14 @@
             <li>Fixed a crash on the Home screen while music was still loading.</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.7.4">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-7-3">
           <details>
           <summary><h3>v1.7.3</h3><span class="label"><time datetime="2026-09-21">21 Sep 2026</time></span></summary>
+          <div class="release-body">
           <ul>
             <li>Smart shuffle now remembers what you skipped and pushes those tracks to the end of the queue so they don't come back right away.</li>
             <li>Online cover search is much more reliable with search fallbacks and support across local and streaming music libraries.</li>
@@ -248,12 +242,14 @@
             <li>All in-app text is now stored in Android string resources, laying the groundwork for translations.</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.7.3">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-7-2">
           <details>
           <summary><h3>v1.7.2</h3><span class="label"><time datetime="2026-09-13">13 Sep 2026</time></span></summary>
+          <div class="release-body">
           <ul>
             <li>Fixed shuffle controls in the notification center and Now Playing screen getting out of sync.</li>
             <li>Improved the active shuffle state so it is clearer without changing the icon style.</li>
@@ -262,12 +258,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.7.1...v1.7.2</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.7.2">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-7-1">
           <details>
           <summary><h3>v1.7.1</h3><span class="label"><time datetime="2026-09-12">12 Sep 2026</time></span></summary>
+          <div class="release-body">
           <ul>
             <li>Choose album covers from your gallery or search for artwork online.</li>
             <li>Filter the library by Local, Subsonic, or Jellyfin and use the updated library and search layouts.</li>
@@ -278,12 +276,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.7.0...v1.7.1</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.7.1">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-7-0">
           <details>
           <summary><h3>v1.7.0</h3><span class="label"><time datetime="2026-09-11">11 Sep 2026</time></span></summary>
+          <div class="release-body">
           <ul>
             <li>Fixed playback pausing between songs when autoplay is on.</li>
             <li>Fixed queue not advancing automatically at the end of a track.</li>
@@ -292,12 +292,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.6.5...v1.7.0</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.7.0">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-6-5">
           <details>
           <summary><h3>v1.6.5</h3><span class="label"><time datetime="2026-08-31">31 Aug 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>CassetteCat Player Gets a Control Panel</strong></p>
           <ul>
             <li>Folders now show a parent-folder label, album-art thumbnails, and support custom cover art.</li>
@@ -310,12 +312,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.6.3...v1.6.5</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.6.5">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-6-3">
           <details>
           <summary><h3>v1.6.3</h3><span class="label"><time datetime="2026-08-30">30 Aug 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>Autoplay Actually Continues Now</strong></p>
           <ul>
             <li>Fixed Autoplay silently failing to continue at the end of your queue instead of picking new songs.</li>
@@ -324,12 +328,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.6.2...v1.6.3</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.6.3">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-6-2">
           <details>
           <summary><h3>v1.6.2</h3><span class="label"><time datetime="2026-08-30">30 Aug 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>Cleaner Setup &amp; a Skip Bug Squashed</strong></p>
           <ul>
             <li>Reworked the setup flow: cleaner, more consistent screens, and one less step.</li>
@@ -342,12 +348,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.6.1...v1.6.2</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.6.2">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-6-1">
           <details>
           <summary><h3>v1.6.1</h3><span class="label"><time datetime="2026-08-29">29 Aug 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>Performance</strong></p>
           <ul>
             <li>Reduced memory usage and smoother scrolling across the library and Now Playing screens.</li>
@@ -359,12 +367,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.6.0...v1.6.1</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.6.1">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-6-0">
           <details>
           <summary><h3>v1.6.0</h3><span class="label"><time datetime="2026-08-29">29 Aug 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>Playback</strong></p>
           <ul>
             <li><strong>Drive Mode</strong>: a stripped, high-contrast full-screen playback view with large touch targets, launches automatically when connected to a car's Bluetooth audio.</li>
@@ -398,12 +408,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.5.0...v1.6.0</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.6.0">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-5-0">
           <details>
           <summary><h3>v1.5.0</h3><span class="label"><time datetime="2026-08-27">27 Aug 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>Playback</strong></p>
           <ul>
             <li><strong>Shake to Skip</strong>: Shake your phone to skip to the next track, with adjustable sensitivity.</li>
@@ -427,12 +439,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.4.1...v1.5.0</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.5.0">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-4-1">
           <details>
           <summary><h3>v1.4.1</h3><span class="label"><time datetime="2026-08-24">24 Aug 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>Playback</strong></p>
           <ul>
             <li>Save the current queue as a playlist and start an Instant Mix from Now Playing.</li>
@@ -449,12 +463,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.4.0...v1.4.1</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.4.1">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-4-0">
           <details>
           <summary><h3>v1.4.0</h3><span class="label"><time datetime="2026-08-23">23 Aug 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>Streaming</strong></p>
           <ul>
             <li><strong>Jellyfin Quick Connect</strong>: Sign in without typing a password by approving a code from an already-signed-in client.</li>
@@ -479,12 +495,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.3.1...v1.4.0</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.4.0">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-3-1">
           <details>
           <summary><h3>v1.3.1</h3><span class="label"><time datetime="2026-08-20">20 Aug 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>Performance</strong></p>
           <ul>
             <li>Smoother transitions between songs during playback.</li>
@@ -497,12 +515,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.3.0...v1.3.1</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.3.1">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-3-0">
           <details>
           <summary><h3>v1.3.0</h3><span class="label"><time datetime="2026-08-20">20 Aug 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>Changelog</strong></p>
           <ul>
             <li>All notable changes to CassetteCat are documented in this file.</li>
@@ -593,12 +613,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.2.0...v1.3.0</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.3.0">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-2-0">
           <details>
           <summary><h3>v1.2.0</h3><span class="label"><time datetime="2026-08-19">19 Aug 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>Changelog</strong></p>
           <ul>
             <li>All notable changes to CassetteCat are documented in this file.</li>
@@ -668,12 +690,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/commits/v1.2.0</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.2.0">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-1-1">
           <details>
           <summary><h3>v1.1.1</h3><span class="label"><time datetime="2026-08-19">19 Aug 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>Changelog</strong></p>
           <ul>
             <li>All notable changes to CassetteCat are documented in this file.</li>
@@ -728,12 +752,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.1.0...v1.1.1</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.1.1">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-1-0">
           <details>
           <summary><h3>v1.1.0</h3><span class="label"><time datetime="2026-08-18">18 Aug 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>Changelog</strong></p>
           <ul>
             <li>All notable changes to CassetteCat are documented in this file.</li>
@@ -788,12 +814,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/compare/v1.0.0...v1.1.0</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.1.0">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="android-v1-0-0">
           <details>
           <summary><h3>v1.0.0</h3><span class="label"><time datetime="2026-08-18">18 Aug 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>Changelog</strong></p>
           <ul>
             <li>All notable changes to CassetteCat are documented in this file.</li>
@@ -834,6 +862,7 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat/commits/v1.0.0</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat/releases/tag/v1.0.0">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
         </details>
@@ -841,9 +870,9 @@
 
         <div class="release-panel" id="desktop" data-platform="desktop" role="tabpanel" aria-label="Desktop">
 
-        <section id="desktop-v1-0-0">
-          <details open>
-          <summary><h3>v1.0.0</h3><span class="label">Latest · <time datetime="2026-10-14">14 Oct 2026</time></span></summary>
+        <section id="desktop-v1-0-0" class="release-latest">
+          <div class="release-meta"><h3>v1.0.0</h3><span class="label">Latest</span> <span class="label"><time datetime="2026-10-14">14 Oct 2026</time></span></div>
+          <div class="release-body">
           <p><strong>Added</strong></p>
           <ul>
             <li>Library Health in Settings. Fix Tags checks every song, or the ones you select, with MusicBrainz in the background, and lists the song details and album covers it would fix. Nothing changes until you review the lists and click Apply.</li>
@@ -868,12 +897,13 @@
             <li>Maximizing works with the mini player open, the window corners are square while maximized, and hovered covers aren't cut off on artist pages and in search.</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/tag/v1.0.0">Release on GitHub</a></p>
-          </details>
+          </div>
         </section>
 
         <section id="desktop-v0-9-0">
           <details>
           <summary><h3>v0.9.0</h3><span class="label"><time datetime="2026-10-09">9 Oct 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>Added</strong></p>
           <ul>
             <li>Your phone can browse this computer's music and play it, on the computer or streamed to the phone.</li>
@@ -931,12 +961,14 @@
             <li>Checksums are in SHA256SUMS.txt. The macOS app isn't notarized yet: the first time, right-click it in Applications and choose Open.</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/tag/v0.9.0">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="desktop-v0-8-0">
           <details>
           <summary><h3>v0.8.0</h3><span class="label"><time datetime="2026-10-05">5 Oct 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>Phone remote</strong></p>
           <ul>
             <li>Control CassetteCat from the Android app on the same Wi-Fi, and move a song, its queue and position between phone and computer.</li>
@@ -954,12 +986,14 @@
             <li>New releases are offered once when the app starts.</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/tag/v0.8.0">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="desktop-v0-7-0">
           <details>
           <summary><h3>v0.7.0</h3><span class="label"><time datetime="2026-09-25">25 Sep 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>What's Changed</strong></p>
           <ul>
             <li>Fix empty Search sections, cover warnings and Library layout warnings by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/22</li>
@@ -972,12 +1006,14 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat-Desktop/compare/v0.6.0...v0.7.0</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/tag/v0.7.0">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
         <section id="desktop-v0-6-0">
           <details>
           <summary><h3>v0.6.0</h3><span class="label"><time datetime="2026-09-25">25 Sep 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>What's Changed</strong></p>
           <ul>
             <li>Fix GitHub release publishing context by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/9</li>
@@ -999,6 +1035,7 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat-Desktop/compare/v0.5.1...v0.6.0</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/tag/v0.6.0">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
 
@@ -1008,6 +1045,7 @@
         <section id="desktop-v0-5-1">
           <details>
           <summary><h3>v0.5.1</h3><span class="label"><time datetime="2026-09-14">14 Sep 2026</time></span></summary>
+          <div class="release-body">
           <p><strong>What's Changed</strong></p>
           <ul>
             <li>Fix Flatpak release CI user scope by @samyyy2311 in https://github.com/samyyy2311/CassetteCat-Desktop/pull/5</li>
@@ -1016,6 +1054,7 @@
             <li><strong>Full Changelog</strong>: https://github.com/samyyy2311/CassetteCat-Desktop/compare/v0.5.0...v0.5.1</li>
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/tag/v0.5.1">Release on GitHub</a></p>
+          </div>
           </details>
         </section>
         </details>
@@ -1040,7 +1079,7 @@
     </div>
   </footer>
 
-  <script src="assets/main.js?v=20261022"></script>
+  <script src="assets/main.js?v=20261022c"></script>
 </body>
 
 </html>
