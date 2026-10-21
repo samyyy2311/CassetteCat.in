@@ -261,6 +261,12 @@ code { font: 0.88em var(--mono); background: var(--bg-2); padding: 0.1em 0.35em;
 .doc-toc ol { list-style: none; margin: 0; padding: 0; font-size: 14px; }
 .doc-toc a { display: flex; gap: 10px; padding: 5px 0; color: var(--ink-2); text-decoration: none; }
 .doc-toc a:hover { color: var(--ink); }
+.doc-toc summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; padding: 5px 0; color: var(--ink-2); }
+.doc-toc summary:hover { color: var(--ink); }
+.doc-toc summary::-webkit-details-marker { display: none; }
+.doc-toc summary::after { content: '+'; font-family: var(--mono); color: var(--ink-3); }
+.doc-toc details[open] > summary::after { content: '−'; }
+.doc-toc details ol { padding-left: 12px; }
 .doc-toc .toc-group { font: 500 13px var(--display); color: var(--ink); margin: 20px 0 6px; }
 .doc-toc .toc-group:first-child { margin-top: 0; }
 .toc-num, .sec-num { font-family: var(--mono); color: var(--ink-3); font-weight: 400; }

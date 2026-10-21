@@ -124,6 +124,8 @@ if (releaseTabs) {
   const reveal = (id) => {
     const details = document.getElementById(id)?.querySelector('details');
     if (details) details.open = true;
+    const group = document.querySelector(`.doc-toc a[href="#${id}"]`)?.closest('details');
+    if (group) group.open = true;
   };
   window.addEventListener('hashchange', () => reveal(location.hash.slice(1)));
   // A link to a release opens its app's tab and scrolls to it once it's shown.

@@ -71,11 +71,14 @@ def fetch_releases(repo):
     return releases
 
 def render(platform, label, releases):
-    toc, content = [], [f'        <div class="release-panel" id="{platform}" data-platform="{platform}" role="tabpanel" aria-label="{label}">']
+    series, content = [], [f'        <div class="release-panel" id="{platform}" data-platform="{platform}" role="tabpanel" aria-label="{label}">']
     for index, release in enumerate(releases):
         tag = release["tag_name"].removeprefix("v")
         anchor = f"{platform}-v{tag.replace('.', '-')}"
-        toc.append(f'          <li data-platform="{platform}"><a href="#{anchor}">v{html.escape(tag)}</a></li>')
+        name = ".".join(tag.split(".")[:2])
+        if not series or series[-1][0] != name:
+            series.append((name, []))
+        series[-1][1].append(f'<a href="#{anchor}">v{html.escape(tag)}</a>')
         name = re.sub(r"^CassetteCat\s+", "", release.get("name") or "")
         title = re.sub(rf"^v?{re.escape(tag)}\s*[-\u2013\u2014:]?\s*", "", name).strip()
         heading = f'v{html.escape(tag)}{(" - " + inline(title)) if title else ""}'
@@ -88,6 +91,15 @@ def render(platform, label, releases):
         lines += ["          </details>", "        </section>"]
         content.append("\n".join(lines))
     content[-1] += "\n        </div>"
+    # The versions list groups each series, such as 1.7.0 to 1.7.7, with only the newest open.
+    toc = []
+    for index, (name, links) in enumerate(series):
+        if len(links) == 1:
+            toc.append(f'          <li data-platform="{platform}">{links[0]}</li>')
+            continue
+        items = "".join(f"<li>{link}</li>" for link in links)
+        toc.append(f'          <li data-platform="{platform}"><details{" open" if index == 0 else ""}>'
+                   f"<summary>v{name}</summary><ol>{items}</ol></details></li>")
     return toc, content
 
 def main():
