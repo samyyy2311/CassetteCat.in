@@ -80,13 +80,17 @@ def render(platform, label, releases):
         name = re.sub(r"^CassetteCat\s+", "", release.get("name") or "")
         title = re.sub(rf"^v?{re.escape(tag)}\s*[-\u2013\u2014:]?\s*", "", name).strip()
         heading = f'v{html.escape(tag)}{(" - " + inline(title)) if title else ""}'
+        published = date.fromisoformat(release["published_at"][:10])
+        when = f'<time datetime="{published.isoformat()}">{published.day} {published:%b %Y}</time>'
+        label_text = f"Latest · {when}" if index == 0 else when
         lines = [f'        <section id="{anchor}">', f'          <details{" open" if index == 0 else ""}>',
-                 f"          <summary><h3>{heading}</h3></summary>"]
+                 f'          <summary><h3>{heading}</h3><span class="label">{label_text}</span></summary>']
         for category, items in parse(release.get("body") or ""):
             if category:
                 lines.append(f"          <p><strong>{inline(category)}</strong></p>")
             lines += ["          <ul>", *(f"            <li>{inline(item)}</li>" for item in items), "          </ul>"]
-        lines += ["          </details>", "        </section>"]
+        lines += [f'          <p class="release-link"><a href="{html.escape(release["html_url"])}">Release on GitHub</a></p>',
+                  "          </details>", "        </section>"]
         content.append("\n".join(lines))
     # Only the latest few releases show; older ones fold into one row, in the notes and in the versions list.
     if len(releases) > RECENT:
