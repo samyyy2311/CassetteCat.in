@@ -120,14 +120,22 @@ if (releaseTabs) {
       next.focus();
     });
   });
-  // Older releases start collapsed, so a link to one, like #desktop-v1-0-0, expands it.
-  const reveal = (id) => {
-    const details = document.getElementById(id)?.querySelector('details');
-    if (details) details.open = true;
-    const group = document.querySelector(`.doc-toc a[href="#${id}"]`)?.closest('details');
-    if (group) group.open = true;
+  // Older releases start collapsed, so a link to one, like #desktop-v1-0-0, expands it and what it sits in.
+  const openAround = (el) => {
+    for (let details = el?.closest('details'); details; details = details.parentElement.closest('details')) details.open = true;
   };
-  window.addEventListener('hashchange', () => reveal(location.hash.slice(1)));
+  const reveal = (id) => {
+    const release = document.getElementById(id);
+    openAround(release?.querySelector('details'));
+    openAround(release);
+    openAround(document.querySelector(`.doc-toc a[href="#${id}"]`));
+  };
+  // The browser scrolls before a collapsed release opens, so scroll again once it has.
+  window.addEventListener('hashchange', () => {
+    const id = location.hash.slice(1);
+    reveal(id);
+    document.getElementById(id)?.scrollIntoView({ behavior: 'instant' });
+  });
   // A link to a release opens its app's tab and scrolls to it once it's shown.
   const target = location.hash.slice(1);
   select(target.startsWith('desktop') ? 'desktop' : 'android');
