@@ -10,21 +10,21 @@ RAW = "https://raw.githubusercontent.com/samyyy2311/{}/main/{}"
 BLOB = "https://github.com/samyyy2311/{}/blob/main/{}"
 ROOT = Path(__file__).resolve().parents[1] / "docs" / "developers"
 
-# (folder on the site, repository, [(page, path in the repository)])
+# (folder on the site, repository, [(page, path in the repository, Lucide icon for the sidebar)])
 GUIDES = [
     ("android", "CassetteCat", [
-        ("building", "docs/dev/building.md"),
-        ("architecture", "docs/dev/architecture.md"),
-        ("how-to", "docs/dev/how-to.md"),
-        ("theme", "docs/dev/theme.md"),
-        ("desktop-remote-protocol", "docs/dev/desktop-remote-protocol.md"),
-        ("releasing", "docs/dev/releasing.md"),
+        ("building", "docs/dev/building.md", "hammer"),
+        ("architecture", "docs/dev/architecture.md", "blocks"),
+        ("how-to", "docs/dev/how-to.md", "list-checks"),
+        ("theme", "docs/dev/theme.md", "palette"),
+        ("desktop-remote-protocol", "docs/dev/desktop-remote-protocol.md", "network"),
+        ("releasing", "docs/dev/releasing.md", "package"),
     ]),
     ("desktop", "CassetteCat-Desktop", [
-        ("building", "docs/dev/building.md"),
-        ("architecture", "ARCHITECTURE.md"),
-        ("design", "DESIGN.md"),
-        ("releasing", "docs/dev/releasing.md"),
+        ("building", "docs/dev/building.md", "hammer"),
+        ("architecture", "ARCHITECTURE.md", "blocks"),
+        ("design", "DESIGN.md", "palette"),
+        ("releasing", "docs/dev/releasing.md", "package"),
     ]),
 ]
 
@@ -35,10 +35,10 @@ def fetch(repo, path):
         return response.read().decode("utf-8")
 
 
-def convert(text, folder, repo, source, pages):
+def convert(text, folder, repo, source, icon, pages):
     title = re.match(r"#\s+(.+)\n", text).group(1).strip()
     body = text[text.index("\n") + 1:].lstrip("\n")
-    on_site = {path: f"/developers/{folder}/{page}" for page, path in pages}
+    on_site = {path: f"/developers/{folder}/{page}" for page, path, _ in pages}
 
     def link(match):
         label, target = match.group(1), match.group(2)
@@ -51,14 +51,14 @@ def convert(text, folder, repo, source, pages):
 
     body = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", link, body)
     edit = BLOB.format(repo, source)
-    return f'---\ntitle: "{title}"\n---\n\n<Note>Copied from [{source}]({edit}) in the {repo} repository.</Note>\n\n{body}'
+    return f'---\ntitle: "{title}"\nicon: "{icon}"\n---\n\n<Note>Copied from [{source}]({edit}) in the {repo} repository.</Note>\n\n{body}'
 
 
 def main():
     for folder, repo, pages in GUIDES:
         (ROOT / folder).mkdir(parents=True, exist_ok=True)
-        for page, path in pages:
-            (ROOT / folder / f"{page}.mdx").write_text(convert(fetch(repo, path), folder, repo, path, pages), encoding="utf-8")
+        for page, path, icon in pages:
+            (ROOT / folder / f"{page}.mdx").write_text(convert(fetch(repo, path), folder, repo, path, icon, pages), encoding="utf-8")
 
 
 if __name__ == "__main__":

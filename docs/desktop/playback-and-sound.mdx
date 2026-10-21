@@ -1,5 +1,6 @@
 ---
 title: "Playback and sound"
+icon: "audio-lines"
 description: "Now Playing, the queue, crossfade, the equalizer, lyrics, the mini player and keyboard shortcuts."
 ---
 
@@ -7,7 +8,9 @@ description: "Now Playing, the queue, crossfade, the equalizer, lyrics, the mini
 
 Click the cover in the player bar to open **Now Playing**: large artwork, the song, its album and the progress bar. The badge under the artist names the audio quality, such as Hi-Res Lossless, Lossless or the codec. Click it for the format, sample rate, bit depth, bitrate and encoding.
 
-The buttons at the top add the song to your favourites, open the song menu and the mini player, and switch between the lyrics and the queue. **Escape** closes Now Playing, and the **Left** and **Right** arrow keys change songs while it's open.
+The buttons at the top add the song to your favourites, open the song menu and the mini player, fill the screen, and switch between the lyrics and the queue. **F11** also goes full screen. **Escape** leaves full screen or closes Now Playing, and the **Left** and **Right** arrow keys change songs while it's open.
+
+**Settings > Appearance > Now Playing Backdrop** sets what's behind Now Playing: **Tinted** colours it from the cover, **Moving** slowly shifts the cover's colours (it uses more graphics memory), and **Clean** keeps it plain. Turning off format badges in **Settings > Music Library** also hides the quality badge.
 
 ## The queue
 
@@ -23,7 +26,7 @@ The queue shows what's playing next. Drag a song by its handle to move it, or re
 - **Song changes**: skipping fades briefly instead of cutting.
 - **Crossfade**: fades each song into the next as it ends, for up to 10 seconds.
 - **Volume Normalization (ReplayGain)**: evens out loudness between songs (**Track**) or keeps the levels of an album as mastered (**Album**), using the ReplayGain tags in your files.
-- **Volume Limit**: caps the volume slider at 50 to 90 percent to protect your hearing.
+- **Volume Limit**: turns all playback down, to protect your hearing. **Maximum Volume Limit** sets how far, from 50 to 100 percent, and the volume slider still uses its whole range.
 - **Playback Device**: picks the speakers or headphones CassetteCat plays through, apart from the system default.
 
 ## Equalizer
@@ -40,7 +43,7 @@ The queue shows what's playing next. Drag a song by its handle to move it, or re
 
 ## Lyrics
 
-Open lyrics with the quotation-mark button in the player bar or in Now Playing. Synced lyrics scroll with the song and highlight the current line; click a line to jump to it. Instrumental songs are marked as such instead of showing nothing.
+Open lyrics with the quotation-mark button in the player bar or in Now Playing. Synced lyrics glide to each line as it's sung and light its words as they're sung; click a line, or reach it with **Tab** and press **Enter**, to jump to it. Breaks in the singing show as dots that fill in until the next line. Instrumental songs are marked as such instead of showing nothing.
 
 CassetteCat looks for lyrics in this order:
 
@@ -53,7 +56,7 @@ CassetteCat looks for lyrics in this order:
 
 **Timing plain lyrics.** If a song only has unsynced lyrics, click **Tap to Sync** in Now Playing and press **Space** as each line starts. The undo button takes back the last tap. When you finish, the timings are saved into the song, so the lyrics scroll from then on.
 
-**Settings > Lyrics** sets the text size, alignment, and whether the current line is highlighted in your accent colour or white.
+**Settings > Lyrics** sets the text size, font and weight, alignment, and whether the current line is highlighted in your accent colour or white. **Settings > Appearance > App Font** changes the font everywhere else.
 
 ## Mini player
 
@@ -80,6 +83,7 @@ On a Mac, use **Cmd** where this table says **Ctrl**.
 | Mute | M |
 | Seek forward / back 5 seconds | Ctrl+Right / Ctrl+Left |
 | Next / previous song (in Now Playing) | Right / Left |
+| Full screen | F11 |
 | Close Now Playing | Escape |
 | Open search | Ctrl+K |
 | Search this page | Ctrl+F |
@@ -87,3 +91,21 @@ On a Mac, use **Cmd** where this table says **Ctrl**.
 | Toggle the sidebar | Ctrl+B |
 
 Change any of them in **Settings > Keyboard Shortcuts**: click a shortcut and press the new keys.
+
+**Previous** goes back to the start of the song once it has played for 3 seconds, and to the song before it until then.
+
+**Tap Alt** to show a letter on each page in the sidebar, then press the letter to go there: **H** Home, **L** Library, **J** Jellyfin, **U** Subsonic, **R** Radio, **S** Search, **I** Listening Record and **T** Settings. Tapping **Alt** again, **Escape** or a click hides them.
+
+### Global shortcuts
+
+**Enable Global Shortcuts** in **Settings > Keyboard Shortcuts** lets these work while CassetteCat is in the background:
+
+| Action | Default |
+| :--- | :--- |
+| Play or pause | Ctrl+Alt+Space |
+| Previous / next song | Ctrl+Alt+Left / Ctrl+Alt+Right |
+| Add to favourites | Ctrl+Alt+F |
+| Search | Ctrl+Alt+S |
+| Mini player | Ctrl+Alt+M |
+
+On Linux they go through your desktop, which asks you to allow them the first time and may let you pick other keys.
