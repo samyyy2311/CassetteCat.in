@@ -237,7 +237,8 @@ code { font: 0.88em var(--mono); background: var(--bg-2); padding: 0.1em 0.35em;
   gap: 16px;
   flex-shrink: 0;
 }
-.site-footer .footer-badges img { display: block; width: 120px; height: 36px; flex-shrink: 0; }
+.site-footer .footer-badges img { display: block; width: auto; height: 32px; }
+.site-footer .footer-badges .codehype-badge { height: 37px; }
 
 .frame { max-width: 1080px; margin: 0 auto; padding: 64px 24px 96px; }
 
