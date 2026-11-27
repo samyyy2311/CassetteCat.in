@@ -11,6 +11,15 @@ PAGE = ROOT / "changelog.html"
 INDEX = ROOT / "index.html"
 SITEMAP = ROOT / "sitemap.xml"
 RECENT = 5
+# Screens shown under a release's notes, as (file in assets/screenshots, caption).
+SHOTS = {
+    ("android", "1.10.0"): [
+        ("click-wheel.webp", "Click Wheel player"),
+        ("now-playing.webp", "Wavy seek bar"),
+        ("seek-bar.webp", "Four seek bar styles"),
+        ("queue.webp", "Undo in the queue"),
+    ],
+}
 
 def inline(text):
     text = html.escape(text, quote=False)
@@ -93,6 +102,12 @@ def render(platform, label, releases):
             if category:
                 lines.append(f"          <p><strong>{inline(category)}</strong></p>")
             lines += ["          <ul>", *(f"            <li>{inline(item)}</li>" for item in items), "          </ul>"]
+        shots = SHOTS.get((platform, tag), [])
+        if shots:
+            lines.append('          <div class="release-shots">')
+            lines += [f'            <figure><img src="assets/screenshots/{name}" alt="{html.escape(caption)}" width="140" height="311"'
+                      f' loading="lazy"><figcaption>{html.escape(caption)}</figcaption></figure>' for name, caption in shots]
+            lines.append("          </div>")
         lines.append(f'          <p class="release-link"><a href="{html.escape(release["html_url"])}">Release on GitHub</a></p>')
         lines.append("          </div>")
         lines +=["        </section>"] if index == 0 else ["          </details>", "        </section>"]
