@@ -263,6 +263,12 @@ code { font: 0.88em var(--mono); background: var(--bg-2); padding: 0.1em 0.35em;
 .release-panel summary:hover h3 { color: var(--accent-hi); }
 .release-panel details .release-body { max-width: 44em; padding: 0 0 24px 276px; }
 .release-link { font-size: 15px; margin-top: 4px; }
+/* A release's new screens, framed like the phones in the Android tour. */
+.release-shots { display: flex; gap: 20px; overflow-x: auto; scrollbar-width: none; margin: 28px 0 12px; }
+.release-shots::-webkit-scrollbar { display: none; }
+.release-shots figure { flex: 0 0 140px; margin: 0; }
+.release-shots img { border-radius: 18px; border: 4px solid #0E0D0C; }
+.release-shots figcaption { margin-top: 10px; font-size: 13px; color: var(--ink-2); }
 .older-releases { border-top: 1px solid var(--rule); }
 .release-tabs svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
