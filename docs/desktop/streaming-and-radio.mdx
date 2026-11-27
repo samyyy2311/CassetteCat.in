@@ -18,7 +18,7 @@ CassetteCat streams from your own server alongside the music on your computer. S
     Click **Subsonic** or **Jellyfin** in the sidebar.
   </Step>
   <Step title="Enter your details">
-    Enter the **Server Address**, for example `music.example.com` or `192.168.1.20:4533`, with your username and password.
+    Enter the **Server Address**, for example `music.example.com` or `192.168.1.20:4533`, with your username and password. You can start the address with `http://` for a server without HTTPS. Outside your home network, CassetteCat asks first, because your password would then travel unencrypted.
   </Step>
   <Step title="Connect">
     Click **Connect**. The server's songs appear on its page.
@@ -33,7 +33,9 @@ For Jellyfin you can use **Quick Connect** instead of a password: CassetteCat sh
 If your server uses a certificate it made itself, or one from your own certificate authority, turn on **Trust self-signed certificate** before connecting.
 </Note>
 
-Your password is kept in the system's credential store: Windows Credential Locker, the macOS Keychain, or your Linux keyring through the Secret Service.
+Your password is kept in the system's credential store: Windows Credential Locker, or your Linux keyring through the Secret Service.
+
+Jellyfin converts songs in a format CassetteCat can't play, so every song on the server plays. Lossless files are sent as they are.
 
 ### Browsing a server
 
@@ -61,6 +63,10 @@ A server's page has **Songs**, **Artists**, **Albums**, **Genres** and **Playlis
 If ListenBrainz refuses your listens, Settings says why, for example when your email address on ListenBrainz isn't verified yet.
 
 A song is scrobbled once you've listened to most of it. Scrobbles are sent as you listen, so songs played while you're offline aren't sent later.
+
+### Loves
+
+Liking a song loves it on your connected accounts, and unliking it takes the love back. **Sync Likes** in **Settings > Scrobbling** marks the songs you liked before you connected an account. Loves go out one a second, and the row shows how many are left.
 
 ## Discord status
 
