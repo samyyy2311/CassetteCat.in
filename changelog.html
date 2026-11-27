@@ -73,7 +73,7 @@
         <div class="doc-head-meta">
           <span><b>Android</b> v1.9.1</span>
           <span class="sep">·</span>
-          <span><b>Desktop</b> v1.0.2</span>
+          <span><b>Desktop</b> v1.0.3</span>
           <span class="sep">·</span>
           <span><b>Source</b> GitHub Releases for <a href="https://github.com/samyyy2311/CassetteCat/releases" target="_blank" rel="noopener">Android</a> and <a href="https://github.com/samyyy2311/CassetteCat-Desktop/releases" target="_blank" rel="noopener">Desktop</a></span>
         </div>
@@ -870,8 +870,45 @@
 
         <div class="release-panel" id="desktop" data-platform="desktop" role="tabpanel" aria-label="Desktop">
 
-        <section id="desktop-v1-0-2" class="release-latest">
-          <div class="release-meta"><h3>v1.0.2</h3><span class="label">Latest</span> <span class="label"><time datetime="2026-10-22">22 Oct 2026</time></span></div>
+        <section id="desktop-v1-0-3" class="release-latest">
+          <div class="release-meta"><h3>v1.0.3</h3><span class="label">Latest</span> <span class="label"><time datetime="2026-11-26">26 Nov 2026</time></span></div>
+          <div class="release-body">
+          <p><strong>Added</strong></p>
+          <ul>
+            <li>Drag songs, an M3U playlist or a folder from File Explorer onto the window: songs play, and folders join your library.</li>
+            <li>Removing a song from the queue can be undone for a few seconds.</li>
+            <li>Liking a song loves it on your connected Last.fm, Libre.fm and ListenBrainz accounts. Sync Likes in Settings &gt; Scrobbling marks the songs you liked before too.</li>
+          </ul>
+          <p><strong>Changed</strong></p>
+          <ul>
+            <li>Every button, chip and choice shares one look, and dropdowns and menus share one panel.</li>
+            <li>In a narrow window, page tabs fold into a menu instead of running off the edge, and the player bar keeps the song title.</li>
+            <li>Shuffle spreads each artist's songs out, so the same artist rarely plays twice in a row.</li>
+            <li>A page appears once it's ready instead of filling in piece by piece, and Settings opens in under a second.</li>
+            <li>CassetteCat starts about a second faster, and searching no longer freezes for half a second as you type.</li>
+            <li>Resizing the window is smoother.</li>
+            <li>Messages such as an import's result show again.</li>
+            <li>A Jellyfin or Subsonic server address can start with http:// even when it isn't on your home network. CassetteCat asks first before sending your password unencrypted.</li>
+          </ul>
+          <p><strong>Fixed</strong></p>
+          <ul>
+            <li>Jellyfin songs in formats the player can't read now play, converted by the server.</li>
+            <li>CassetteCat no longer crashes when it comes back from the system tray or from the mini player.</li>
+            <li>Music no longer stutters while a page opens or a setting is saved.</li>
+            <li>Closing the full player while the mini player is open no longer quits the app.</li>
+            <li>Pause no longer gets stuck when you pause while the next song is loading.</li>
+            <li>Song counts in the Listening Record are no longer cut short when you close the window to the tray or the mini player.</li>
+            <li>Covers that went blank when the song changed come back, and the queue stays on the current song after shuffling.</li>
+            <li>Opening CassetteCat again while it's starting brings its window up instead of doing nothing.</li>
+            <li>Buttons and See all links can be used with the keyboard and screen readers.</li>
+          </ul>
+          <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/tag/v1.0.3">Release on GitHub</a></p>
+          </div>
+        </section>
+
+        <section id="desktop-v1-0-2">
+          <details>
+          <summary><h3>v1.0.2</h3><span class="label"><time datetime="2026-10-22">22 Oct 2026</time></span></summary>
           <div class="release-body">
           <p><strong>Fixed</strong></p>
           <ul>
@@ -880,6 +917,7 @@
           </ul>
           <p class="release-link"><a href="https://github.com/samyyy2311/CassetteCat-Desktop/releases/tag/v1.0.2">Release on GitHub</a></p>
           </div>
+          </details>
         </section>
 
         <section id="desktop-v1-0-1">
@@ -1015,6 +1053,9 @@
           </details>
         </section>
 
+        <details class="older-releases">
+          <summary><h3>Older versions</h3></summary>
+
         <section id="desktop-v0-8-0">
           <details>
           <summary><h3>v0.8.0</h3><span class="label"><time datetime="2026-10-05">5 Oct 2026</time></span></summary>
@@ -1039,9 +1080,6 @@
           </div>
           </details>
         </section>
-
-        <details class="older-releases">
-          <summary><h3>Older versions</h3></summary>
 
         <section id="desktop-v0-7-0">
           <details>
