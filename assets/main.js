@@ -167,7 +167,6 @@ const AWAY_TITLES = [
   'the chorus is coming, come back',
   'purrrrrr, your music missed you',
   'the cat sat on the pause button',
-  'side B is still spinning 📼',
   'one more song?',
   'the cat is guarding your queue',
   'purrrrrr… it’s quiet without you',
