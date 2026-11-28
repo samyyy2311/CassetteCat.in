@@ -46,7 +46,7 @@ There is no iPhone or iPad version.
 - Android: https://cassettecat.caffeinelabs.in/android
 - Desktop: https://cassettecat.caffeinelabs.in/desktop
 - User guide: https://cassettecat.caffeinelabs.in/docs
-- Changelog: https://cassettecat.caffeinelabs.in/changelog
+- What's new: https://cassettecat.caffeinelabs.in/whats-new
 - Privacy policy: https://cassettecat.caffeinelabs.in/privacy
 - Terms: https://cassettecat.caffeinelabs.in/terms
 - Android source: https://github.com/samyyy2311/CassetteCat
