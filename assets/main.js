@@ -158,3 +158,16 @@ document.querySelectorAll('.tour').forEach((tour) => {
     });
   });
 });
+
+// While the tab is in the background its title calls you back; the page's own title returns with you.
+const AWAY_TITLES = [
+  'the tape is still spinning',
+  'side B is waiting for you',
+  'the cat paused your mixtape',
+  'rewinding until you\'re back',
+  'your queue misses you',
+];
+const homeTitle = document.title;
+document.addEventListener('visibilitychange', () => {
+  document.title = document.hidden ? AWAY_TITLES[Math.floor(Math.random() * AWAY_TITLES.length)] : homeTitle;
+});
