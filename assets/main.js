@@ -161,15 +161,11 @@ document.querySelectorAll('.tour').forEach((tour) => {
 
 // While the tab is in the background its title calls you back; the page's own title returns with you.
 const AWAY_TITLES = [
-  'purrrrrr… come back?',
-  'hey, you left mid-song',
-  'the cat is waiting by the door 🐈',
-  'the chorus is coming, come back',
-  'purrrrrr, your music missed you',
-  'the cat sat on the pause button',
-  'one more song?',
-  'the cat is guarding your queue',
-  'purrrrrr… it’s quiet without you',
+  'purrrrrr… your music is still here',
+  'the cat kept your place',
+  'your queue is waiting',
+  'whenever you’re ready',
+  'the cat is waiting for you 🐈',
 ];
 const homeTitle = document.title;
 document.addEventListener('visibilitychange', () => {
