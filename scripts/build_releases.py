@@ -2,6 +2,7 @@
 import html, json, re
 from datetime import date
 from pathlib import Path
+from urllib.error import URLError
 from urllib.request import Request, urlopen
 
 API = "https://api.github.com/repos/samyyy2311/{}/releases?per_page=100"
@@ -120,9 +121,16 @@ def render(platform, label, releases):
     return content
 
 def main():
+    # Fetched before anything is written, so a failed request leaves every page as committed.
+    try:
+        fetched = [(platform, label, fetch_releases(repo)) for platform, label, repo in PLATFORMS]
+    except URLError as error:
+        # The deploy runs this too, from shared build machines that GitHub's rate limit can turn away. The
+        # changelog is committed with each release, so the site still deploys with the last one.
+        print(f"Couldn't fetch releases from GitHub ({error}); keeping the committed changelog.")
+        return
     content, latest = [], {}
-    for platform, label, repo in PLATFORMS:
-        releases = fetch_releases(repo)
+    for platform, label, releases in fetched:
         latest[platform] = releases[0]["tag_name"].removeprefix("v")
         content += render(platform, label, releases)
     page = PAGE.read_text(encoding="utf-8")
