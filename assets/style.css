@@ -192,6 +192,53 @@ code { font: 0.88em var(--mono); background: var(--bg-2); padding: 0.1em 0.35em;
 .together-note { margin: 8px 0 0; font-size: 15px; color: var(--ink-3); }
 #player .platform { max-width: 620px; }
 
+/* Services the apps connect to, as a quiet line of names under the hero. */
+.works-with { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 32px; padding-top: 40px; padding-bottom: 40px; }
+.works-with h2 { margin: 0; }
+.works-with ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 28px; }
+.works-with li { font: 400 15px var(--mono); color: var(--ink-2); }
+
+/* Where the music is: three panels, each listing what plays from there, in the app's own row style. */
+.where-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.where-card { background: var(--bg-2); border: 1px solid var(--bg-3); border-radius: 12px; padding: 24px; }
+.where-card header { display: flex; flex-direction: column-reverse; gap: 6px; margin-bottom: 18px; }
+.where-card h3 { font-size: 20px; }
+.where-feed { list-style: none; margin: 0; padding: 0; }
+.where-feed li { display: flex; flex-direction: column; gap: 2px; padding: 12px 0; border-top: 1px solid var(--bg-3); }
+.where-feed b { font-weight: 500; }
+.where-feed span { font-size: 14px; color: var(--ink-2); }
+
+/* Two app screens drawn in HTML, so they stay sharp and light. */
+.detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.detail { margin: 0; display: flex; flex-direction: column; }
+.detail .mock { flex: 1; }
+.mock { background: var(--bg-2); border: 1px solid var(--bg-3); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+.mock-title { font: 500 12px var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-hi); margin-bottom: 12px; }
+.mock-rows { list-style: none; margin: 0; padding: 0; }
+.mock-rows li { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-top: 1px solid var(--bg-3); }
+.mock-switch { width: 36px; height: 20px; border-radius: 10px; border: 1.5px solid var(--accent); position: relative; }
+.mock-switch::after { content: ''; position: absolute; top: 3px; right: 3px; width: 11px; height: 11px; border-radius: 50%; background: var(--accent-hi); }
+.mock-grip { width: 12px; height: 14px; background: radial-gradient(circle, var(--ink-3) 1.5px, transparent 2px) 0 0 / 6px 5px; }
+.mock-row-strong { display: flex; flex-direction: column; margin: 14px 0 0; padding-top: 14px; border-top: 1px solid var(--rule); }
+.mock-row-strong small { font-size: 14px; color: var(--ink-2); }
+.mock-toast { display: inline-flex; gap: 18px; margin: 16px 0 0; padding: 10px 16px; border: 1px solid var(--rule); border-radius: 10px; background: var(--bg); }
+.mock-toast b { font-weight: 500; color: var(--accent-hi); }
+.detail figcaption b { display: block; font: 500 18px var(--display); margin-bottom: 6px; }
+.detail figcaption span { color: var(--ink-2); font-size: 15px; }
+
+/* Three numbered steps from download to playing. */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 40px; counter-reset: step; }
+.steps li { counter-increment: step; border-top: 1px solid var(--rule); padding: 20px 0 8px; }
+.steps li::before { content: counter(step, decimal-leading-zero); display: block; font: 500 13px var(--mono); color: var(--accent-hi); margin-bottom: 10px; }
+.steps b { display: block; font: 500 18px var(--display); margin-bottom: 6px; }
+.steps span { color: var(--ink-2); font-size: 15px; }
+
+@media (max-width: 900px) {
+  .where-grid { grid-template-columns: 1fr; }
+  .detail-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+}
+
 .privacy { border-top: 1px solid var(--bg-3); border-bottom: 1px solid var(--bg-3); padding: 64px 0; }
 .privacy p { font-family: var(--sans); font-weight: 300; font-size: clamp(22px, 2.8vw, 32px); line-height: 1.35; max-width: 30em; margin: 0; color: var(--ink-2); }
 .privacy strong { font-weight: 400; color: var(--ink); }

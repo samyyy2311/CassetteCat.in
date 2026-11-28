@@ -8,7 +8,7 @@ from urllib.request import Request, urlopen
 API = "https://api.github.com/repos/samyyy2311/{}/releases?per_page=100"
 PLATFORMS = [("android", "Android", "CassetteCat"), ("desktop", "Desktop", "CassetteCat-Desktop")]
 ROOT = Path(__file__).resolve().parents[1]
-PAGE = ROOT / "changelog.html"
+PAGE = ROOT / "whats-new.html"
 INDEX = ROOT / "index.html"
 SITEMAP = ROOT / "sitemap.xml"
 RECENT = 5

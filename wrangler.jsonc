@@ -7,7 +7,8 @@
     "directory": "./_site",
     "binding": "ASSETS",
     "not_found_handling": "404-page",
-    // The site has no /docs files, so these requests go to worker.js instead of the 404 page.
-    "run_worker_first": ["/docs", "/docs/*"]
+    // The site has no /docs files, so these requests go to worker.js instead of the 404 page, as does the
+    // changelog's old address, which redirects to What's new.
+    "run_worker_first": ["/docs", "/docs/*", "/changelog", "/changelog.html"]
   }
 }

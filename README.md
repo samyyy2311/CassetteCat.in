@@ -9,7 +9,7 @@ The site is plain HTML, CSS and JavaScript, with no framework and no build step 
 | Path | What it is |
 | :--- | :--- |
 | `index.html`, `android.html`, `desktop.html` | The home page and each app's page |
-| `changelog.html` | Every release of both apps, built from GitHub Releases |
+| `whats-new.html` | What's new: every release of both apps, built from GitHub Releases |
 | `privacy.html`, `terms.html`, `404.html` | The privacy policy, terms and the not-found page |
 | `assets/` | `style.css`, `main.js`, logos, screenshots and icons |
 | `docs/` | The guides, published by [Mintlify](https://mintlify.com). `docs.json` sets their navigation |
@@ -32,7 +32,7 @@ Then open [localhost:8000](http://localhost:8000). To preview the guides, run `n
 python scripts/build_releases.py
 ```
 
-It rebuilds `changelog.html` from both apps' GitHub releases, puts the latest versions in each page's structured data, and updates `sitemap.xml`. Commit the result.
+It rebuilds `whats-new.html` from both apps' GitHub releases, puts the latest versions in each page's structured data, and updates `sitemap.xml`. Commit the result.
 
 ## Updating the guides
 

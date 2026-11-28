@@ -6,6 +6,10 @@ const SITE_HOST = "cassettecat.caffeinelabs.in";
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    // The changelog became What's new; old links and search results still land on it.
+    if (url.pathname === "/changelog" || url.pathname === "/changelog.html") {
+      return Response.redirect(new URL("/whats-new" + url.search, url), 301);
+    }
     if (url.pathname !== "/docs" && !url.pathname.startsWith("/docs/")) {
       return env.ASSETS.fetch(request);
     }
